@@ -32,7 +32,23 @@
       <div class="main-block__benefit_main">
         <div class="main-block__benefit_int">
           <div class="main-block__benefit_int-barrel"></div>
-          <div class="main-block__benefit_int-block"></div>
+          <div class="main-block__benefit_int-block">
+            <div class="main-block__benefit_int-block--item"></div>
+            <div class="main-block__benefit_int-block--item"></div>
+            <div class="main-block__benefit_int-block--bottom">
+              <div class="main-block__benefit_int-block--bottom_left"></div>
+              <div class="main-block__benefit_int-block--bottom_right">
+                <div class="main-block__benefit_int-block--bottom_right-item"></div>
+                <div class="main-block__benefit_int-block--bottom_right-item"></div>
+                <div class="main-block__benefit_int-block--bottom_right-big">
+                  <div class="main-block__benefit_int-block--bottom_right-big">
+                    <div class="main-block__benefit_int-block--bottom_right-big--left"></div>
+                    <div class="main-block__benefit_int-block--bottom_right-big--right"></div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
         </div>
       </div>
       <div class="main-block__benefit_add-bot">
@@ -272,6 +288,47 @@ import Corner from './Corner.vue';
             opacity: 1;
             background: url('../assets/images/barrel-active.png') -35px 0px/contain no-repeat;
             transition: .2s;
+          }
+        }
+        &-block {
+          width: 204px;
+          height: 82px;
+          border-top: 1px solid #E3E3E3;
+          border-left: 1px solid #E3E3E3;
+          align-self: flex-end;
+          &--item {
+            width: 100%;
+            height: 12px;
+            border-bottom: 1px solid #E3E3E3;
+          }
+          &--bottom {
+            display: flex;
+            &_left {
+              width: 97px;
+              height: 57px;
+              border-right: 1px solid #E3E3E3;
+            }
+            &_right {
+              display: flex;
+              width: 107px;
+              flex-direction: column;
+              &-item {
+                width: 100%;
+                height: 12px;
+                border-bottom: 1px solid #E3E3E3;
+              }
+              &-big {
+                width: 100%;
+                display: flex;
+                &--left {
+                  width: 51px;
+                  height: 33px;
+                  border-right:  1px solid #E3E3E3;
+
+                }
+
+              }
+            }
           }
 
         }
