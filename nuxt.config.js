@@ -1,7 +1,6 @@
 export default {
   // Target: https://go.nuxtjs.dev/config-target
   target: 'static',
-  mode: 'universal',
 
   // Global page headers: https://go.nuxtjs.dev/config-head
   head: {
@@ -16,7 +15,8 @@ export default {
       { name: 'format-detection', content: 'telephone=no' }
     ],
     link: [
-      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' }
+      { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
+      {rel: 'stylesheet', href:"https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap"}
     ]
   },
 

@@ -8,7 +8,7 @@
           v-for="link in links"
           :key="link.url"
           active-class="active"
-          :to="'#'"
+          :to="link.url"
           :exact="link.exact"
           class='header__top_links-link'
           :class="{ 'header__top_links-link--active': $route.path === `${link.url}`}"
@@ -81,8 +81,9 @@
           line-height: 16px;
           color: #9D9D9D;
           margin-right: 24px;
+          cursor: pointer;
           &--active {
-            font-weight: 800px;
+            color: #000000;
           }
         }
       }
@@ -152,6 +153,7 @@
           font-size: 14px;
           line-height: 16px;
           color: #000000;
+          cursor: pointer;
         }
 
       }
