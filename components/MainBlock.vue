@@ -127,6 +127,7 @@ import Corner from './Corner.vue';
       }
       &_add {
         display: flex;
+        column-gap: 41px;
         margin-top: 100px;
         &-how {
           border: 1px solid #E3E3E3;
@@ -145,7 +146,7 @@ import Corner from './Corner.vue';
             display: flex;
             max-width: 300px;
             height: 48px;
-            margin-left: 26.42px;
+            padding-left: 26.42px;
             border-bottom: 1px solid #E3E3E3;
             font-family: 'Roboto';
             font-style: normal;
@@ -167,7 +168,6 @@ import Corner from './Corner.vue';
         &-choise {
           display: flex;
           flex-direction: column;
-          margin-left: 41px;
           &--btn {
             width: 279px;
             height: 66px;
