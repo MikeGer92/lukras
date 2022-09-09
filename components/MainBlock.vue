@@ -12,9 +12,9 @@
       <div class="main-block__info_add">
         <div class="main-block__info_add-how">
           <div class="main-block__info_add-int">
-            <div class="main-block__info_add-int--item"><img src="../assets/images/marker.png">Сохраним ландшафт участка</div>
-            <div class="main-block__info_add-int--item"><img src="../assets/images/marker.png">Под ключ за 1 день</div>
-            <div class="main-block__info_add-int--item"><img src="../assets/images/marker.png">Сохраним официальную гарантию</div>
+            <div class="main-block__info_add-int--item"><img src="@/assets/images/marker.png">Сохраним ландшафт участка</div>
+            <div class="main-block__info_add-int--item"><img src="@/assets/images/marker.png">Под ключ за 1 день</div>
+            <div class="main-block__info_add-int--item"><img src="@/assets/images/marker.png">Сохраним официальную гарантию</div>
           </div>
         </div>
         <div class="main-block__info_add-choise">
@@ -27,7 +27,7 @@
       <div class="main-block__benefit_add-top">
         <div class="main-block__benefit_add-top--text">Особые условия для
           строителей и прорабов</div>
-          <a class="main-block__benefit_add-top--link" href="#">Получить<img src="../assets/images/marker-link.png"></a>
+          <a class="main-block__benefit_add-top--link" href="#">Получить<img src="@/assets/images/marker-link.png"></a>
       </div>
       <div class="main-block__benefit_main">
         <div class="main-block__benefit_int">
@@ -54,7 +54,7 @@
       <div class="main-block__benefit_add-bot">
         <div class="main-block__benefit_add-bot--text">Подарок каждому на выбор
           при покупке до 31 августа</div>
-          <a class="main-block__benefit_add-bot--link" href="#">Подробнее<img src="../assets/images/marker-link.png"></a>
+          <a class="main-block__benefit_add-bot--link" href="#">Подробнее<img src="@/assets/images/marker-link.png"></a>
       </div>
     </div>
   </section>
@@ -285,9 +285,7 @@ import Corner from './Corner.vue';
           height: 335px;
           background: url('../assets/images/barrel.png') 35px 0px/contain no-repeat;
           &:hover {
-            opacity: 1;
-            background: url('../assets/images/barrel-active.png') -35px 0px/contain no-repeat;
-            transition: .2s;
+            background: url('../assets/images/barrel-active.png') -40px 0px/contain no-repeat;
           }
         }
         &-block {
