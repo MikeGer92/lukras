@@ -24,7 +24,7 @@
 </template>
 <script>
   export default {
-
+    name: 'CalcBlock'
   }
 </script>
 
@@ -71,10 +71,11 @@
           width: 100%;
           display: flex;
           border-bottom: 1px solid #E3E3E3;
+          background: #FCFCFC;
           padding-left: 40px;
           column-gap: 22px;
           &--sqr {
-            padding: 22px 23px;
+            padding: 22px 24px;
             border-left: 1px solid #E3E3E3;
             border-right: 1px solid #E3E3E3;
             font-family: 'Roboto';
@@ -110,8 +111,7 @@
             }
           }
           &--btn {
-            width: 225px;
-            // height: 66px;
+            width: 226px;
             display: flex;
             flex-direction: row;
             align-items: flex-start;
@@ -119,7 +119,12 @@
             gap: 10px;
             border: 2px solid #FF0000;
             border-radius: 4px;
-            color: #FF0000;;
+            font-family: 'Roboto';
+            font-style: normal;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+            color: #FF0000;
           }
         }
       }
