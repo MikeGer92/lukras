@@ -74,6 +74,7 @@ import Corner from './Corner.vue';
     max-width: 1320px;
     display: flex;
     margin: 128px auto 0 auto;
+    column-gap: 44px;
     &__info {
       display: flex;
       flex-direction: column;
@@ -126,6 +127,7 @@ import Corner from './Corner.vue';
       }
       &_add {
         display: flex;
+        column-gap: 41px;
         margin-top: 100px;
         &-how {
           border: 1px solid #E3E3E3;
@@ -144,7 +146,7 @@ import Corner from './Corner.vue';
             display: flex;
             max-width: 300px;
             height: 48px;
-            margin-left: 26.42px;
+            padding-left: 26.42px;
             border-bottom: 1px solid #E3E3E3;
             font-family: 'Roboto';
             font-style: normal;
@@ -166,7 +168,6 @@ import Corner from './Corner.vue';
         &-choise {
           display: flex;
           flex-direction: column;
-          margin-left: 41px;
           &--btn {
             width: 279px;
             height: 66px;
@@ -191,12 +192,11 @@ import Corner from './Corner.vue';
     }
     &__benefit {
       display: block;
+      position: relative;
       width: 538px;
       height: 652px;
-      margin-left: 44px;
       background: #FCFCFC;
       &_main {
-        position: relative;
         width: 424px;
         height: 547px;
         border: 1px solid #E3E3E3;
@@ -206,15 +206,15 @@ import Corner from './Corner.vue';
         &-top, &-bot {
           width: 240px;
           height: 124px;
-          position: fixed;
+          position: absolute;
           border: 1px solid #E3E3E3;
           align-self: flex-end;
           background: #FCFCFC;
           z-index: 2;
         }
         &-top {
-          top: 192px;
-          right: 298px;
+          top: -56px;
+          right: 0px;
           padding: 24px;
           &--text {
             font-family: 'Roboto';
@@ -242,8 +242,8 @@ import Corner from './Corner.vue';
           }
         }
         &-bot {
-          top: 735px;
-          right: 625px;
+          bottom: 47px;
+          left: -88px;
           padding: 24px;
           &--text {
             font-family: 'Roboto';

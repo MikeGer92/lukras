@@ -72,7 +72,9 @@
       justify-content: space-between;
       &_links, &_contacts {
         display: flex;
+        column-gap: 24px;
         &-link, &-contact {
+          flex: auto;
           text-decoration: none;
           font-family: 'Roboto';
           font-style: normal;
@@ -80,7 +82,6 @@
           font-size: 14px;
           line-height: 16px;
           color: #9D9D9D;
-          margin-right: 24px;
           cursor: pointer;
           &--active {
             color: #000000;
