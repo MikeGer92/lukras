@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="main-block">
+    <section class="main-block" id="main">
       <div class="main-block__info">
         <div class="main-block__info_descr">— За счет официального диллерского договора</div>
         <h1 class="main-block__info_title">

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="advant">
+    <section class="advant" id="advant">
       <h3 class="advant__title">Преимущества<br>септиков
         <span class="advant__title_span">ТВЕРЬ
           <div class="advant__title_license">&#174;</div>
@@ -46,6 +46,26 @@ export default {
           id: 4,
           title: 'Энергонезависим',
           descr: 'При отключении электричества продолжает работать в течении нескольких суток'
+        },
+        {
+          id: 5,
+          title: 'Неубиваемость',
+          descr: 'В прямом смысле слова, нет деталей, которые могут сломаться. Срок службы до 50 лет.'
+        },
+        {
+          id: 6,
+          title: 'Невозможно засорить',
+          descr: 'Нет тонких трубок и шлагнов.'
+        },
+        {
+          id: 7,
+          title: 'Не пахнет. Вообще.',
+          descr: 'Можно монтировать блико к дому.'
+        },
+        {
+          id: 8,
+          title: 'Энергонезависим',
+          descr: 'При отключении электричества продолжает работать в течении нескольких суток'
         }
       ]
     }
@@ -54,7 +74,7 @@ export default {
 </script>
 
 <style lang="scss">
-  ::-webkit-scrollbar { 
+  ::-webkit-scrollbar {
     width: 0px;
     background: transparent;
   }

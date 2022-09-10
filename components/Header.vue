@@ -5,17 +5,17 @@
         <div
           class="header__top_links"
         >
-          <nuxt-link
+          <li
             v-for="link in links"
             :key="link.url"
             active-class="active"
-            :to="link.url"
+            @click="goTo(link.url)"
             :exact="link.exact"
             class='header__top_links-link'
             :class="{ 'header__top_links-link--active': $route.path === `${link.url}`}"
             >
             {{ link.title }}
-          </nuxt-link>
+          </li>
         </div>
         <div class="header__top_contacts">
           <div class="header__top_contacts-contact">Ул. Механизаторов 10</div>
@@ -46,13 +46,18 @@
     data() {
       return {
         links: [
-          {title: 'Рассчет стоимости', url: '/', exact: true},
-          {title: 'Каталог', url: '/catalog'},
-          {title: 'Преимущества', url: '/tradein'},
-          {title: 'Осторожно', url: '/warning'},
-          {title: 'Этапы работы', url: '/steps'},
-          {title: 'Контакты', url: '/contacts'},
+          {title: 'Рассчет стоимости', url: 'main', exact: true},
+          {title: 'Каталог', url: 'catalog'},
+          {title: 'Преимущества', url: 'advant'},
+          {title: 'Осторожно', url: 'warning'},
+          {title: 'Этапы работы', url: 'steps'},
+          {title: 'Контакты', url: 'contacts'},
         ],
+      }
+    },
+    methods: {
+      goTo(id) {
+        this.$emit('scrollTo', id)
       }
     }
   }

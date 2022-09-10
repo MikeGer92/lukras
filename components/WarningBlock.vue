@@ -1,5 +1,5 @@
 <template>
-  <section class="warning">
+  <section class="warning" id="warning">
     <h2 class="warning__title">ОСТЕРЕГАЙТЕСЬ КОМПАНИЙ ОДНОДНЕВОК</h2>
     <div class="warning__info">
       <div class="warning__info_wrap">

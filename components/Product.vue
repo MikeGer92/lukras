@@ -19,7 +19,7 @@
           <div class="product__main_info-item--data">{{ product.people }}</div>
           <div class="product__main_info-item--descr">Количество жильцов</div>
         </div>
-        <div class="product__main_info-btn">Подробнее</div>
+        <button type="button" class="product__main_info-btn">Подробнее</button>
       </div>
       <div class="product__main_image"></div>
     </div>
@@ -158,6 +158,7 @@
           color: #FF0000;
           position: absolute;
           bottom: 0;
+          cursor: pointer;
         }
       }
       &_image {
