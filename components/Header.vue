@@ -111,20 +111,17 @@
       &_social {
         display: flex;
         align-items: center;
+        gap: 24px;
         &-item {
           font-weight: 500;
           font-size: 14px;
           line-height: 16px;
           color: #000000;
-          margin-right: 24px;
-          &:last-child {
-            margin-right: 0;
-          }
         }
         &-divider {
           width: 1px;
           height: 16px;
-          margin: auto 32px;
+          margin: auto 8px;
           background: #EAEAEA;
         }
         &-phone {
