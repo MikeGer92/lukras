@@ -1,63 +1,65 @@
 <template>
-  <section class="main-block">
-    <div class="main-block__info">
-      <div class="main-block__info_descr">— За счет официального диллерского договора</div>
-      <h1 class="main-block__info_title">
-        <div class="main-block__info_title-black">СЕПТИК</div>
-        <div class="main-block__info_title-span">ТВЕРЬ</div>
-        <div class="main-block__info_title-license">&#174;</div>
-        <div class="main-block__info_title-black">ПОД КЛЮЧ</div>
-        <div class="main-block__info_title-black">C ВЫГОДОЙ ДО 15%</div>
-      </h1>
-      <div class="main-block__info_add">
-        <div class="main-block__info_add-how">
-          <div class="main-block__info_add-int">
-            <div class="main-block__info_add-int--item"><img src="@/assets/images/marker.png">Сохраним ландшафт участка</div>
-            <div class="main-block__info_add-int--item"><img src="@/assets/images/marker.png">Под ключ за 1 день</div>
-            <div class="main-block__info_add-int--item"><img src="@/assets/images/marker.png">Сохраним официальную гарантию</div>
+  <div class="container">
+    <section class="main-block">
+      <div class="main-block__info">
+        <div class="main-block__info_descr">— За счет официального диллерского договора</div>
+        <h1 class="main-block__info_title">
+          <div class="main-block__info_title-black">СЕПТИК</div>
+          <div class="main-block__info_title-span">ТВЕРЬ</div>
+          <div class="main-block__info_title-license">&#174;</div>
+          <div class="main-block__info_title-black">ПОД КЛЮЧ</div>
+          <div class="main-block__info_title-black">C ВЫГОДОЙ ДО 15%</div>
+        </h1>
+        <div class="main-block__info_add">
+          <div class="main-block__info_add-how">
+            <div class="main-block__info_add-int">
+              <div class="main-block__info_add-int--item"><img src="@/assets/images/marker.png">Сохраним ландшафт участка</div>
+              <div class="main-block__info_add-int--item"><img src="@/assets/images/marker.png">Под ключ за 1 день</div>
+              <div class="main-block__info_add-int--item"><img src="@/assets/images/marker.png">Сохраним официальную гарантию</div>
+            </div>
+          </div>
+          <div class="main-block__info_add-choise">
+            <Corner></Corner>
+            <div class="main-block__info_add-choise--btn">Подобрать нужную модель</div>
           </div>
         </div>
-        <div class="main-block__info_add-choise">
-          <Corner></Corner>
-          <div class="main-block__info_add-choise--btn">Подобрать нужную модель</div>
+      </div>
+      <div class="main-block__benefit">
+        <div class="main-block__benefit_add-top">
+          <div class="main-block__benefit_add-top--text">Особые условия для
+            строителей и прорабов</div>
+            <a class="main-block__benefit_add-top--link" href="#">Получить<img src="@/assets/images/marker-link.png"></a>
         </div>
-      </div>
-    </div>
-    <div class="main-block__benefit">
-      <div class="main-block__benefit_add-top">
-        <div class="main-block__benefit_add-top--text">Особые условия для
-          строителей и прорабов</div>
-          <a class="main-block__benefit_add-top--link" href="#">Получить<img src="@/assets/images/marker-link.png"></a>
-      </div>
-      <div class="main-block__benefit_main">
-        <div class="main-block__benefit_int">
-          <div class="main-block__benefit_int-barrel"></div>
-          <div class="main-block__benefit_int-block">
-            <div class="main-block__benefit_int-block--item"></div>
-            <div class="main-block__benefit_int-block--item"></div>
-            <div class="main-block__benefit_int-block--bottom">
-              <div class="main-block__benefit_int-block--bottom_left"></div>
-              <div class="main-block__benefit_int-block--bottom_right">
-                <div class="main-block__benefit_int-block--bottom_right-item"></div>
-                <div class="main-block__benefit_int-block--bottom_right-item"></div>
-                <div class="main-block__benefit_int-block--bottom_right-big">
+        <div class="main-block__benefit_main">
+          <div class="main-block__benefit_int">
+            <div class="main-block__benefit_int-barrel"></div>
+            <div class="main-block__benefit_int-block">
+              <div class="main-block__benefit_int-block--item"></div>
+              <div class="main-block__benefit_int-block--item"></div>
+              <div class="main-block__benefit_int-block--bottom">
+                <div class="main-block__benefit_int-block--bottom_left"></div>
+                <div class="main-block__benefit_int-block--bottom_right">
+                  <div class="main-block__benefit_int-block--bottom_right-item"></div>
+                  <div class="main-block__benefit_int-block--bottom_right-item"></div>
                   <div class="main-block__benefit_int-block--bottom_right-big">
-                    <div class="main-block__benefit_int-block--bottom_right-big--left"></div>
-                    <div class="main-block__benefit_int-block--bottom_right-big--right"></div>
+                    <div class="main-block__benefit_int-block--bottom_right-big">
+                      <div class="main-block__benefit_int-block--bottom_right-big--left"></div>
+                      <div class="main-block__benefit_int-block--bottom_right-big--right"></div>
+                    </div>
                   </div>
                 </div>
               </div>
             </div>
           </div>
         </div>
+        <div class="main-block__benefit_add-bot">
+          <div class="main-block__benefit_add-bot--text">Подарок каждому на выбор
+            при покупке до 31 августа</div>
+            <a class="main-block__benefit_add-bot--link" href="#">Подробнее<img src="@/assets/images/marker-link.png"></a>
+        </div>
       </div>
-      <div class="main-block__benefit_add-bot">
-        <div class="main-block__benefit_add-bot--text">Подарок каждому на выбор
-          при покупке до 31 августа</div>
-          <a class="main-block__benefit_add-bot--link" href="#">Подробнее<img src="@/assets/images/marker-link.png"></a>
-      </div>
-    </div>
-  </section>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -80,12 +82,11 @@ import Corner from './Corner.vue';
       flex-direction: column;
       margin-top: 40px;
       &_descr {
-        font-family: 'Roboto';
-        font-style: normal;
         font-weight: 400;
         font-size: 14px;
         line-height: 16px;
         color: #636363;
+        margin-bottom: 24px;
       }
       &_title {
         display: flex;
@@ -95,7 +96,6 @@ import Corner from './Corner.vue';
         &-black {
           display: flex;
           font-family: 'Roboto Condensed';
-          font-style: normal;
           font-weight: 700;
           font-size: 72px;
           line-height: 80px;
@@ -106,7 +106,6 @@ import Corner from './Corner.vue';
         &-span {
           display: flex;
           font-family: 'Roboto Condensed';
-          font-style: normal;
           font-weight: 700;
           font-size: 72px;
           line-height: 80px;
@@ -118,7 +117,6 @@ import Corner from './Corner.vue';
           margin-left: -16px;
           display: flex;
           font-family: 'Roboto Condensed';
-          font-style: normal;
           font-weight: 400;
           font-size: 20px;
           line-height: 20px;
@@ -177,8 +175,6 @@ import Corner from './Corner.vue';
             align-items: flex-start;
             padding: 24px 33px;
             gap: 10px;
-            font-family: 'Roboto';
-            font-style: normal;
             font-weight: 500;
             font-size: 16px;
             line-height: 18px;
@@ -217,8 +213,6 @@ import Corner from './Corner.vue';
           right: 0px;
           padding: 24px;
           &--text {
-            font-family: 'Roboto';
-            font-style: normal;
             font-weight: 500;
             font-size: 14px;
             line-height: 18px;
@@ -227,8 +221,6 @@ import Corner from './Corner.vue';
           }
           &--link {
             text-decoration: none;
-            font-family: 'Roboto';
-            font-style: normal;
             font-weight: 500;
             font-size: 14px;
             line-height: 16px;
@@ -246,8 +238,6 @@ import Corner from './Corner.vue';
           left: -88px;
           padding: 24px;
           &--text {
-            font-family: 'Roboto';
-            font-style: normal;
             font-weight: 500;
             font-size: 14px;
             line-height: 18px;
@@ -256,8 +246,6 @@ import Corner from './Corner.vue';
           }
           &--link {
             text-decoration: none;
-            font-family: 'Roboto';
-            font-style: normal;
             font-weight: 500;
             font-size: 14px;
             line-height: 16px;
@@ -328,11 +316,8 @@ import Corner from './Corner.vue';
               }
             }
           }
-
         }
       }
-
-
     }
   }
 

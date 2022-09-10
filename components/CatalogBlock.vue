@@ -1,14 +1,16 @@
 <template>
-  <section class="catalog-block">
-    <h2 class="catalog-block__title">Каталог систем очистки для загородных домов</h2>
-    <div class="catalog-block__products"
-      >
-        <Product
-          :product="item"
-          v-for="item in prodList"
-          :key="item.name"
+  <section class="catalog">
+    <div class="container">
+      <h2 class="catalog__title">Каталог систем очистки для загородных домов</h2>
+      <div class="catalog__products"
         >
-      </Product>
+          <Product
+            :product="item"
+            v-for="item in prodList"
+            :key="item.name"
+          >
+        </Product>
+      </div>
     </div>
   </section>
 </template>
@@ -52,15 +54,15 @@ import Product from './Product.vue';
 </script>
 
 <style lang="scss">
-  .catalog-block {
+  .catalog {
     margin-top: 201px;
     display: flex;
     flex-direction: column;
     padding: 80px 0;
-    gap: 64px;
     background: #FCFCFC;
     &__title {
       max-width: 536px;
+      margin-bottom: 64px;
       font-family: 'Roboto Condensed';
       font-style: normal;
       font-weight: 700;

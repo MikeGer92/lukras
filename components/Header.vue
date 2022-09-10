@@ -1,40 +1,42 @@
 <template>
-  <div class="header">
-    <div class="header__top">
-      <div
-        class="header__top_links"
-      >
-        <nuxt-link
-          v-for="link in links"
-          :key="link.url"
-          active-class="active"
-          :to="link.url"
-          :exact="link.exact"
-          class='header__top_links-link'
-          :class="{ 'header__top_links-link--active': $route.path === `${link.url}`}"
-          >
-          {{ link.title }}
-        </nuxt-link>
-      </div>
-      <div class="header__top_contacts">
-        <div class="header__top_contacts-contact">Ул. Механизаторов 10</div>
-        <div class="header__top_contacts-contact">info@lukras.ru</div>
-        <div class="header__top_contacts-contact">Звоните ПН - ВС: 9:00 - 18:00</div>
-      </div>
+  <div class="container">
+    <header class="header">
+      <div class="header__top">
+        <div
+          class="header__top_links"
+        >
+          <nuxt-link
+            v-for="link in links"
+            :key="link.url"
+            active-class="active"
+            :to="link.url"
+            :exact="link.exact"
+            class='header__top_links-link'
+            :class="{ 'header__top_links-link--active': $route.path === `${link.url}`}"
+            >
+            {{ link.title }}
+          </nuxt-link>
+        </div>
+        <div class="header__top_contacts">
+          <div class="header__top_contacts-contact">Ул. Механизаторов 10</div>
+          <div class="header__top_contacts-contact">info@lukras.ru</div>
+          <div class="header__top_contacts-contact">Звоните ПН - ВС: 9:00 - 18:00</div>
+        </div>
 
-    </div>
-    <div class="header__divider"></div>
-    <div class="header__bottom">
-      <div class="header__bottom_brand"></div>
-      <div class="header__bottom_social">
-        <div class="header__bottom_social-item">Telegram</div>
-        <div class="header__bottom_social-item">WhatsApp</div>
-        <div class="header__bottom_social-item">Viber</div>
-        <div class="header__bottom_social-divider"></div>
-        <div class="header__bottom_social-phone">8 (800) 600-90-91</div>
-        <div class="header__bottom_social-request">Оставить заявку</div>
       </div>
-    </div>
+      <div class="header__divider"></div>
+      <div class="header__bottom">
+        <div class="header__bottom_brand"></div>
+        <div class="header__bottom_social">
+          <div class="header__bottom_social-item">Telegram</div>
+          <div class="header__bottom_social-item">WhatsApp</div>
+          <div class="header__bottom_social-item">Viber</div>
+          <div class="header__bottom_social-divider"></div>
+          <div class="header__bottom_social-phone">8 (800) 600-90-91</div>
+          <div class="header__bottom_social-request">Оставить заявку</div>
+        </div>
+      </div>
+    </header>
   </div>
 </template>
 
@@ -76,8 +78,6 @@
         &-link, &-contact {
           flex: auto;
           text-decoration: none;
-          font-family: 'Roboto';
-          font-style: normal;
           font-weight: 400;
           font-size: 14px;
           line-height: 16px;
@@ -112,8 +112,6 @@
         display: flex;
         align-items: center;
         &-item {
-          font-family: 'Roboto';
-          font-style: normal;
           font-weight: 500;
           font-size: 14px;
           line-height: 16px;
@@ -130,8 +128,6 @@
           background: #EAEAEA;
         }
         &-phone {
-          font-family: 'Roboto';
-          font-style: normal;
           font-weight: 500;
           font-size: 14px;
           line-height: 16px;
@@ -148,8 +144,6 @@
           height: 40px;
           border: 1px solid #EAEAEA;
           border-radius: 4px;
-          font-family: 'Roboto';
-          font-style: normal;
           font-weight: 500;
           font-size: 14px;
           line-height: 16px;
