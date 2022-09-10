@@ -55,7 +55,7 @@ export default {
   .advant {
     margin-top: 120px;
     display: flex;
-    width: 1480px;
+    width: 1460px;
     flex-direction: column;
     overflow-x: scroll;
     &__title {
