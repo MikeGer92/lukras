@@ -1,26 +1,28 @@
 <template>
-  <section class="calc-block">
-    <div class="calc-block__main">
-      <div class="calc-block__main_top">
-        <h2 class="calc-block__main_top-title">Рассчитайте стоимость установки Септика для вашего участка</h2>
-        <div class="calc-block__main_top-subtitle">Ответьте на 4 вопросов и получите расчёт стоимости и сроков установки септика на ваш участок</div>
-      </div>
-      <div class="calc-block__main_bottom">
-        <div class="calc-block__main_bottom-top">
-          <div class="calc-block__main_bottom-top--sqr">1</div>
-          <div class="calc-block__main_bottom-top--text">На сколько человек нужна канализация?</div>
+  <div class="container">
+    <section class="calc">
+      <div class="calc__main">
+        <div class="calc__main_top">
+          <h2 class="calc__main_top-title">Рассчитайте стоимость установки Септика для вашего участка</h2>
+          <div class="calc__main_top-subtitle">Ответьте на 4 вопросов и получите расчёт стоимости и сроков установки септика на ваш участок</div>
         </div>
-        </div>
-        <div class="calc-block__main_bottom-main">
-          <div class="calc-block__main_bottom-main--choise">
-            <div class="calc-block__main_bottom-main--choise_item">1 - 10</div>
-            <div class="calc-block__main_bottom-main--choise_item">10 - 50</div>
-            <div class="calc-block__main_bottom-main--choise_item">50 - 200</div>
+        <div class="calc__main_bottom">
+          <div class="calc__main_bottom-top">
+            <div class="calc__main_bottom-top--sqr">1</div>
+            <div class="calc__main_bottom-top--text">На сколько человек нужна канализация?</div>
           </div>
-          <div class="calc-block__main_bottom-main--btn">Следующий вопрос</div>
+          </div>
+          <div class="calc__main_bottom-main">
+            <div class="calc__main_bottom-main--choise">
+              <div class="calc__main_bottom-main--choise_item">1 - 10</div>
+              <div class="calc__main_bottom-main--choise_item">10 - 50</div>
+              <div class="calc__main_bottom-main--choise_item">50 - 200</div>
+            </div>
+            <div class="calc__main_bottom-main--btn">Следующий вопрос</div>
+          </div>
         </div>
-      </div>
-  </section>
+    </section>
+  </div>
 </template>
 <script>
   export default {
@@ -29,7 +31,7 @@
 </script>
 
 <style lang="scss">
-  .calc-block {
+  .calc {
     margin-top: 160px;
     width: 100%;
     border: 1px solid #E3E3E3;
@@ -46,7 +48,6 @@
         &-title {
           max-width: 695px;
           font-family: 'Roboto Condensed';
-          font-style: normal;
           font-weight: 700;
           font-size: 40px;
           line-height: 48px;
@@ -55,8 +56,6 @@
         }
         &-subtitle {
           max-width: 409px;
-          font-family: 'Roboto';
-          font-style: normal;
           font-weight: 400;
           font-size: 16px;
           line-height: 24px;
@@ -78,8 +77,6 @@
             padding: 22px 24px;
             border-left: 1px solid #E3E3E3;
             border-right: 1px solid #E3E3E3;
-            font-family: 'Roboto';
-            font-style: normal;
             font-weight: 400;
             font-size: 16px;
             line-height: 18px;
@@ -119,8 +116,6 @@
             gap: 10px;
             border: 2px solid #FF0000;
             border-radius: 4px;
-            font-family: 'Roboto';
-            font-style: normal;
             font-weight: 500;
             font-size: 16px;
             line-height: 18px;

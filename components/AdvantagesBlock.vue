@@ -1,11 +1,13 @@
 <template>
-  <section class="advant-block">
-    <h3 class="advant-block__title">
-      <div class="advant-block__title_main">Преимущества септиков <div>ТВЕРЬ</div></div>
-      <!-- <div class="advant-block__title_span"></div>
-      <div class="advant-block__title_license">&#174;</div> -->
-    </h3>
-  </section>
+  <div class="container">
+    <section class="advant">
+      <h3 class="advant__title">
+        <div class="advant__title_main">Преимущества септиков</div>
+        <div class="advant__title_span">ТВЕРЬ</div>
+        <div class="advant__title_license">&#174;</div>
+      </h3>
+    </section>
+  </div>
 </template>
 
 <script>
@@ -15,7 +17,7 @@
 </script>
 
 <style lang="scss">
-  .advant-block {
+  .advant {
     margin-top: 120px;
     display: flex;
     flex-direction: column;
@@ -24,25 +26,22 @@
       max-width: 540px;
       text-align: left;
       flex-wrap: wrap;
+      font-family: 'Roboto Condensed';
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 80px;
+      text-transform: uppercase;
+      color: #000000;
       &_main {
         display: flex;
-        font-family: 'Roboto Condensed';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 72px;
-        line-height: 80px;
-        text-transform: uppercase;
-        color: #000000;
         order: 0;
       }
       &_span {
         display: flex;
-        font-family: 'Roboto Condensed';
-        font-style: normal;
-        font-weight: 700;
-        font-size: 72px;
-        line-height: 80px;
-        text-transform: uppercase;
+        // font-weight: 700;
+        // font-size: 72px;
+        // line-height: 80px;
+        // text-transform: uppercase;
         color: transparent;
         -webkit-text-stroke: 1px #000000;
         order: 1;
