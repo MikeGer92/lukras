@@ -94,7 +94,6 @@ import Corner from './Corner.vue';
         width: 828px;
         flex-wrap: wrap;
         &-black {
-          display: flex;
           font-family: 'Roboto Condensed';
           font-weight: 700;
           font-size: 72px;
@@ -104,7 +103,6 @@ import Corner from './Corner.vue';
           margin-right: 16px;
         }
         &-span {
-          display: flex;
           font-family: 'Roboto Condensed';
           font-weight: 700;
           font-size: 72px;
@@ -115,7 +113,6 @@ import Corner from './Corner.vue';
         &-license {
           width: 32px;
           margin-left: -16px;
-          display: flex;
           font-family: 'Roboto Condensed';
           font-weight: 400;
           font-size: 20px;
