@@ -3,15 +3,15 @@
     <h2 class="warning__title">ОСТЕРЕГАЙТЕСЬ КОМПАНИЙ ОДНОДНЕВОК</h2>
     <div class="warning__info">
       <div class="warning__info_wrap">
-        <Corner :style="{'width': '64px', 'transform': 'rotate(90deg)'}"></Corner>
+        <Corner :style="{'width': '64px', 'height': '64px', 'transform': 'rotate(90deg)'}"></Corner>
         <div class="warning__info_item">
           <h3 class="warning__info_item-title">Снимается гарантии от производителя</h3>
           <h5 class="warning__info_item-descr">Если монтаж произведен НЕ официальным представителем, ГАРАНТИЯ СНИМАЕТСЯ</h5>
         </div>
-        <Corner :style="{'width': '64px', 'margin-top': '-64px', 'transform': 'rotate(-90deg)', 'align-self': 'flex-end'}"></Corner>
+        <Corner :style="{'width': '64px', 'height': '64px', 'margin-top': '-64px', 'transform': 'rotate(-90deg)', 'align-self': 'flex-end'}"></Corner>
       </div>
       <div class="warning__info_wrap">
-        <Corner :style="{'width': '64px', 'transform': 'rotate(90deg)'}"></Corner>
+        <Corner :style="{'width': '64px', 'height': '64px', 'transform': 'rotate(90deg)'}"></Corner>
         <div class="warning__info_item">
           <h3 class="warning__info_item-title">НЕПРАВИЛЬНЫЙ МОНТАЖ</h3>
           <h4 class="warning__info_item-descr">
@@ -20,7 +20,7 @@
             <p class="warning__info_item-descr--text">Поломки в процессе эксплуатации</p>
           </h4>
         </div>
-        <Corner :style="{'width': '64px', 'margin-top': '-64px', 'transform': 'rotate(-90deg)', 'align-self': 'flex-end'}"></Corner>
+        <Corner :style="{'width': '64px', 'height': '64px', 'margin-top': '-64px', 'transform': 'rotate(-90deg)', 'align-self': 'flex-end'}"></Corner>
       </div>
     </div>
 
