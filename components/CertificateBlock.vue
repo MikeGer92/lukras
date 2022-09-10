@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="cert">
+    <section class="cert" id="certif">
       <div class="cert__inter">
         <div class="cert__inter_left">
           <div class="cert__inter_left-title">Сертификат диллерства</div>
@@ -13,10 +13,10 @@
           </div>
           <div class="cert__inter_right-whatsup">
             <div class="cert__inter_right-whatsup-btn">
-              <div class="cert__inter_right-whatsup--btn">
+              <button type="button" class="cert__inter_right-whatsup--btn">
                 <div class="cert__inter_right-whatsup--btn_icon"><img src="@/assets/images/whats-icon.png"></div>
                 <div class="cert__inter_right-whatsup--btn_text">Написать в WhatsApp</div>
-              </div>
+              </button>
             </div>
             <div class="cert__inter_right-whatsup--text">Можем начать с переписки в WhatsApp, это удобно и быстро</div>
           </div>

@@ -17,15 +17,15 @@
         </div>
         <div class="footer__menu">
           <div class="footer__menu_title">Меню</div>
-          <div class="footer__menu_list">
-            <nuxt-link class="footer__menu_list-link" to="#">Главная</nuxt-link>
-            <nuxt-link class="footer__menu_list-link" to="#">Рассчитать стоимость</nuxt-link>
-            <nuxt-link class="footer__menu_list-link" to="#">Каталог</nuxt-link>
-            <nuxt-link class="footer__menu_list-link" to="#">Преимущества</nuxt-link>
-            <nuxt-link class="footer__menu_list-link" to="#">Каталог</nuxt-link>
-            <nuxt-link class="footer__menu_list-link" to="#">Этапы работ</nuxt-link>
-            <nuxt-link class="footer__menu_list-link" to="#">Контакты</nuxt-link>
-          </div>
+          <ul class="footer__menu_list">
+            <li class="footer__menu_list-link" @click="moveTo('main')">Главная</li>
+            <li class="footer__menu_list-link" @click="moveTo('calc')">Рассчитать стоимость</li>
+            <li class="footer__menu_list-link" @click="moveTo('catalog')">Каталог</li>
+            <li class="footer__menu_list-link" @click="moveTo('advant')">Преимущества</li>
+            <li class="footer__menu_list-link" @click="moveTo('certif')">Сертификат</li>
+            <li class="footer__menu_list-link" @click="moveTo('catalog')">Этапы работ</li>
+            <li class="footer__menu_list-link" @click="moveTo('catalog')">Контакты</li>
+          </ul>
         </div>
         <div class="footer__inform">
           <div class="footer__inform_title">Информация</div>
@@ -46,9 +46,15 @@
 </template>
 
 <script>
-  export default {
-
+export default {
+  name: 'Footer',
+  methods: {
+    moveTo(id) {
+      // const refName = 'certif'
+      this.$emit('goTo', id)
+    }
   }
+}
 </script>
 
 <style lang="scss">
@@ -139,6 +145,7 @@
           line-height: 16px;
           color: #4D4D4D;
           word-break: nowrap;
+          cursor: pointer;
         }
       }
     }

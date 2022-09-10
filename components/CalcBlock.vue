@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="calc">
+    <section class="calc" id="calc">
       <div class="calc__main">
         <div class="calc__main_top">
           <h2 class="calc__main_top-title">Рассчитайте стоимость установки Септика для вашего участка</h2>
@@ -18,7 +18,7 @@
               <div class="calc__main_bottom-main--choise_item">10 - 50</div>
               <div class="calc__main_bottom-main--choise_item">50 - 200</div>
             </div>
-            <div class="calc__main_bottom-main--btn">Следующий вопрос</div>
+            <button type="button" class="calc__main_bottom-main--btn">Следующий вопрос</button>
           </div>
         </div>
     </section>
@@ -105,6 +105,7 @@
               width: 200px;
               height: 80px;
               border: 1px solid #E3E3E3;
+              cursor: pointer;
             }
           }
           &--btn {
@@ -120,6 +121,7 @@
             font-size: 16px;
             line-height: 18px;
             color: #FF0000;
+            cursor: pointer;
           }
         }
       }

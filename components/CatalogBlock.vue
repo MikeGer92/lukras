@@ -1,5 +1,5 @@
 <template>
-  <section class="catalog">
+  <section class="catalog" id="catalog">
     <div class="container">
       <h2 class="catalog__title">Каталог систем очистки для загородных домов</h2>
       <div class="catalog__products"
