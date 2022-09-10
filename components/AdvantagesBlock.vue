@@ -7,11 +7,13 @@
         </span>
       </h3>
       <div class="advant__swiper">
-        <AdvantageItem
-          v-for="item in advantList"
-          :key="item.id"
-          :advantage="item"
-        ></AdvantageItem>
+        <div class="advant__swiper_wrapp">
+          <AdvantageItem
+            v-for="item in advantList"
+            :key="item.id"
+            :advantage="item"
+          ></AdvantageItem>
+        </div>
       </div>
     </section>
   </div>
@@ -52,12 +54,14 @@ export default {
 </script>
 
 <style lang="scss">
+  ::-webkit-scrollbar { 
+    width: 0px;
+    background: transparent;
+  }
   .advant {
     margin-top: 120px;
     display: flex;
-    width: 1460px;
     flex-direction: column;
-    overflow-x: scroll;
     &__title {
       text-align: left;
       font-family: 'Roboto Condensed';
@@ -84,10 +88,14 @@ export default {
       }
     }
     &__swiper {
-      // width: fit-content;
       display: flex;
-      gap: 24px;
-      margin-top: 48px;
+      width: 1460px;
+      overflow-x: scroll;
+      &_wrapp {
+        display: flex;
+        gap: 24px;
+        margin-top: 48px;
+      }
     }
   }
 
