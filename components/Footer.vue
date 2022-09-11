@@ -20,7 +20,7 @@
             <li class="footer__menu_list-link" @click="moveTo('advant')">Преимущества</li>
             <li class="footer__menu_list-link" @click="moveTo('certif')">Сертификат</li>
             <li class="footer__menu_list-link" @click="moveTo('steps')">Этапы работ</li>
-            <li class="footer__menu_list-link" @click="moveTo('catalog')">Контакты</li>
+            <li class="footer__menu_list-link" @click="moveTo('contacts')">Контакты</li>
           </ul>
         </div>
         <div class="footer__inform">
@@ -47,8 +47,7 @@ export default {
     name: "Footer",
     methods: {
         moveTo(id) {
-            // const refName = 'certif'
-            this.$emit("goTo", id);
+          this.$emit("goTo", id);
         }
     },
     components: { Social }
@@ -57,6 +56,9 @@ export default {
 
 <style lang="scss">
   .footer {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
     background: #FCFCFC;
     &__wrapper {
       display: flex;

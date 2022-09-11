@@ -49,6 +49,7 @@
 <style lang="scss">
   .steps {
     background: #FCFCFC;
+    padding-bottom: 120px;
     &__wrapper {
       background: #FCFCFC;
       border-left: 1px solid #E3E3E3;

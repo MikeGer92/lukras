@@ -16,7 +16,7 @@ export default {
   methods: {
     moveTo(id) {
       console.log(id)
-      this.$router.replace({ name: this.$route.name, hash: `#${id}`});
+      this.$router.replace({ name: this.$route.name, hash: `#${id}` });
     }
   }
 }
