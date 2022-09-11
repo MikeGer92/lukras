@@ -9,11 +9,12 @@
             <div class="footer__contact_contacts-phone">8 (800) 600-90-91</div>
             <div class="footer__contact_contacts-mail">info@lukras.ru</div>
           </div>
-          <div class="footer__contact_social">
+          <Social :style="{'padding': '0'}"></Social>
+          <!-- <div class="footer__contact_social">
             <div class="footer__contact_social-telegram"><img src="@/assets/images/telegram-icon.png"></div>
             <div class="footer__contact_social-whatsup"><img src="@/assets/images/whats-icon.png"></div>
             <div class="footer__contact_social-viber"><img src="@/assets/images/vaiber-icon.png"></div>
-          </div>
+          </div> -->
         </div>
         <div class="footer__menu">
           <div class="footer__menu_title">Меню</div>
@@ -46,14 +47,16 @@
 </template>
 
 <script>
+import Social from './Social.vue';
 export default {
-  name: 'Footer',
-  methods: {
-    moveTo(id) {
-      // const refName = 'certif'
-      this.$emit('goTo', id)
-    }
-  }
+    name: "Footer",
+    methods: {
+        moveTo(id) {
+            // const refName = 'certif'
+            this.$emit("goTo", id);
+        }
+    },
+    components: { Social }
 }
 </script>
 
@@ -95,16 +98,18 @@ export default {
         display: flex;
         gap: 24px;
         &-telegram {
+          height: 48px;
           display: flex;
-          padding: 14px;
+          padding: 12px 14px;
           background: #2CA2DC;
           & img {
             width: 20px;
-            height: 20px;
+            height: 16px;
           }
         }
         &-whatsup {
           padding: 14px;
+          height: 48px;
           background: #89E167;
           & img {
             width: 20px;
@@ -113,6 +118,7 @@ export default {
         }
         &-viber {
           padding: 14px;
+          height: 48px;
           background: #7360F2;
           & img {
             width: 20px;

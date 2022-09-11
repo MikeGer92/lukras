@@ -20,19 +20,16 @@
           </div>
         </div>
       </div>
-      <div class="contact-form__inter_social">
-        <div class="contact-form__inter_social-telegram"><img src="@/assets/images/telegram-icon.png"></div>
-            <div class="contact-form__inter_social-whatsup"><img src="@/assets/images/whats-icon.png"></div>
-            <div class="contact-form__inter_social-viber"><img src="@/assets/images/vaiber-icon.png"></div>
-      </div>
+      <Social></Social>
     </div>
   </div>
 </template>
 
 <script>
+import Social from './Social.vue';
   export default {
-
-  }
+    components: { Social }
+}
 </script>
 
 <style lang="scss">
@@ -98,36 +95,6 @@
               line-height: 18px;
               color: #000000;
             }
-          }
-        }
-      }
-      &_social {
-        display: flex;
-        gap: 24px;
-        padding: 0 0 40px 40px;
-        &-telegram {
-          display: flex;
-          padding: 14px;
-          background: #2CA2DC;
-          & img {
-            width: 20px;
-            height: 20px;
-          }
-        }
-        &-whatsup {
-          padding: 14px;
-          background: #89E167;
-          & img {
-            width: 20px;
-            height: 20px;
-          }
-        }
-        &-viber {
-          padding: 14px;
-          background: #7360F2;
-          & img {
-            width: 20px;
-            height: 19px;
           }
         }
       }
