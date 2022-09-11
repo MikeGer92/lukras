@@ -1,7 +1,8 @@
 <template>
-  <div>
+  <section class="map">
 
-  </div>
+
+  </section>
 </template>
 
 <script>
@@ -11,5 +12,10 @@
 </script>
 
 <style lang="scss">
+  .map {
+    width: 100%;
+    height: 800px;
+    background: url('@/assets/images/map.png') 0px 0px/cover no-repeat;
+  }
 
 </style>

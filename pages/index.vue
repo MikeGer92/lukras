@@ -7,6 +7,7 @@
     <CertificateBlock></CertificateBlock>
     <WarningBlock></WarningBlock>
     <StepsBlock></StepsBlock>
+    <MapBlock></MapBlock>
 </div>
 </template>
 
@@ -18,9 +19,10 @@ import AdvantagesBlock from '~/components/AdvantagesBlock.vue';
 import CertificateBlock from '~/components/CertificateBlock.vue';
 import WarningBlock from '../components/WarningBlock.vue';
 import StepsBlock from '~/components/StepsBlock.vue';
+import MapBlock from '../components/MapBlock.vue';
 export default {
     name: "IndexPage",
-    components: { MainBlock, CalcBlock, CatalogBlock, AdvantagesBlock, CertificateBlock, WarningBlock, StepsBlock }
+    components: { MainBlock, CalcBlock, CatalogBlock, AdvantagesBlock, CertificateBlock, WarningBlock, StepsBlock, MapBlock }
 }
 </script>
 <style lang="scss">
