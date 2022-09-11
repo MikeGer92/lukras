@@ -6,7 +6,9 @@
     <AdvantagesBlock></AdvantagesBlock>
     <CertificateBlock></CertificateBlock>
     <WarningBlock></WarningBlock>
+    <WorksGalary></WorksGalary>
     <StepsBlock></StepsBlock>
+    <OurGalary></OurGalary>
     <ConsultBlock></ConsultBlock>
     <MapBlock></MapBlock>
 </div>
@@ -22,9 +24,11 @@ import WarningBlock from '../components/WarningBlock.vue';
 import StepsBlock from '~/components/StepsBlock.vue';
 import MapBlock from '../components/MapBlock.vue';
 import ConsultBlock from '~/components/ConsultBlock.vue';
+import OurGalary from '~/components/OurGalary.vue';
+import WorksGalary from '../components/WorksGalary.vue';
 export default {
     name: "IndexPage",
-    components: { MainBlock, CalcBlock, CatalogBlock, AdvantagesBlock, CertificateBlock, WarningBlock, StepsBlock, MapBlock, ConsultBlock }
+    components: { MainBlock, CalcBlock, CatalogBlock, AdvantagesBlock, CertificateBlock, WarningBlock, StepsBlock, MapBlock, ConsultBlock, OurGalary, WorksGalary }
 }
 </script>
 <style lang="scss">
