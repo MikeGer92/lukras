@@ -69,6 +69,7 @@
           &-item {
             padding: 24px 40px;
             border-right: 1px solid #E3E3E3;
+            cursor: pointer;
             &--active {
               border: 1px solid #BF0000;
               color: #BF0000;
