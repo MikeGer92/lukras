@@ -23,7 +23,7 @@
             <li class="footer__menu_list-link" @click="moveTo('catalog')">Каталог</li>
             <li class="footer__menu_list-link" @click="moveTo('advant')">Преимущества</li>
             <li class="footer__menu_list-link" @click="moveTo('certif')">Сертификат</li>
-            <li class="footer__menu_list-link" @click="moveTo('catalog')">Этапы работ</li>
+            <li class="footer__menu_list-link" @click="moveTo('steps')">Этапы работ</li>
             <li class="footer__menu_list-link" @click="moveTo('catalog')">Контакты</li>
           </ul>
         </div>
