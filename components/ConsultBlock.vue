@@ -139,7 +139,7 @@ import Social from './Social.vue';
           display: flex;
           background: #FCFCFC;
           border-top: 1px solid #E3E3E3;
-          padding: 48px 48px;
+          padding: 48px 48px 0 48px;
           gap: 153px;
           &--text {
             max-width: 184px;

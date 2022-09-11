@@ -10,11 +10,6 @@
             <div class="footer__contact_contacts-mail">info@lukras.ru</div>
           </div>
           <Social :style="{'padding': '0'}"></Social>
-          <!-- <div class="footer__contact_social">
-            <div class="footer__contact_social-telegram"><img src="@/assets/images/telegram-icon.png"></div>
-            <div class="footer__contact_social-whatsup"><img src="@/assets/images/whats-icon.png"></div>
-            <div class="footer__contact_social-viber"><img src="@/assets/images/vaiber-icon.png"></div>
-          </div> -->
         </div>
         <div class="footer__menu">
           <div class="footer__menu_title">Меню</div>
@@ -92,38 +87,6 @@ export default {
           line-height: 24px;
           text-transform: uppercase;
           color: #000000;
-        }
-      }
-      &_social {
-        display: flex;
-        gap: 24px;
-        &-telegram {
-          height: 48px;
-          display: flex;
-          padding: 12px 14px;
-          background: #2CA2DC;
-          & img {
-            width: 20px;
-            height: 16px;
-          }
-        }
-        &-whatsup {
-          padding: 14px;
-          height: 48px;
-          background: #89E167;
-          & img {
-            width: 20px;
-            height: 20px;
-          }
-        }
-        &-viber {
-          padding: 14px;
-          height: 48px;
-          background: #7360F2;
-          & img {
-            width: 20px;
-            height: 19px;
-          }
         }
       }
     }
