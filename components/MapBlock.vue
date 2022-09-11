@@ -1,6 +1,8 @@
 <template>
   <section class="map">
-    <ContactForm></ContactForm>
+    <div class="container" :style="{'background': 'transparent'}">
+      <ContactForm></ContactForm>
+    </div>
   </section>
 </template>
 
@@ -16,7 +18,7 @@ import ContactForm from './ContactForm.vue';
     width: 100%;
     height: 800px;
     background: url('@/assets/images/map.png') 0px 0px/cover no-repeat;
-    padding: 136px  0  0 140px;
+    padding: 136px  0;
   }
 
 </style>
