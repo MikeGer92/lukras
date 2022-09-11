@@ -15,7 +15,7 @@
           <div class="calc__main_bottom-main">
             <div class="calc__main_bottom-main--choise">
               <div class="calc__main_bottom-main--choise_item">1 - 10</div>
-              <div class="calc__main_bottom-main--choise_item">10 - 50</div>
+              <div class="calc__main_bottom-main--choise_item calc__main_bottom-main--choise_item-active">10 - 50</div>
               <div class="calc__main_bottom-main--choise_item">50 - 200</div>
             </div>
             <button type="button" class="calc__main_bottom-main--btn">Следующий вопрос</button>
@@ -106,6 +106,10 @@
               height: 80px;
               border: 1px solid #E3E3E3;
               cursor: pointer;
+              &-active {
+                color: #000000;
+                border: 1px solid #000000;
+              }
             }
           }
           &--btn {
