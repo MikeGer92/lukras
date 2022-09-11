@@ -1,7 +1,43 @@
 <template>
-  <div>
-
-  </div>
+  <section class="steps">
+    <div class="container">
+      <div class="steps__wrapper">
+        <div class="steps__title" id="steps">Этапы<br>монтажных<br>работ</div>
+        <div class="steps__main">
+          <ul class="steps__main_list">
+            <li class="steps__main_list-item">
+              <div class="steps__main_list-item--sqr">1</div>
+              <div class="steps__main_list-item--text">ДОСТАВКА СЕПТИКА НА ОБЪЕКТ</div>
+            </li>
+            <li class="steps__main_list-item">
+              <div class="steps__main_list-item--sqr">2</div>
+              <div class="steps__main_list-item--text">ПОДГОТОВКА КОТЛОВАНА И МАГИСТРАЛЕЙ</div>
+            </li>
+            <li class="steps__main_list-item">
+              <div class="steps__main_list-item--sqr">3</div>
+              <div class="steps__main_list-item--text">УСТАНОВКА СЕПТИКА В КОТЛОВАН</div>
+              <div class="steps__main_list-item--divider"></div>
+            </li>
+            <li class="steps__main_list-item">
+              <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">4</div>
+              <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ПРОКЛАДКА ТРУБ И ЭЛЕКТОКАБЕЛЯ</div>
+            </li>
+            <li class="steps__main_list-item">
+              <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">5</div>
+              <div class="steps__main_list-item--text steps__main_list-item--text_deactive">НАСТРОЙКИ И ПРОВЕРКА РАБОТОСПОСОБНОСТИ</div>
+            </li>
+            <li class="steps__main_list-item">
+              <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">6</div>
+              <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ОБУЧЕНИЕ</div>
+            </li>
+          </ul>
+          <div class="steps__main_image">
+            <div class="steps__main_image-inter"><img src="@/assets/images/steps-img.png"></div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -11,5 +47,78 @@
 </script>
 
 <style lang="scss">
+  .steps {
+    background: #FCFCFC;
+    &__wrapper {
+      background: #FCFCFC;
+      border-left: 1px solid #E3E3E3;
+      display: flex;
+      flex-direction: column;
+    }
+    &__title {
+      padding: 160px 0 64px 112px;
+      font-family: 'Roboto Condensed';
+      font-weight: 700;
+      font-size: 72px;
+      line-height: 80px;
+      text-transform: uppercase;
+      color: #000000;
+    }
+    &__main {
+      display: flex;
+      justify-content: space-between;
+      &_list {
+        list-style: none;
+        display: flex;
+        flex-direction: column;
+        gap: 64px;
+        &-item {
+          display: flex;
+          align-items: center;
+          gap: 48px;
+          &--sqr {
+            padding: 22px 27px;
+            border: 1px solid #E3E3E3;
+            border-left: none;
+            font-weight: 400;
+            font-size: 16px;
+            line-height: 18px;
+            text-align: center;
+            color: #000000;
+            &_deactive {
+              color: #949494;
+            }
+          }
+          &--text {
+            font-weight: 700;
+            font-size: 16px;
+            line-height: 16px;
+            text-transform: uppercase;
+            color: #000000;
+            &_deactive {
+              color: #949494;
+            }
+          }
+          &--divider {
+            width: 370px;
+            height: 1px;
+            margin-left: -24px;
+            background: #E3E3E3;
+          }
+        }
+      }
+      &_image {
+        padding: 8px;
+        background: #FCFCFC;
+        border: 1px solid #E3E3E3;
+        &-inter {
+          height: 688px;
+          border: 1px solid #E3E3E3;
+          object-fit: cover;
+          object-fit: cover;
+        }
+      }
+    }
+  }
 
 </style>
