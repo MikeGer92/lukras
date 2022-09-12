@@ -1,92 +1,121 @@
 <template>
-  <div class="swiper">
-    <div class="swiper-wrapper">
-      <div v-for="i in 6" :key="i" class="swiper-slide" :class="`slide--${i}`">
-        <div class="slider-content">Slide {{ i }}</div>
+  <div>
+    <div class="swiper"
+    >
+      <div class="swiper-wrapper">
+        <div v-for="item in slideList" :key="item.id" class="swiper-slide" :class="`slide--${item.id}`">
+        </div>
       </div>
+      <div class="galary__manage">
+        <div class="galary__manage_wrapper">
+          <div class="galary__manage_photo">
+            <div class="galary__manage_photo-title">Фото</div>
+            <div class="galary__manage_photo-num">
+            </div>
+          </div>
+          <div class="galary__manage_btn">
+            <div class="galary__manage_btn-prev"><img src="@/assets/images/prev.png"></div>
+            <div class="galary__manage_btn-next"><img src="@/assets/images/next.png"></div>
+          </div>
+        </div>
     </div>
-    <!-- If pagination is needed -->
-    <div class="swiper-pagination"></div>
-
-    <!-- If navigation buttons are needed -->
-    <div class="swiper-button-prev"></div>
-    <div class="swiper-button-next"></div>
+    </div>
   </div>
 </template>
 
 <script>
-// import Swiper JS
-// add or remove unused modules
 import { Swiper, Navigation, Pagination, Autoplay } from 'swiper'
 import 'swiper/swiper-bundle.min.css'
 export default {
-  mounted() {
-    // configure Swiper to use modules. The modules were tested with SwiperJS v6.8.4 with NuxtJS v2.15.7
-    // previously it was before export default. Moved here for performance issues. Move back in case of problems.
-    // add or remove unused modules
-    Swiper.use([Navigation, Pagination, Autoplay])
+  data() {
+    return {
+      slideList: [
+        {id: '0', name: 'Slide_1'},
+        {id: '1', name: 'Slide_2'},
+        {id: '2', name: 'Slide_3'},
+        {id: '3', name: 'Slide_4'},
+        {id: '4', name: 'Slide_5'},
+        {id: '5', name: 'Slide_6'}
+      ]
 
-    // init Swiper:
-    /* eslint-disable no-unused-vars */
+    }
+  },
+  mounted() {
+    Swiper.use([Navigation, Pagination, Autoplay])
     const swiper = new Swiper('.swiper', {
-      // Optional parameters
-      // @see https://swiperjs.com/swiper-api#parameters
       direction: 'horizontal',
       loop: true,
-      // remove unused modules if needed
+      slidesPerView: 3,
+      centeredSlides: true,
+      slidesOffsetBefore: -168,
       modules: [Navigation, Pagination, Autoplay],
-      // Pagination if needed
       pagination: {
-        el: '.swiper-pagination',
-        type: 'bullets',
+        el: '.galary__manage_photo-num',
+        type: 'fraction',
         clickable: true
       },
-      // Autoplay if needed
       autoplay: {
         delay: 3000
       },
-      // Navigation arrows if needed
       navigation: {
-        nextEl: '.swiper-button-next',
-        prevEl: '.swiper-button-prev'
+        nextEl: '.galary__manage_btn-next',
+        prevEl: '.galary__manage_btn-prev'
       }
-      // Configure other options. Not tested
     })
   }
 }
 </script>
 
-<style scoped>
+<style lang="scss">
 .swiper {
-  height: 300px;
+  display: flex;
+  flex-direction: column;
+  height: 520px;
   overflow: hidden;
   position: relative;
-  width: 500px;
+  width: 1600px;
+}
+.swiper-wrapper {
+  width: 100%;
+  display: flex;
 }
 .swiper-slide {
-  align-items: center;
+  font-size: 18px;
+  background: #fff;
   display: flex;
+  align-items: center;
   justify-content: center;
+  filter: brightness(60%);
+}
+.swiper-slide-active {
+  width: 872px  !important;
+  filter: brightness(100%);
 }
 .slider-content {
   color: #000;
 }
+.slide--0 {
+  width: 872px;
+  background: url('@/assets/images/galary-left.png') 0px 0px/cover no-repeat;
+}
 .slide--1 {
-  background-color: #f1c40f;
+  width: 872px;
+  background: url('@/assets/images/galary-active.png') 0px 0px/cover no-repeat;
 }
 .slide--2 {
-  background-color: #e67e22;
+  width: 872px;
+  background: url('@/assets/images/galary-right.png') 0px 0px/cover no-repeat;
 }
 .slide--3 {
-  background-color: #e74c3c;
+  width: 872px;
+  background: url('@/assets/images/works-left.png') 0px 0px/cover no-repeat;
 }
 .slide--4 {
-  background-color: #9b59b6;
+  width: 872px;
+  background: url('@/assets/images/galary-active.png') 0px 0px/cover no-repeat;
 }
 .slide--5 {
-  background-color: #3498db;
-}
-.slide--6 {
-  background-color: #2ecc71;
+  width: 872px;
+  background: url('@/assets/images/galary-right.png') 0px 0px/cover no-repeat;
 }
 </style>
