@@ -3,7 +3,13 @@
     <div class="swiper"
     >
       <div class="swiper-wrapper">
-        <div v-for="item in imageList" :key="item.id" class="swiper-slide" :style="{'background': `url(${item.url}) 0px 0px/cover no-repeat`}"></div>
+        <div
+          v-for="item in imageList"
+          :key="item.id" class="swiper-slide"
+          :style="{'background': `url(${item.url}) 0px 0px/cover no-repeat`}"
+        >
+        <div v-if="`${item.name}`" class="swiper-data">{{item.name}}</div>
+        </div>
       </div>
       <div class="swiper__manage">
         <div class="swiper__manage_wrapper">
@@ -117,6 +123,11 @@ export default {
       }
     }
   }
+}
+.swiper-data {
+  font-size: 48px;
+  color: #fff;
+  text-align: center;
 }
 .swiper-wrapper {
   width: 100%;
