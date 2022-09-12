@@ -24,7 +24,8 @@
             </div>
             <div class="calc__main_bottom-main--buttons">
               <button type="button" class="calc__main_bottom-main--buttons_btn" v-if="questNum>1" @click="prevQuest">Предыдущий вопрос</button>
-              <button type="button" class="calc__main_bottom-main--buttons_btn" @click="nextQuest">Следующий вопрос</button>
+              <button type="button" class="calc__main_bottom-main--buttons_btn" v-if="questNum<4"  @click="nextQuest">Следующий вопрос</button>
+              <button type="submit" class="calc__main_bottom-main--buttons_btn" v-if="questNum===4" @click="nextQuest">Отправить форму</button>
           </div>
           </div>
         </div>
@@ -39,24 +40,34 @@
         questNum: 1,
         activeQuest: null,
         activeTab:'',
+        answers: {
+          people: '',
+          square: '',
+          coast: '',
+          deadline: ''
+        },
         questList: [
           {
             id: 1,
+            name: 'people',
             title: 'На сколько человек нужна канализация?',
             variants: ['1 - 10', '10 - 50', '50 - 200' ]
           },
           {
             id: 2,
-            title: 'Общая лощадь Вашего дома?',
+            name: 'square',
+            title: 'Общая площадь Вашего дома?',
             variants: ['до 100 кв.м.', '100 - 300 кв.м.', 'более 300 кв.м.' ]
           },
           {
             id: 3,
+            name: 'coast',
             title: 'В какую стоимость хотите уложиться?',
             variants: ['до 10 000 руб.', '10 000 - 30 000 руб.', 'более 30 000 руб.' ]
           },
           {
             id: 4,
+            name: 'deadline',
             title: 'Как быстро нужно начать работы?',
             variants: ['завтра', 'в течении месяца', 'в течении полугода' ]
           }
@@ -77,12 +88,22 @@
         this.activeTab = this.actQuest.variants[0]
       },
       nextQuest() {
+        const key = this.actQuest.name
+        this.answers[key] = this.activeTab
         if (this.questNum < this.questList.length) {
           this.questNum += 1
         } else {
+          alert(`Проверьте Ваши ответы:
+          1. На сколько человек: ${this.answers.people}
+          2. Площадь дома: ${this.answers.square}
+          3. Желаемая стоимость: ${this.answers.coast}
+          4. Когда начинаем: ${this.answers.deadline}`)
+          this.answers = {people: '', square: '', coast: '', deadline: ''}
           this.questNum = 1
         }
         this.activeTab = this.actQuest.variants[0]
+
+        console.log(this.answers)
       },
       changeActive(item) {
         this.activeTab = item
