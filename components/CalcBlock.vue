@@ -8,17 +8,24 @@
         </div>
         <div class="calc__main_bottom">
           <div class="calc__main_bottom-top">
-            <div class="calc__main_bottom-top--sqr">1</div>
-            <div class="calc__main_bottom-top--text">На сколько человек нужна канализация?</div>
+            <div class="calc__main_bottom-top--sqr">{{ questNum }}</div>
+            <div class="calc__main_bottom-top--text">{{ actQuest.title }}</div>
           </div>
           </div>
           <div class="calc__main_bottom-main">
             <div class="calc__main_bottom-main--choise">
-              <div class="calc__main_bottom-main--choise_item">1 - 10</div>
-              <div class="calc__main_bottom-main--choise_item calc__main_bottom-main--choise_item-active">10 - 50</div>
-              <div class="calc__main_bottom-main--choise_item">50 - 200</div>
+              <div class="calc__main_bottom-main--choise_item"
+                v-for="item in actQuest.variants"
+                :key="item"
+                :class="{'calc__main_bottom-main--choise_item-active': activeTab === item}"
+                @click="changeActive(item)"
+              > {{ item }}
+              </div>
             </div>
-            <button type="button" class="calc__main_bottom-main--btn">Следующий вопрос</button>
+            <div class="calc__main_bottom-main--buttons">
+              <button type="button" class="calc__main_bottom-main--buttons_btn" v-if="questNum>1" @click="prevQuest">Предыдущий вопрос</button>
+              <button type="button" class="calc__main_bottom-main--buttons_btn" @click="nextQuest">Следующий вопрос</button>
+          </div>
           </div>
         </div>
     </section>
@@ -26,7 +33,62 @@
 </template>
 <script>
   export default {
-    name: 'CalcBlock'
+    name: 'CalcBlock',
+    data() {
+      return {
+        questNum: 1,
+        activeQuest: null,
+        activeTab:'',
+        questList: [
+          {
+            id: 1,
+            title: 'На сколько человек нужна канализация?',
+            variants: ['1 - 10', '10 - 50', '50 - 200' ]
+          },
+          {
+            id: 2,
+            title: 'Общая лощадь Вашего дома?',
+            variants: ['до 100 кв.м.', '100 - 300 кв.м.', 'более 300 кв.м.' ]
+          },
+          {
+            id: 3,
+            title: 'В какую стоимость хотите уложиться?',
+            variants: ['до 10 000 руб.', '10 000 - 30 000 руб.', 'более 30 000 руб.' ]
+          },
+          {
+            id: 4,
+            title: 'Как быстро нужно начать работы?',
+            variants: ['завтра', 'в течении месяца', 'в течении полугода' ]
+          }
+        ]
+      }
+    },
+    computed: {
+      actQuest() {
+        return this.activeQuest = this.questList.find(quest => quest.id === this.questNum)
+      }
+    },
+    mounted() {
+     this.activeTab =  this.actQuest.variants[0]
+    },
+    methods: {
+      prevQuest() {
+        this.questNum -= 1 ? this.questNum > 1: ''
+        this.activeTab = this.actQuest.variants[0]
+      },
+      nextQuest() {
+        if (this.questNum < this.questList.length) {
+          this.questNum += 1
+        } else {
+          this.questNum = 1
+        }
+        this.activeTab = this.actQuest.variants[0]
+      },
+      changeActive(item) {
+        this.activeTab = item
+        console.log(item)
+      }
+    }
   }
 </script>
 
@@ -106,16 +168,20 @@
               }
             }
           }
-          &--btn {
-            max-width: 226px;
+          &--buttons {
             display: flex;
-            padding: 24px 36px;
-            border: 2px solid #FF0000;
-            border-radius: 4px;
-            font-weight: 500;
-            font-size: 16px;
-            line-height: 18px;
-            color: #FF0000;
+            gap: 40px;
+            &_btn {
+              max-width: 236px;
+              display: flex;
+              padding: 24px 36px;
+              border: 2px solid #FF0000;
+              border-radius: 4px;
+              font-weight: 500;
+              font-size: 16px;
+              line-height: 18px;
+              color: #FF0000;
+            }
           }
         }
       }
