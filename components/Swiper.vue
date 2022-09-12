@@ -3,8 +3,7 @@
     <div class="swiper"
     >
       <div class="swiper-wrapper">
-        <div v-for="item in slideList" :key="item.id" class="swiper-slide" :class="`slide--${item.id}`">
-        </div>
+        <div v-for="item in imageList" :key="item.id" class="swiper-slide" :style="{'background': `url(${item.url}) 0px 0px/cover no-repeat`}"></div>
       </div>
       <div class="galary__manage">
         <div class="galary__manage_wrapper">
@@ -27,17 +26,23 @@
 import { Swiper, Navigation, Pagination, Autoplay } from 'swiper'
 import 'swiper/swiper-bundle.min.css'
 export default {
+  name: 'Swiper',
+  props: {
+    imageList: {
+      type: Array,
+      default: () => []
+    }
+  },
   data() {
     return {
       slideList: [
-        {id: '0', name: 'Slide_1'},
-        {id: '1', name: 'Slide_2'},
-        {id: '2', name: 'Slide_3'},
-        {id: '3', name: 'Slide_4'},
-        {id: '4', name: 'Slide_5'},
-        {id: '5', name: 'Slide_6'}
+        {id: '0', url: require('@/assets/images/galary-left.png')},
+        {id: '1', url: require('@/assets/images/galary-active.png')},
+        {id: '2', url: require('@/assets/images/galary-right.png')},
+        {id: '3', url: require('@/assets/images/galary-left.png')},
+        {id: '4', url: require('@/assets/images/galary-active.png')},
+        {id: '5', url: require('@/assets/images/galary-right.png')}
       ]
-
     }
   },
   mounted() {
@@ -93,29 +98,5 @@ export default {
 }
 .slider-content {
   color: #000;
-}
-.slide--0 {
-  width: 872px;
-  background: url('@/assets/images/galary-left.png') 0px 0px/cover no-repeat;
-}
-.slide--1 {
-  width: 872px;
-  background: url('@/assets/images/galary-active.png') 0px 0px/cover no-repeat;
-}
-.slide--2 {
-  width: 872px;
-  background: url('@/assets/images/galary-right.png') 0px 0px/cover no-repeat;
-}
-.slide--3 {
-  width: 872px;
-  background: url('@/assets/images/galary-left.png') 0px 0px/cover no-repeat;
-}
-.slide--4 {
-  width: 872px;
-  background: url('@/assets/images/galary-active.png') 0px 0px/cover no-repeat;
-}
-.slide--5 {
-  width: 872px;
-  background: url('@/assets/images/galary-right.png') 0px 0px/cover no-repeat;
 }
 </style>

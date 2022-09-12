@@ -3,7 +3,7 @@
     <div class="container">
       <div class="galary__title">Собственный склад<br>оборудования в Ростове на Дону</div>
     </div>
-    <Swiper></Swiper>
+    <Swiper :imageList="slideList"></Swiper>
   </section>
 </template>
 
@@ -11,7 +11,19 @@
 import Swiper from './Swiper.vue';
   export default {
     name: "OurGalary",
-    components: { Swiper }
+    components: { Swiper },
+    data() {
+      return {
+        slideList: [
+          {id: '0', url: require('@/assets/images/galary-left.png')},
+          {id: '1', url: require('@/assets/images/galary-active.png')},
+          {id: '2', url: require('@/assets/images/galary-right.png')},
+          {id: '3', url: require('@/assets/images/galary-left.png')},
+          {id: '4', url: require('@/assets/images/galary-active.png')},
+          {id: '5', url: require('@/assets/images/galary-right.png')}
+        ]
+      }
+    }
 }
 </script>
 

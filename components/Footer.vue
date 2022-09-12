@@ -9,7 +9,7 @@
             <div class="footer__contact_contacts-phone">8 (800) 600-90-91</div>
             <div class="footer__contact_contacts-mail">info@lukras.ru</div>
           </div>
-          <Social :style="{'padding': '0'}"></Social>
+          <Social></Social>
         </div>
         <div class="footer__menu">
           <div class="footer__menu_title">Меню</div>
@@ -61,10 +61,13 @@ export default {
     margin: 0 auto;
     background: #FCFCFC;
     &__wrapper {
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr );
+      column-gap: 24px;
       padding: 48px 0;
     }
     &__contact {
+      grid-column: span 5;
       display: flex;
       flex-direction: column;
       gap: 48px;
@@ -93,8 +96,7 @@ export default {
       }
     }
     &__menu {
-      max-width: 187px;
-      margin-left: 368px;
+      grid-column: span 3;
       &_title {
         font-family: 'Roboto Condensed';
         font-style: normal;
@@ -121,8 +123,7 @@ export default {
       }
     }
     &__inform {
-      max-width: 423px;
-      margin-left: 150px;
+      grid-column: span 3;
       &_title {
         font-family: 'Roboto Condensed';
         font-style: normal;

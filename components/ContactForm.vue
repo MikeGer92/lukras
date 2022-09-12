@@ -20,7 +20,9 @@
           </div>
         </div>
       </div>
-      <Social></Social>
+      <div class="contact-form__inter_social">
+        <Social></Social>
+      </div>
     </div>
   </div>
 </template>
@@ -97,6 +99,9 @@ import Social from './Social.vue';
             }
           }
         }
+      }
+      &_social {
+        padding: 0 40px 40px 40px;
       }
     }
   }
