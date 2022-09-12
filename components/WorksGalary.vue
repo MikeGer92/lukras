@@ -12,26 +12,28 @@
         </div>
       </div>
     </div>
-    <div class="works__images"></div>
-    <div class="works__manage">
-      <div class="works__manage_wrapper">
-        <div class="works__manage_photo">
-          <div class="works__manage_photo-title">Фото</div>
-          <div class="works__manage_photo-num">1/6</div>
-        </div>
-        <div class="works__manage_btn">
-          <div class="works__manage_btn-prev"><img src="@/assets/images/prev.png"></div>
-          <div class="works__manage_btn-next"><img src="@/assets/images/next.png"></div>
-        </div>
-      </div>
-    </div>
+    <Swiper :imageList="worksSlidesList"></Swiper>
   </section>
 </template>
 
 <script>
+import Swiper from './Swiper.vue';
   export default {
-    name: 'OurGalary'
-  }
+    name: "OurGalary",
+    data() {
+        return {
+            worksSlidesList: [
+                { id: "0", url: require("@/assets/images/works-left.png") },
+                { id: "1", url: require("@/assets/images/works-active.png") },
+                { id: "2", url: require("@/assets/images/works-right.png") },
+                { id: "3", url: require("@/assets/images/works-left.png") },
+                { id: "4", url: require("@/assets/images/works-active.png") },
+                { id: "5", url: require("@/assets/images/works-right.png") }
+            ]
+        };
+    },
+    components: { Swiper }
+}
 </script>
 
 <style lang="scss">
@@ -59,64 +61,21 @@
         margin: 0 auto;
       }
       &_items {
-          display: flex;
-          border-left: 1px solid #E3E3E3;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 18px;
-          text-align: center;
-          color: #000000;
-          &-item {
-            padding: 24px 40px;
-            border-right: 1px solid #E3E3E3;
-            cursor: pointer;
-            &--active {
-              border: 1px solid #BF0000;
-              color: #BF0000;
-            }
-          }
-        }
-    }
-    &__images {
-      width: 100%;
-      max-width: 1600px;
-      margin: 0 auto;
-      height: 520px;
-      background: url('@/assets/images/works.png') 0px 0px/cover no-repeat;
-    }
-    &__manage {
-      display: flex;
-      width: 100%;
-      max-width: 1600px;
-      margin: 0 auto;
-      border-bottom: 1px solid #E3E3E3;
-      &_wrapper {
-        width: 100%;
-        max-width: 1320px;
-        margin: 0 auto;
+        display: flex;
         border-left: 1px solid #E3E3E3;
-        border-right: 1px solid #E3E3E3;
-        display: flex;
-        justify-content: space-between;
-      }
-      &_photo {
-        display: flex;
         font-weight: 400;
         font-size: 16px;
         line-height: 18px;
         text-align: center;
         color: #000000;
-        &-title, &-num {
-          padding: 22px 40px 23px 40px;
+        &-item {
+          padding: 24px 40px;
           border-right: 1px solid #E3E3E3;
-        }
-      }
-      &_btn {
-        display: flex;
-        &-prev, &-next {
-          padding: 24px;
-          border-left: 1px solid #E3E3E3;
           cursor: pointer;
+          &--active {
+            border: 1px solid #BF0000;
+            color: #BF0000;
+          }
         }
       }
     }

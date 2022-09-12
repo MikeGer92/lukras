@@ -5,16 +5,16 @@
       <div class="swiper-wrapper">
         <div v-for="item in imageList" :key="item.id" class="swiper-slide" :style="{'background': `url(${item.url}) 0px 0px/cover no-repeat`}"></div>
       </div>
-      <div class="galary__manage">
-        <div class="galary__manage_wrapper">
-          <div class="galary__manage_photo">
-            <div class="galary__manage_photo-title">Фото</div>
-            <div class="galary__manage_photo-num">
+      <div class="swiper__manage">
+        <div class="swiper__manage_wrapper">
+          <div class="swiper__manage_photo">
+            <div class="swiper__manage_photo-title">Фото</div>
+            <div class="swiper__manage_photo-num">
             </div>
           </div>
-          <div class="galary__manage_btn">
-            <div class="galary__manage_btn-prev"><img src="@/assets/images/prev.png"></div>
-            <div class="galary__manage_btn-next"><img src="@/assets/images/next.png"></div>
+          <div class="swiper__manage_btn">
+            <div class="swiper__manage_btn-prev"><img src="@/assets/images/prev.png"></div>
+            <div class="swiper__manage_btn-next"><img src="@/assets/images/next.png"></div>
           </div>
         </div>
     </div>
@@ -55,7 +55,7 @@ export default {
       slidesOffsetBefore: -168,
       modules: [Navigation, Pagination, Autoplay],
       pagination: {
-        el: '.galary__manage_photo-num',
+        el: '.swiper__manage_photo-num',
         type: 'fraction',
         clickable: true
       },
@@ -63,8 +63,8 @@ export default {
         delay: 3000
       },
       navigation: {
-        nextEl: '.galary__manage_btn-next',
-        prevEl: '.galary__manage_btn-prev'
+        nextEl: '.swiper__manage_btn-next',
+        prevEl: '.swiper__manage_btn-prev'
       }
     })
   }
@@ -79,6 +79,44 @@ export default {
   overflow: hidden;
   position: relative;
   width: 1600px;
+  &__manage {
+    display: flex;
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    border-bottom: 1px solid #E3E3E3;
+    &_wrapper {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      border-left: 1px solid #E3E3E3;
+      border-right: 1px solid #E3E3E3;
+      display: flex;
+      justify-content: space-between;
+    }
+    &_photo {
+      display: flex;
+      font-weight: 400;
+      font-size: 16px;
+      line-height: 18px;
+      text-align: center;
+      color: #000000;
+      &-title, &-num {
+        display: flex;
+        padding: 22px 40px;
+        border-right: 1px solid #E3E3E3;
+        align-items: center;
+      }
+    }
+    &_btn {
+      display: flex;
+      &-prev, &-next {
+        padding: 24px;
+        border-left: 1px solid #E3E3E3;
+        cursor: pointer;
+      }
+    }
+  }
 }
 .swiper-wrapper {
   width: 100%;
