@@ -188,7 +188,6 @@ import Corner from './Corner.vue';
       position: relative;
       width: 538px;
       height: 652px;
-      background: #FCFCFC;
       &_main {
         width: 424px;
         height: 547px;
@@ -307,9 +306,7 @@ import Corner from './Corner.vue';
                   width: 51px;
                   height: 33px;
                   border-right:  1px solid #E3E3E3;
-
                 }
-
               }
             }
           }

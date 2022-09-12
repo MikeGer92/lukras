@@ -57,8 +57,6 @@ export default {
 <style lang="scss">
   .footer {
     width: 100%;
-    max-width: 1600px;
-    margin: 0 auto;
     background: #FCFCFC;
     &__wrapper {
       display: grid;
@@ -108,11 +106,11 @@ export default {
       }
       &_list {
         display: flex;
+        list-style: none;
         flex-direction: column;
         margin-top: 32px;
         gap: 16px;
         &-link {
-          text-decoration: none;
           font-weight: 400;
           font-size: 14px;
           line-height: 16px;

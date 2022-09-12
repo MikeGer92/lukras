@@ -86,7 +86,6 @@
       },
       changeActive(item) {
         this.activeTab = item
-        console.log(item)
       }
     }
   }
