@@ -137,10 +137,10 @@ import Social from './Social.vue';
         }
         &-social {
           display: flex;
+          justify-content: space-between;
           background: #FCFCFC;
           border-top: 1px solid #E3E3E3;
-          padding: 48px 48px 0 48px;
-          gap: 153px;
+          padding: 48px;
           &--text {
             max-width: 184px;
             font-weight: 400;

@@ -1,8 +1,8 @@
 <template>
   <div class="social">
-    <div class="social__telegram"><img src="@/assets/images/telegram-icon.png"></div>
-    <div class="social__whatsup"><img src="@/assets/images/whats-icon.png"></div>
-    <div class="social__viber"><img src="@/assets/images/vaiber-icon.png"></div>
+    <div class="social__telegram"><img src="@/assets/images/telegram-icon.svg"></div>
+    <div class="social__whatsup"><img src="@/assets/images/whats-icon.svg"></div>
+    <div class="social__viber"><img src="@/assets/images/viber-icon.svg"></div>
   </div>
 </template>
 
@@ -16,7 +16,7 @@
 .social {
   display: flex;
   gap: 24px;
-  padding: 0 0 40px 40px;
+  // padding: 0 0 40px 40px;
   &__telegram {
     height: 48px;
     display: flex;
