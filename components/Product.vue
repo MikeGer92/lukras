@@ -113,16 +113,15 @@
         display: flex;
         flex-direction: column;
         position: relative;
-
-        gap: 24px;
         &-item {
           display: flex;
           flex-direction: column;
-          gap: 8px;
           white-space: nowrap;
+          margin-bottom: 24px;
           &--data {
             display: flex;
             width: 100%;
+            margin-top: 8px;
             font-family: 'Roboto Condensed';
             font-style: normal;
             font-weight: 700;
@@ -141,24 +140,15 @@
           }
         }
         &-btn {
-          display: flex;
-          align-items: flex-start;
           margin-top: 16px;
           padding: 12px 24px;
-          gap: 10px;
-          width: 121px;
-          height: 40px;
+          max-width: 121px;
           border: 1px solid #FF0000;
           border-radius: 4px;
-          font-family: 'Roboto';
-          font-style: normal;
           font-weight: 500;
           font-size: 14px;
           line-height: 16px;
           color: #FF0000;
-          position: absolute;
-          bottom: 0;
-          cursor: pointer;
         }
       }
       &_image {

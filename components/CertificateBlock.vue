@@ -22,7 +22,7 @@
           </div>
           <div class="cert__inter_right-gift">
             <div class="cert__inter_right-gift--icon"><img src="@/assets/images/gift-icon.png"></div>
-            <div class="cert__inter_right-gift--text">Будьте уверены, у нас самые низкие цены, а еще мы дарим подарки!</div>
+            <div class="cert__inter_right-gift--text">Будьте уверены, у нас самые низкие<br>цены, а еще мы дарим подарки!</div>
           </div>
         </div>
       </div>
@@ -45,11 +45,11 @@
     padding: 8px;
     border: 1px solid #E3E3E3;
     &__inter {
-      display: flex;
-      width: 100%;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
       border: 1px solid #E3E3E3;
       &_left {
-        max-width: 640px;
+        grid-column: span 6;
         border-right: 1px solid #E3E3E3;
         background: #FCFCFC;
         &-title {
@@ -68,6 +68,7 @@
         }
       }
       &_right {
+        grid-column: span 6;
         display: flex;
         flex-direction: column;
         &-info {
@@ -94,20 +95,22 @@
         }
         &-whatsup {
           display: flex;
+          justify-content: flex-start;
+          align-items: center;
           padding: 48px;
-          justify-content: space-between;
           &--btn {
             display: flex;
+            align-items: center;
+            max-width: 300px;
             border: 2px solid #74D95B;
             border-radius: 4px;
-            display: flex;
             &_icon {
               background: #74D95B;
               padding: 15px;
               object-fit: cover;
             }
             &_text {
-              padding: 24px;
+              padding: 0 22px;
               font-weight: 500;
               font-size: 16px;
               line-height: 18px;
@@ -115,8 +118,8 @@
             }
           }
           &--text {
-            padding: 9px 0;
-            max-width: 257px;
+            margin-left: 24px;
+            max-width: 247px;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;
@@ -125,14 +128,13 @@
         }
         &-gift {
           display: flex;
-          justify-content: space-between;
+          justify-content: flex-start;
           background: #FCFCFC;
           border-top: 1px solid #E3E3E3;
-          padding: 48px 256px 48px 48px;
+          padding: 48px;
           gap: 24px;
           &--icon {
             padding: 14px 13px 15px 13px;
-            object-fit: cover;
             background: #FCFCFC;
             border: 1px solid #E3E3E3;
           }

@@ -103,8 +103,9 @@ export default {
       color: #000000;
       &-title, &-num {
         display: flex;
-        padding: 22px 40px 23px 40px;
+        padding: 22px 40px;
         border-right: 1px solid #E3E3E3;
+        align-items: center;
       }
     }
     &_btn {

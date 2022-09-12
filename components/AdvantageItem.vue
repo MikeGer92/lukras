@@ -85,12 +85,11 @@
         line-height: 24px;
         text-transform: uppercase;
         color: #000000;
-        padding-left: 40px;
+        padding: 0 40px;
       }
       &_descr {
         display: flex;
-        padding: 0 0 40px 40px;
-        max-width: 312px;
+        padding: 0 40px 40px 40px;
         font-size: 16px;
         line-height: 24px;
         color: #3F3F3F;

@@ -38,15 +38,11 @@
     padding: 8px;
     &__main {
       border: 1px solid #E3E3E3;
-      display: flex;
-      flex-direction: column;
       &_top {
-        display: flex;
-        flex-direction: column;
         padding: 40px;
-        gap: 24px;
         &-title {
           max-width: 695px;
+          margin-bottom: 24px;
           font-family: 'Roboto Condensed';
           font-weight: 700;
           font-size: 40px;
@@ -63,8 +59,6 @@
         }
       }
       &_bottom {
-        display: flex;
-        flex-direction: column;
         border-top: 1px solid #E3E3E3;
         &-top {
           width: 100%;
@@ -92,10 +86,10 @@
           display: flex;
           flex-direction: column;
           padding: 40px;
-          gap: 40px;
           &--choise {
             display: flex;
             column-gap: 40px;
+            margin-bottom: 40px;
             &_item {
               display: flex;
               justify-content: center;
@@ -113,19 +107,15 @@
             }
           }
           &--btn {
-            width: 226px;
+            max-width: 226px;
             display: flex;
-            flex-direction: row;
-            align-items: flex-start;
             padding: 24px 36px;
-            gap: 10px;
             border: 2px solid #FF0000;
             border-radius: 4px;
             font-weight: 500;
             font-size: 16px;
             line-height: 18px;
             color: #FF0000;
-            cursor: pointer;
           }
         }
       }
