@@ -8,9 +8,8 @@
           <li
             v-for="link in links"
             :key="link.url"
+            v-scroll-to="`#${link.url}`"
             active-class="active"
-            @click="goTo(link.url)"
-            :exact="link.exact"
             class='header__top_links-link'
             :class="{ 'header__top_links-link--active': $route.path === `${link.url}`}"
             >

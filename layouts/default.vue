@@ -1,9 +1,9 @@
 <template>
   <div>
     <div>
-      <Header @scrollTo="moveTo"></Header>
+      <Header></Header>
       <nuxt />
-      <Footer @goTo="moveTo"></Footer>
+      <Footer></Footer>
     </div>
   </div>
 </template>
@@ -13,12 +13,6 @@ import Header from '@/components/Header'
 import Footer from '~/components/Footer.vue';
 export default {
   components: { Header, Footer },
-  methods: {
-    moveTo(id) {
-      console.log(id)
-      this.$router.replace({ name: this.$route.name, hash: `#${id}` });
-    }
-  }
 }
 </script>
 

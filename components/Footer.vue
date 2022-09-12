@@ -14,13 +14,13 @@
         <div class="footer__menu">
           <div class="footer__menu_title">Меню</div>
           <ul class="footer__menu_list">
-            <li class="footer__menu_list-link" @click="moveTo('main')">Главная</li>
-            <li class="footer__menu_list-link" @click="moveTo('calc')">Рассчитать стоимость</li>
-            <li class="footer__menu_list-link" @click="moveTo('catalog')">Каталог</li>
-            <li class="footer__menu_list-link" @click="moveTo('advant')">Преимущества</li>
-            <li class="footer__menu_list-link" @click="moveTo('certif')">Сертификат</li>
-            <li class="footer__menu_list-link" @click="moveTo('steps')">Этапы работ</li>
-            <li class="footer__menu_list-link" @click="moveTo('contacts')">Контакты</li>
+            <li class="footer__menu_list-link" v-scroll-to="'#main'">Главная</li>
+            <li class="footer__menu_list-link" v-scroll-to="'#calc'">Рассчитать стоимость</li>
+            <li class="footer__menu_list-link" v-scroll-to="'#catalog'">Каталог</li>
+            <li class="footer__menu_list-link" v-scroll-to="'#advant'">Преимущества</li>
+            <li class="footer__menu_list-link" v-scroll-to="'#certif'">Сертификат</li>
+            <li class="footer__menu_list-link" v-scroll-to="'#steps'">Этапы работ</li>
+            <li class="footer__menu_list-link" v-scroll-to="'#contacts'">Контакты</li>
           </ul>
         </div>
         <div class="footer__inform">
@@ -44,13 +44,8 @@
 <script>
 import Social from './Social.vue';
 export default {
-    name: "Footer",
-    methods: {
-        moveTo(id) {
-          this.$emit("goTo", id);
-        }
-    },
-    components: { Social }
+  name: "Footer",
+  components: { Social }
 }
 </script>
 
