@@ -108,7 +108,7 @@ export default {
 }
 .slide--3 {
   width: 872px;
-  background: url('@/assets/images/works-left.png') 0px 0px/cover no-repeat;
+  background: url('@/assets/images/galary-left.png') 0px 0px/cover no-repeat;
 }
 .slide--4 {
   width: 872px;
