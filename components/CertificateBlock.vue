@@ -12,12 +12,12 @@
             <h4 class="cert__inter_right-info--subtitle">Чтобы узнать конечную стоимость септика, необходимо согласовать модель, доставку, ваш подарок и т. д.</h4>
           </div>
           <div class="cert__inter_right-whatsup">
-            <div class="cert__inter_right-whatsup-btn">
+            <a href="#" class="cert__inter_right-whatsup--link">
               <button type="button" class="cert__inter_right-whatsup--btn">
                 <div class="cert__inter_right-whatsup--btn_icon"><img src="@/assets/images/whats-icon.png"></div>
                 <div class="cert__inter_right-whatsup--btn_text">Написать в WhatsApp</div>
               </button>
-            </div>
+            </a>
             <div class="cert__inter_right-whatsup--text">Можем начать с переписки в WhatsApp, это удобно и быстро</div>
           </div>
           <div class="cert__inter_right-gift">
@@ -98,6 +98,9 @@
           justify-content: flex-start;
           align-items: center;
           padding: 48px;
+          &--link {
+            text-decoration: none;
+          }
           &--btn {
             display: flex;
             align-items: center;
