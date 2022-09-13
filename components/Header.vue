@@ -3,7 +3,7 @@
     <header class="header">
       <div class="header__top">
         <div
-          class="header__top_links"
+          :class="{'header__top_links': true, 'header__top_links-active': isShowLinks}"
         >
           <li
             v-for="link in links"
@@ -16,12 +16,18 @@
             {{ link.title }}
           </li>
         </div>
-        <div class="header__top_contacts">
+        <div
+          :class="{'header__top_contacts': true, 'header__top_contacts-deactive': isShowLinks}"
+        >
           <div class="header__top_contacts-contact">Ул. Механизаторов 10</div>
           <div class="header__top_contacts-contact">info@lukras.ru</div>
           <div class="header__top_contacts-contact">Звоните ПН - ВС: 9:00 - 18:00</div>
         </div>
-        <div class="header__top_popup"></div>
+        <div
+          :class="{'header__top_popup': true, 'header__top_popup-deactive': isShowLinks}"
+          @click="isLinks"
+        >
+        </div>
 
       </div>
       <div class="header__divider"></div>
@@ -45,6 +51,7 @@
     name: 'Header',
     data() {
       return {
+        isShowLinks: false,
         links: [
           {title: 'Рассчет стоимости', url: 'main', exact: true},
           {title: 'Каталог', url: 'catalog'},
@@ -56,8 +63,9 @@
       }
     },
     methods: {
-      goTo(id) {
-        this.$emit('scrollTo', id)
+      isLinks() {
+        this.isShowLinks = !this.isShowLinks
+        console.log(this.isShowLinks)
       }
     }
   }
@@ -88,9 +96,6 @@
           line-height: 16px;
           color: #9D9D9D;
           cursor: pointer;
-          &--active {
-            color: #000000;
-          }
         }
       }
       &_popup {
@@ -98,7 +103,7 @@
         height: 16px;
         background: url('@/assets/images/show.svg');
         display: none;
-        &-active {
+        &-deactive {
           width: 13px;
           height: 13px;
           background: url('@/assets/images/close.svg');
@@ -172,6 +177,14 @@
     &__top {
       &_links {
         display: none;
+        &-active {
+          display: flex;
+        }
+      }
+      &_contacts {
+        &-deactive {
+          display: none;
+        }
       }
       &_popup {
         display: flex;
