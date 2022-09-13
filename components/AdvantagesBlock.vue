@@ -118,5 +118,18 @@ export default {
       }
     }
   }
-
+  @media (min-width: 390px) and (max-width: 768px) {
+    .advant {
+      margin-top: 100px;
+      &__swiper {
+        // width: 100%;
+        width: 724px;
+        overflow-x: hidden;
+        &_wrapp {
+          gap: 20px;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
 </style>

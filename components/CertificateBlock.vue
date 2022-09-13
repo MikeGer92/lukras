@@ -151,5 +151,17 @@
       }
     }
   }
-
+  @media (min-width: 390px) and (max-width: 768px) {
+    .cert {
+      margin-top: 100px;
+      &__inter {
+        &_left {
+          grid-column: span 12;
+        }
+        &_right {
+          grid-column: span 12;
+        }
+      }
+    }
+  }
 </style>
