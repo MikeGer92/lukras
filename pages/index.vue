@@ -1,7 +1,7 @@
 <template>
   <div class="main">
     <MainBlock></MainBlock>
-    <CalcBlock></CalcBlock>
+    <!-- <CalcBlock></CalcBlock>
     <CatalogBlock></CatalogBlock>
     <AdvantagesBlock></AdvantagesBlock>
     <CertificateBlock></CertificateBlock>
@@ -10,7 +10,7 @@
     <StepsBlock></StepsBlock>
     <OurGalary></OurGalary>
     <ConsultBlock></ConsultBlock>
-    <MapBlock></MapBlock>
+    <MapBlock></MapBlock> -->
 </div>
 </template>
 
