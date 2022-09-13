@@ -159,24 +159,19 @@ import Corner from './Corner.vue';
       column-gap: 41px;
       margin-top: 100px;
       &-how {
+        padding: 8px;
         border: 1px solid #E3E3E3;
-        width: 318px;
-        height: 162px;
         border: 1px solid #E3E3E3;
         order: 0;
       }
       &-int {
         display: flex;
         flex-direction: column;
-        width: 300px;
-        height: 144px;
-        margin: 8px;
         border: 1px solid #E3E3E3;
         &--item {
           display: flex;
           max-width: 300px;
-          height: 48px;
-          padding-left: 26.42px;
+          padding: 16px 21px 16px 26.42px;
           border-bottom: 1px solid #E3E3E3;
           font-family: 'Roboto';
           font-style: normal;
@@ -199,9 +194,10 @@ import Corner from './Corner.vue';
         display: flex;
         flex-direction: column;
         order: 1;
+        .corner {
+          order: 0;
+        }
         &--btn {
-          width: 279px;
-          height: 66px;
           margin-top: 37px;
           display: flex;
           padding: 24px 33px;
@@ -211,6 +207,7 @@ import Corner from './Corner.vue';
           color: #FF0000;
           border: 2px solid #FF0000;
           border-radius: 4px;
+          order: 1;
         }
       }
       &-benefsmall {
@@ -510,15 +507,29 @@ import Corner from './Corner.vue';
           order: 3;
         }
         .corner {
-          display: none;
+         order: 1;
+         margin-top: 170px;
+         width: 56px;
+         height: 56px;
         }
         &-benefsmall {
           order: 2;
           display: block;
         }
+        &-how {
+          max-height: 166px;
+        }
+        &-int {
+          &--item {
+            padding: 16px 16px 16px 18.21px;
+          }
+        }
         &-choise {
+          margin-top: -375px;
           &--btn {
-            margin-top: -377px;
+            margin-top: 0;
+            padding: 24px 48px;
+            order: 0;
           }
         }
       }
