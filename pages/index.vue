@@ -4,8 +4,8 @@
     <CalcBlock></CalcBlock>
     <CatalogBlock></CatalogBlock>
     <AdvantagesBlock></AdvantagesBlock>
-    <!-- <CertificateBlock></CertificateBlock>
-    <WarningBlock></WarningBlock>
+    <CertificateBlock></CertificateBlock>
+    <!-- <WarningBlock></WarningBlock>
     <WorksGalary></WorksGalary>
     <StepsBlock></StepsBlock>
     <OurGalary></OurGalary>
