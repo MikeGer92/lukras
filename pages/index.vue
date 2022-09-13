@@ -3,8 +3,8 @@
     <MainBlock></MainBlock>
     <CalcBlock></CalcBlock>
     <CatalogBlock></CatalogBlock>
-    <!-- <AdvantagesBlock></AdvantagesBlock>
-    <CertificateBlock></CertificateBlock>
+    <AdvantagesBlock></AdvantagesBlock>
+    <!-- <CertificateBlock></CertificateBlock>
     <WarningBlock></WarningBlock>
     <WorksGalary></WorksGalary>
     <StepsBlock></StepsBlock>
