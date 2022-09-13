@@ -168,6 +168,7 @@
           display: flex;
           flex-direction: column;
           padding: 40px;
+          background: #FCFCFC;
           &--choise {
             display: flex;
             column-gap: 40px;
