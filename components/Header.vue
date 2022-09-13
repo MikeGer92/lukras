@@ -21,6 +21,7 @@
           <div class="header__top_contacts-contact">info@lukras.ru</div>
           <div class="header__top_contacts-contact">Звоните ПН - ВС: 9:00 - 18:00</div>
         </div>
+        <div class="header__top_popup"></div>
 
       </div>
       <div class="header__divider"></div>
@@ -65,7 +66,6 @@
 <style lang="scss">
   .header {
     width: 100%;
-    width: 1320px;
     margin: 0 auto;
     display: flex;
     flex-direction: column;
@@ -79,6 +79,7 @@
       &_links, &_contacts {
         display: flex;
         column-gap: 24px;
+        list-style: none;
         &-link, &-contact {
           flex: auto;
           text-decoration: none;
@@ -90,6 +91,17 @@
           &--active {
             color: #000000;
           }
+        }
+      }
+      &_popup {
+        width: 18px;
+        height: 16px;
+        background: url('@/assets/images/show.svg');
+        display: none;
+        &-active {
+          width: 13px;
+          height: 13px;
+          background: url('@/assets/images/close.svg');
         }
       }
     }
@@ -110,7 +122,7 @@
         display: flex;
         width: 144.7px;
         height: 24px;
-        background: url('../assets/images/logo.png') 0px 0px/cover no-repeat;
+        background: url('../assets/images/logo.svg') 0px 0px/cover no-repeat;
       }
       &_social {
         display: flex;
@@ -151,9 +163,36 @@
           color: #000000;
           cursor: pointer;
         }
-
       }
     }
   }
 
+@media (min-width: 390px) and (max-width: 768px) {
+  .header {
+    &__top {
+      &_links {
+        display: none;
+      }
+      &_popup {
+        display: flex;
+      }
+    }
+    &__bottom {
+      &_brand {
+        width: 120.58px;
+        background-size: contain;
+      }
+      &_social {
+        column-gap: 20px;
+        &-divider {
+          margin: auto 0;
+        }
+        &-phone {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
+
+}
 </style>
