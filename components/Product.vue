@@ -158,10 +158,25 @@
         &:hover {
           background: url('../assets/images/barrel-active.png') -40px 0px/ cover no-repeat;
         }
-
+      }
+    }
+  }
+  @media (min-width: 390px) and (max-width: 768px) {
+    .product {
+      max-width: 100%;
+      padding: 40px;
+      &__wrapper {
+        width: 100%;
+      }
+      &__main {
+        column-gap: 130px;
+        &_image {
+          width: 254px;
+          height: 256px;
+          margin-top: -72px;
+        }
       }
     }
 
   }
-
 </style>

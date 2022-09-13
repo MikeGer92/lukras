@@ -168,6 +168,7 @@
           display: flex;
           flex-direction: column;
           padding: 40px;
+          background: #FCFCFC;
           &--choise {
             display: flex;
             column-gap: 40px;
@@ -207,5 +208,17 @@
       }
     }
   }
-
+  @media (min-width: 390px) and (max-width: 768px) {
+    .calc {
+      margin-top: 100px;
+      &__main {
+        &_top {
+          &-title {
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
 </style>

@@ -215,7 +215,7 @@ import Corner from './Corner.vue';
         order: 2;
         position: relative;
         width: 452px;
-        height: 587px;
+        // height: 587px;
         &_main {
           width: 328px;
           height: 423px;
@@ -234,7 +234,7 @@ import Corner from './Corner.vue';
           }
           &-top {
             width: 212px;
-            top: -56px;
+            top: -92px;
             right: 100px;
             padding: 24px 16px;
             &--text {
@@ -259,7 +259,7 @@ import Corner from './Corner.vue';
             }
           }
           &-bot {
-            bottom: 77px;
+            bottom: -87px;
             left: -100px;
             padding: 24px;
             &--text {
@@ -285,8 +285,8 @@ import Corner from './Corner.vue';
           }
         }
         &_int {
-          width: 316px;
-          height: 410px;
+          width: 310px;
+          height: 406px;
           border: 1px solid #E3E3E3;
           display: flex;
           flex-direction: column;
@@ -517,6 +517,7 @@ import Corner from './Corner.vue';
           display: block;
         }
         &-how {
+          margin-top: 0px;
           max-height: 166px;
         }
         &-int {
@@ -525,7 +526,8 @@ import Corner from './Corner.vue';
           }
         }
         &-choise {
-          margin-top: -375px;
+          margin-top: -211px;
+          // height: fit-content;
           &--btn {
             margin-top: 0;
             padding: 24px 48px;
