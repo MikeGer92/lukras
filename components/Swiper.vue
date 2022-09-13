@@ -41,6 +41,7 @@ export default {
   },
   data() {
     return {
+      offset: -168,
       slideList: [
         {id: '0', url: require('@/assets/images/galary-left.png')},
         {id: '1', url: require('@/assets/images/galary-active.png')},
@@ -51,14 +52,29 @@ export default {
       ]
     }
   },
+  computed: {
+    getOffset() {
+      if (window.innerWidth < 1600) {
+        this.offset = -210
+      } else {
+        this.offset = -168
+      }
+      return this.offset
+    }
+  },
+  beforeMount() {
+    this.getOffset
+  },
   mounted() {
+    console.log(window.innerWidth)
+    console.log(this.offset)
     Swiper.use([Navigation, Pagination, Autoplay])
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: true,
       slidesPerView: 3,
       centeredSlides: true,
-      slidesOffsetBefore: -168,
+      slidesOffsetBefore: this.offset, // big - 168 small - 210
       modules: [Navigation, Pagination, Autoplay],
       pagination: {
         el: '.swiper__manage_photo-num',
@@ -147,5 +163,20 @@ export default {
 }
 .slider-content {
   color: #000;
+}
+@media (min-width: 390px) and (max-width: 768px) {
+  .swiper {
+    width: 100%;
+    height: 400px;
+    &__manage {
+      &_wrapper {
+        max-width: 724px;
+      }
+    }
+  }
+  .swiper-slide-active {
+    width: 670px  !important;
+    filter: brightness(100%);
+  }
 }
 </style>

@@ -5,11 +5,11 @@
     <CatalogBlock></CatalogBlock>
     <AdvantagesBlock></AdvantagesBlock>
     <CertificateBlock></CertificateBlock>
-    <!-- <WarningBlock></WarningBlock>
+    <WarningBlock></WarningBlock>
     <WorksGalary></WorksGalary>
-    <StepsBlock></StepsBlock>
+    <!-- <StepsBlock></StepsBlock> -->
     <OurGalary></OurGalary>
-    <ConsultBlock></ConsultBlock>
+    <!-- <ConsultBlock></ConsultBlock>
     <MapBlock></MapBlock> -->
 </div>
 </template>
