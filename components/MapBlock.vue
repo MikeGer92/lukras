@@ -47,6 +47,7 @@ import ContactForm from './ContactForm.vue';
         height: 360px;
         background: url('@/assets/images/map-xs.png') 0px 0px/cover no-repeat;
         padding: 360px 0 0 0;
+        margin-bottom: 64px;
       }
     }
   }

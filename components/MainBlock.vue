@@ -605,6 +605,7 @@ import Corner from './Corner.vue';
         &-benefsmall {
           display: flex;
           flex-direction: column;
+          margin-right: 0;
           margin-top: 40px;
           order: 2;
           gap: 16px;
