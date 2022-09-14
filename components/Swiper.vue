@@ -41,7 +41,7 @@ export default {
   },
   data() {
     return {
-      offset: -168,
+      offset: -500,
       slideList: [
         {id: '0', url: require('@/assets/images/galary-left.png')},
         {id: '1', url: require('@/assets/images/galary-active.png')},
@@ -54,10 +54,12 @@ export default {
   },
   computed: {
     getOffset() {
-      if (window.innerWidth < 1600) {
-        this.offset = -210
-      } else {
+      if (window.innerWidth > 1600) {
         this.offset = -168
+      } else if (window.innerWidth < 500) {
+        this.offset = -103
+      } else {
+        this.offset = -210
       }
       return this.offset
     }
@@ -74,7 +76,7 @@ export default {
       loop: true,
       slidesPerView: 3,
       centeredSlides: true,
-      slidesOffsetBefore: this.offset, // big - 168 small - 210
+      slidesOffsetBefore: this.offset, // big - 168 small - 210 xs -
       modules: [Navigation, Pagination, Autoplay],
       pagination: {
         el: '.swiper__manage_photo-num',
@@ -100,7 +102,8 @@ export default {
   height: 520px;
   overflow: hidden;
   position: relative;
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   &__manage {
     display: flex;
     width: 100%;
@@ -164,7 +167,7 @@ export default {
 .slider-content {
   color: #000;
 }
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 361px) and (max-width: 768px) {
   .swiper {
     width: 100%;
     height: 400px;
@@ -176,6 +179,37 @@ export default {
   }
   .swiper-slide-active {
     width: 670px  !important;
+    filter: brightness(100%);
+  }
+}
+@media (max-width: 360px) {
+  .swiper {
+    width: 100%;
+    height: 328px;
+    &__manage {
+      &_wrapper {
+        max-width: 100%;
+      }
+      &_photo {
+        font-size: 14px;
+        line-height: 16px;
+        &-title, &-num {
+          padding: 12px 24px;
+        }
+      }
+      &_btn {
+        &-prev, &-next {
+          padding: 13px;
+          & img {
+            width: 11px;
+            height: 11px;
+          }
+        }
+      }
+    }
+  }
+  .swiper-slide-active {
+    width: 328px  !important;
     filter: brightness(100%);
   }
 }

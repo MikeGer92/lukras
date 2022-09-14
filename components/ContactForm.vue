@@ -116,7 +116,7 @@ import Social from './Social.vue';
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .contact-form {
       display: flex;
       max-width: 100%;
@@ -151,6 +151,11 @@ import Social from './Social.vue';
           order: 1;
         }
       }
+    }
+  }
+  @media (max-width: 360px) {
+    .contact-form {
+      margin-top: 64px;
     }
   }
 </style>

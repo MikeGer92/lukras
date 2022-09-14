@@ -96,7 +96,7 @@
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .advantage {
       width: 352px;
       &__inter {
@@ -110,7 +110,28 @@
         &_descr {
           padding: 0 32px 32px 32px;
         }
-
+      }
+    }
+  }
+  @media (max-width: 360px) {
+    .advantage {
+      width: 100%;
+      &__inter {
+        height: 230px;
+        gap: 16px;
+        &_top {
+          margin-bottom: 16px;
+        }
+        &_title {
+          padding: 0 16px;
+          font-size: 18px;
+          line-height: 18px;
+        }
+        &_descr {
+          padding: 0 16px 24px 16px;
+          font-size: 14px;
+          line-height: 20px;
+        }
       }
     }
   }

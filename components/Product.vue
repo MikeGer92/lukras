@@ -7,6 +7,7 @@
             <div class="product__top_title-license">&#174;</div>
             <div class="product__top_title-name">{{ product.name }}</div>
         </div>
+        <div class="product__top_image"></div>
         <div class="product__top_price">{{ product.price }}</div>
     </div>
     <div class="product__main">
@@ -63,6 +64,7 @@
       justify-content: space-between;
       &_title {
         display: flex;
+        order: 0;
         &-span {
           font-family: 'Roboto Condensed';
           font-style: normal;
@@ -92,6 +94,14 @@
           color: #000000;
         }
       }
+      &_image {
+        display: none;
+        order: 1;
+        background: url('../assets/images/barrel.png') 0px 0px/ contain no-repeat;
+        &:hover {
+          background: url('../assets/images/barrel-active.png') -40px 0px/ cover no-repeat;
+        }
+      }
       &_price {
         display: flex;
         padding: 8px 16px;
@@ -103,6 +113,7 @@
         color: #000000;
         background: #FCFCFC;
         border: 1px solid #E3E3E3;
+        order: 2
       }
     }
     &__main {
@@ -112,7 +123,7 @@
       &_info {
         display: flex;
         flex-direction: column;
-        position: relative;
+        order: 0;
         &-item {
           display: flex;
           flex-direction: column;
@@ -152,6 +163,7 @@
         }
       }
       &_image {
+        order: 1;
         width: 182.89px;
         height: 184px;
         background: url('../assets/images/barrel.png') 0px 0px/ contain no-repeat;
@@ -161,7 +173,7 @@
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 451px) and (max-width: 768px) {
     .product {
       max-width: 100%;
       padding: 40px;
@@ -171,12 +183,61 @@
       &__main {
         column-gap: 130px;
         &_image {
+          display: flex;
           width: 254px;
           height: 256px;
           margin-top: -72px;
         }
       }
     }
-
+  }
+  @media (max-width: 450px) {
+    .product {
+      max-width: 100%;
+      padding: 24px;
+      &__wrapper {
+        width: 100%;
+      }
+      &__top {
+        flex-direction: column;
+        &_price {
+          order: 0;
+          max-width: 128px;
+          margin: -24px 0 0 -24px;
+          border-top: none;
+          border-left: none;
+        }
+        &_image {
+          margin: 14px 0 29px 0;
+          display: flex;
+          align-self: center;
+          order: 1;
+          width: 181px;
+          height: 183px;
+        }
+        &_title {
+          order:  2;
+        }
+      }
+      &__main {
+        column-gap: 130px;
+        flex-direction: column;
+        &_info {
+          order: 1;
+          flex-direction: row;
+          flex-wrap: wrap;
+          justify-content: space-between;
+          &-item {
+            &--descr {
+              font-size: 12px;
+              line-height: 14px;
+            }
+          }
+        }
+        &_image {
+          display: none;
+        }
+      }
+    }
   }
 </style>

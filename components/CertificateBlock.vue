@@ -109,7 +109,7 @@
             border-radius: 4px;
             &_icon {
               background: #74D95B;
-              padding: 15px;
+              padding: 13px;
               object-fit: cover;
             }
             &_text {
@@ -151,7 +151,7 @@
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .cert {
       margin-top: 100px;
       &__inter {
@@ -160,6 +160,71 @@
         }
         &_right {
           grid-column: span 12;
+        }
+      }
+    }
+  }
+  @media (max-width: 360px) {
+    .cert {
+      margin-top: 64px;
+      &__inter {
+        &_left {
+          grid-column: span 12;
+          border-bottom: 1px solid #E3E3E3;
+          border-right: none;
+          &-main {
+            width: 100%;
+            padding: 9px 65px 50px 66px;
+            display: flex;
+            object-fit: cover;
+            justify-content: center;
+            & img {
+              width: 213px;
+              height: auto;
+            }
+          }
+        }
+        &_right {
+          grid-column: span 12;
+          &-info {
+            padding: 24px 16px;
+            &--title {
+              font-size: 24px;
+              line-height: 32px;
+            }
+            &--subtitle {
+              font-size: 15px;
+              line-height: 24px;
+              margin-top: 24px;
+            }
+          }
+          &-whatsup {
+            flex-direction: column;
+            padding: 24px;
+            &--btn {
+              width: 285px;
+            }
+            &--text {
+              font-size: 15px;
+              line-height: 24px;
+              margin-left: 0;
+              margin-top: 24px;
+            }
+          }
+          &-gift {
+            padding: 24px 24px;
+            flex-direction: column;
+            gap: 16px;
+            &--icon {
+              max-width: 48px;
+              padding: 13px;
+              align-self: center;
+            }
+            &--text {
+              font-size: 15px;
+              text-align: center;
+            }
+          }
         }
       }
     }

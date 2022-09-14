@@ -2,6 +2,7 @@
   <div class="container">
     <header class="header">
       <div class="header__top">
+        <div class="header__top_brand"></div>
         <div
           :class="{'header__top_links': true, 'header__top_links-active': isShowLinks}"
         >
@@ -83,6 +84,13 @@
       display: flex;
       width: 100%;
       justify-content: space-between;
+      align-items: center;
+      &_brand {
+        display: none;
+        width: 144.7px;
+        height: 24px;
+        background: url('../assets/images/logo.svg') 0px 0px/cover no-repeat;
+      }
       &_links, &_contacts {
         display: flex;
         column-gap: 24px;
@@ -170,8 +178,7 @@
       }
     }
   }
-
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 451px) and (max-width: 768px) {
   .header {
     &__top {
       &_links {
@@ -205,6 +212,66 @@
       }
     }
   }
+}
+@media (max-width: 450px) {
+  .header {
+    &__top {
+      position: relative;
+      margin-bottom: 16px;
+      &_brand {
+        display: flex;
+      }
+      &_links {
+        margin-top: 24px;
+        display: none;
+        flex-direction: column;
+        position: fixed;
+        top: 5%;
+        left: 50%;
+        transform: translateX(-50%);
+        gap: 24px;
+        background-color: #fff;
+        &-link {
+          width: 100%;
+          font-weight: 500;
+          color: #000000;
+          align-items: center;
+          background-color: #fff;
+        }
 
+        &-active {
+          display: flex;
+        }
+      }
+      &_contacts {
+        display: none;
+        &-deactive {
+          display: none;
+        }
+      }
+      &_popup {
+        display: flex;
+      }
+    }
+    &__divider {
+      display: none;
+    }
+    &__bottom {
+      display: none;
+      &_brand {
+        width: 120.58px;
+        background-size: contain;
+      }
+      &_social {
+        column-gap: 20px;
+        &-divider {
+          margin: auto 0;
+        }
+        &-phone {
+          margin-right: 0px;
+        }
+      }
+    }
+  }
 }
 </style>

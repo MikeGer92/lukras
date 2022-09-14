@@ -7,10 +7,10 @@
     <CertificateBlock></CertificateBlock>
     <WarningBlock></WarningBlock>
     <WorksGalary></WorksGalary>
-    <StepsBlock></StepsBlock>
+    <!-- <StepsBlock></StepsBlock> -->
     <OurGalary></OurGalary>
-    <ConsultBlock></ConsultBlock>
-    <MapBlock></MapBlock>
+    <!-- <ConsultBlock></ConsultBlock> -->
+    <!-- <MapBlock></MapBlock> -->
 </div>
 </template>
 

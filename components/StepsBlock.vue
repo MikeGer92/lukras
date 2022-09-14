@@ -120,7 +120,7 @@
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .steps {
       padding-bottom: 0;
       &__title {
@@ -158,6 +158,10 @@
           }
         }
       }
+    }
+  }
+  @media (max-width: 360px) {
+    .steps {
     }
   }
 </style>

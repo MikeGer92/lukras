@@ -24,10 +24,14 @@ import ContactForm from './ContactForm.vue';
     display: flex;
     align-items: flex-end;
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .map {
       background: url('@/assets/images/map-small.png') 0px 0px/cover no-repeat;
       padding: 0 22px 22px 22px;
+    }
+  }
+  @media (max-width: 360px) {
+    .map {
     }
   }
 </style>

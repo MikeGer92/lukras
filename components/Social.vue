@@ -17,7 +17,6 @@
   text-decoration: none;
   display: flex;
   gap: 24px;
-  // padding: 0 0 40px 40px;
   &__telegram {
     height: 48px;
     display: flex;
