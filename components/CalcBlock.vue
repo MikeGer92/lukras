@@ -223,6 +223,59 @@
   }
   @media (max-width: 360px) {
     .calc {
+      margin-top: 64px;
+      &__main {
+        &_top {
+          padding: 32px 10px 40px 16px;
+          &-title {
+            font-size: 24px;
+            line-height: 32px;
+          }
+        }
+        &_bottom {
+          border-top: none;
+          &-top {
+            flex-direction: column;
+            border-bottom: none;
+            padding-left: 15px;
+            &--sqr {
+              max-width: 40px;
+              padding: 11px 15px;
+              border-top: 1px solid #E3E3E3;
+              border-bottom: 1px solid #E3E3E3;
+              margin-bottom: 16px;
+            }
+          }
+          &-main {
+            padding: 15px;
+            &--choise {
+              max-width: 100%;
+              flex-direction: column;
+              margin-bottom: 24px;
+              gap: 16px;
+              &_item {
+                width: 100%;
+                height: auto;
+                padding: 16px;
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 16px;
+                color: #000000;
+              }
+            }
+            &--buttons {
+              flex-direction: column;
+              max-width: 100%;
+              gap: 16px;
+              &_btn {
+                max-width: 100%;
+                justify-content: center;
+                padding: 24px;
+              }
+            }
+          }
+        }
+      }
     }
   }
 </style>

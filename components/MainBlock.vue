@@ -1,6 +1,9 @@
 <template>
   <div class="container">
     <section class="main-block" id="main">
+      <div class="main-block__small">
+        <div class="main-block__small_inter"></div>
+      </div>
       <div class="main-block__info">
         <div class="main-block__info_descr">— За счет официального диллерского договора</div>
         <h1 class="main-block__info_title">
@@ -110,6 +113,19 @@ import Corner from './Corner.vue';
   display: flex;
   margin: 128px auto 0 auto;
   column-gap: 44px;
+  &__small {
+    display: none;
+    padding: 8px;
+    border: 1px solid #E3E3E3;
+    &_inter {
+      border: 1px solid #E3E3E3;
+      padding: 24px 55px 19px 68px;
+      background: url('../assets/images/barrel.png') 50px 0px/contain no-repeat;
+      &:hover {
+        background: url('../assets/images/barrel-active.png') 0px 0px/contain no-repeat;
+      }
+    }
+  }
   &__info {
     display: flex;
     flex-direction: column;
@@ -120,12 +136,14 @@ import Corner from './Corner.vue';
       line-height: 16px;
       color: #636363;
       margin-bottom: 24px;
+      order: 0;
     }
     &_title {
       display: flex;
       text-align: left;
       width: 828px;
       flex-wrap: wrap;
+      order: 1;
       &-black {
         font-family: 'Roboto Condensed';
         font-weight: 700;
@@ -158,9 +176,9 @@ import Corner from './Corner.vue';
       width: 100%;
       column-gap: 41px;
       margin-top: 100px;
+      order: 2;
       &-how {
         padding: 8px;
-        border: 1px solid #E3E3E3;
         border: 1px solid #E3E3E3;
         order: 0;
       }
@@ -498,7 +516,6 @@ import Corner from './Corner.vue';
       }
       &_add {
         margin-top: 56px;
-        // flex-direction: column;
         column-gap: unset;
         width: 100%;
         justify-content: space-between;
@@ -527,7 +544,6 @@ import Corner from './Corner.vue';
         }
         &-choise {
           margin-top: -211px;
-          // height: fit-content;
           &--btn {
             margin-top: 0;
             padding: 24px 48px;
@@ -543,6 +559,100 @@ import Corner from './Corner.vue';
 }
 @media (max-width: 360px) {
   .main-block {
+    margin: 0 auto 0;
+    flex-direction: column;
+    &__small {
+      display: block;
+      margin-bottom: 24px;
+      &_inter {
+        height: 232px;
+      }
+    }
+    &__info {
+      margin-top: 0px;
+      &_descr {
+        margin-bottom: 16px;
+      }
+      &_title {
+        width: 100%;
+        &-black, &-span {
+          font-size: 38px;
+          line-height: 42px;
+        }
+        &-black {
+          margin-right: 0;
+        }
+        &-span {
+          margin-left: 16px;
+        }
+        &-license {
+          font-size: 16px;
+          line-height: 16px;
+          margin-left: -12px;
+        }
+      }
+      &_add {
+        margin-top: 24px;
+        column-gap: unset;
+        width: 100%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        .corner {
+          display: none;
+        }
+        &-benefsmall {
+          display: flex;
+          flex-direction: column;
+          margin-top: 40px;
+          order: 2;
+          gap: 16px;
+          &_main {
+            display: none;
+          }
+          &_add {
+            width: 100%;
+            display: flex;
+            flex-direction: column;
+            &-top, &-bot {
+              position: unset;
+              width: 100%;
+              height: auto;
+              margin: 0 auto;
+              padding: 16px 15px 16px 16px;
+              &--text {
+                font-weight: 500;
+                font-size: 14px;
+                line-height: 18px;
+                color: #000000;
+                margin-bottom: 16px;
+              }
+            }
+          }
+        }
+        &-how {
+          margin-top: 0px;
+          width: 100%;
+          max-height: 166px;
+        }
+        &-int {
+          &--item {
+            padding: 16px 16px 16px 18.21px;
+          }
+        }
+        &-choise {
+          margin-top: 0px;
+          order: 1;
+          &--btn {
+            margin-top: 24px;
+            padding: 24px 58px;
+            order: 0;
+          }
+        }
+      }
+    }
+    &__benefit {
+      display: none;
+    }
   }
 }
 </style>

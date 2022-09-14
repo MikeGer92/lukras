@@ -100,7 +100,8 @@ export default {
   height: 520px;
   overflow: hidden;
   position: relative;
-  width: 1600px;
+  width: 100%;
+  max-width: 1600px;
   &__manage {
     display: flex;
     width: 100%;
