@@ -147,6 +147,7 @@ import Social from './Social.vue';
             font-size: 16px;
             line-height: 24px;
             color: #3F3F3F;
+            order: 0;
           }
         }
       }
@@ -178,6 +179,64 @@ import Social from './Social.vue';
   }
   @media (max-width: 360px) {
     .consult {
+      margin: 64px -16px;
+      grid-template-columns: repeat(12, 1fr);
+      &__inter {
+        flex-direction: column;
+        &_image {
+          grid-column: span 12;
+          height: 220px;
+          background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
+          &-title {
+            padding: 12px 24px;
+            max-width: 132px;
+          }
+        }
+        &_consl {
+          grid-column: span 12;
+          gap: 24px;
+          &-info {
+            padding: 24px 32px 0 16px;
+            &--title {
+              font-size: 24px;
+              line-height: 32px;
+            }
+            &--subtitle {
+              margin-top: 16px;
+              font-size: 14px;
+              line-height: 20px;
+            }
+          }
+          &-form {
+            flex-direction: column;
+            align-items: center;
+            padding: 0;
+            &--inputs {
+              flex-direction: column;
+              gap: 24px;
+              &_inp {
+                width: 312px;
+              }
+            }
+            &--add {
+              flex-direction: column;
+              gap: 16px;
+              &_btn {
+                padding: 24px 115px;
+              }
+            }
+          }
+          &-social {
+            flex-direction: column;
+            padding: 24px;
+            gap: 24px;
+            align-items: center;
+            &--text {
+              text-align: center;
+            }
+          }
+        }
+      }
     }
   }
 </style>

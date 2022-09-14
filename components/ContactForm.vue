@@ -155,7 +155,58 @@ import Social from './Social.vue';
   }
   @media (max-width: 360px) {
     .contact-form {
-      margin-top: 64px;
+      display: none;
+      display: flex;
+      flex-direction: column;
+      max-width: 100%;
+      &__inter {
+        flex-direction: row;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &_title {
+          width: 100%;
+          padding: 24px 16px;
+          font-size: 32px;
+          line-height: 40px;
+          order: 0;
+        }
+        &_divider {
+          display: none;
+        }
+        &_wrapp {
+          width: 100%;
+          padding: 24px 16px;
+          border-top: 1px solid #E3E3E3;
+          border-bottom: none;
+          order: 1;
+        }
+        &_info {
+          width: 100%;
+          flex-direction: column;
+          gap: 50px;
+          &-addr {
+            &--title, &--address {
+              font-size: 14px;
+              line-height: 16px;
+            }
+          }
+          &-cont {
+            column-gap: 48px;
+            &--phone, &--mail {
+              &_title, &_num, &_addr {
+                font-size: 14px;
+                line-height: 16px;
+              }
+            }
+          }
+        }
+        &_social {
+          width: 100%;
+          border-top: 1px solid #E3E3E3;
+          padding: 24px 16px;
+          order: 2;
+        }
+      }
     }
   }
 </style>
