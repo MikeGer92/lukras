@@ -178,7 +178,7 @@
       }
     }
   }
-@media (min-width: 361px) and (max-width: 768px) {
+@media (min-width: 451px) and (max-width: 768px) {
   .header {
     &__top {
       &_links {
@@ -213,7 +213,7 @@
     }
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 450px) {
   .header {
     &__top {
       position: relative;
@@ -222,17 +222,21 @@
         display: flex;
       }
       &_links {
+        margin-top: 24px;
         display: none;
         flex-direction: column;
         position: fixed;
-        top: 10%;
+        top: 5%;
         left: 50%;
         transform: translateX(-50%);
         gap: 24px;
+        background-color: #fff;
         &-link {
+          width: 100%;
           font-weight: 500;
           color: #000000;
           align-items: center;
+          background-color: #fff;
         }
 
         &-active {

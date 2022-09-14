@@ -18,11 +18,11 @@
 }
 @media (min-width: 361px) and (max-width: 768px) {
   .container {
-    max-width: 724px;
+    padding: 23px;
   }
 }
 @media (max-width: 360px) {
   .container {
-    max-width: 328px;
+    padding: 16px;
   }
 }

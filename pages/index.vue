@@ -1,9 +1,9 @@
 <template>
   <div class="main">
-    <MainBlock></MainBlock>
-    <CalcBlock></CalcBlock>
-    <!-- <CatalogBlock></CatalogBlock>
-    <AdvantagesBlock></AdvantagesBlock>
+    <!-- <MainBlock></MainBlock>
+    <CalcBlock></CalcBlock> -->
+    <CatalogBlock></CatalogBlock>
+    <!-- <AdvantagesBlock></AdvantagesBlock>
     <CertificateBlock></CertificateBlock>
     <WarningBlock></WarningBlock>
     <WorksGalary></WorksGalary>
