@@ -65,7 +65,6 @@
     methods: {
       isLinks() {
         this.isShowLinks = !this.isShowLinks
-        console.log(this.isShowLinks)
       }
     }
   }

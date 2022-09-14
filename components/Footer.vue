@@ -156,6 +156,7 @@ export default {
       &__wrapper {
         row-gap: 48px;
         grid-template-columns: repeat(12, 1fr );
+        column-gap: 0;
       }
       &__contact {
         display: grid;
