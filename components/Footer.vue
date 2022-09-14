@@ -158,8 +158,11 @@ export default {
         grid-template-columns: repeat(12, 1fr );
       }
       &__contact {
-        grid-column: span 10;
-        padding: 0 24px 48px 0;
+        display: grid;
+        grid-template-columns: repeat(12, 1fr );
+        grid-column: span 12;
+        column-gap: 0;
+        padding: 0 0px 48px 0;
         border-bottom: 1px solid #E3E3E3;
         flex-direction: row;
         justify-content: space-between;
