@@ -4,12 +4,14 @@
       <div class="footer__wrapper">
         <div class="footer__contact">
           <div class="footer__contact_logo"><img src="@/assets/images/logo.png"></div>
-          <div class="footer__contact_contacts">
-            <div class="footer__contact_contacts-title">Контакты:</div>
-            <div class="footer__contact_contacts-phone">8 (800) 600-90-91</div>
-            <div class="footer__contact_contacts-mail">info@lukras.ru</div>
-          </div>
-          <Social></Social>
+          <div class="footer__contact_contacts-wrapper">
+            <div class="footer__contact_contacts">
+              <div class="footer__contact_contacts-title">Контакты:</div>
+              <div class="footer__contact_contacts-phone">8 (800) 600-90-91</div>
+              <div class="footer__contact_contacts-mail">info@lukras.ru</div>
+            </div>
+            <Social></Social>
+        </div>
         </div>
         <div class="footer__menu">
           <div class="footer__menu_title">Меню</div>
@@ -86,6 +88,9 @@ export default {
           text-transform: uppercase;
           color: #000000;
         }
+        &-mail {
+          padding-bottom: 48px;
+        }
       }
     }
     &__menu {
@@ -146,5 +151,37 @@ export default {
       }
     }
   }
+  @media (min-width: 390px) and (max-width: 768px) {
+    .footer {
+      &__wrapper {
+        row-gap: 48px;
+        grid-template-columns: repeat(12, 1fr );
+      }
+      &__contact {
+        grid-column: span 10;
+        padding: 0 24px 48px 0;
+        border-bottom: 1px solid #E3E3E3;
+        flex-direction: row;
+        justify-content: space-between;
+        &_logo {
+          grid-column: span 6;
+        }
+        &_contacts {
+          flex-direction: column;
+          padding-bottom: 48px;
+          &-wrapper {
+            flex-direction: column;
+            grid-column: span 6;
+          }
+        }
+      }
+      &__menu {
+        grid-column: span 6;
+      }
+      &__inform {
+        grid-column: span 6;
+      }
+    }
 
+  }
 </style>
