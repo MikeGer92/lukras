@@ -161,7 +161,7 @@
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .product {
       max-width: 100%;
       padding: 40px;
@@ -177,6 +177,9 @@
         }
       }
     }
-
+  }
+  @media (max-width: 360px) {
+    .product {
+    }
   }
 </style>

@@ -77,7 +77,7 @@ import Product from './Product.vue';
       column-gap: 24px;
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .catalog {
       margin-top: 100px;
       padding: 64px 0;
@@ -91,6 +91,10 @@ import Product from './Product.vue';
         flex-direction: column;
         gap: 20px;
       }
+    }
+  }
+  @media (max-width: 360px) {
+    .catalog {
     }
   }
 </style>

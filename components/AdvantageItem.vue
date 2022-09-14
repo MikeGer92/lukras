@@ -96,7 +96,7 @@
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .advantage {
       width: 352px;
       &__inter {
@@ -110,8 +110,12 @@
         &_descr {
           padding: 0 32px 32px 32px;
         }
-
       }
+    }
+  }
+  @media (max-width: 360px) {
+    .advantage {
+
     }
   }
 </style>

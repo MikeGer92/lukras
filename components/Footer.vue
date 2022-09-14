@@ -151,7 +151,7 @@ export default {
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .footer {
       &__wrapper {
         row-gap: 48px;
@@ -186,6 +186,9 @@ export default {
         grid-column: span 6;
       }
     }
-
+  }
+  @media (max-width: 360px) {
+    .footer {
+    }
   }
 </style>

@@ -123,13 +123,17 @@ export default {
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .works {
       margin-top: 100px;
       &__title {
         font-size: 32px;
         line-height: 40px;
       }
+    }
+  }
+  @media (max-width: 360px) {
+    .works {
     }
   }
 </style>

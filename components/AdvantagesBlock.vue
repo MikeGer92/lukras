@@ -118,7 +118,7 @@ export default {
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .advant {
       margin-top: 100px;
       &__swiper {
@@ -130,6 +130,11 @@ export default {
           flex-wrap: wrap;
         }
       }
+    }
+  }
+  @media (max-width: 360px) {
+    .advant {
+
     }
   }
 </style>

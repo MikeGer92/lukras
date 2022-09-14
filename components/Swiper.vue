@@ -164,7 +164,7 @@ export default {
 .slider-content {
   color: #000;
 }
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 361px) and (max-width: 768px) {
   .swiper {
     width: 100%;
     height: 400px;
@@ -177,6 +177,10 @@ export default {
   .swiper-slide-active {
     width: 670px  !important;
     filter: brightness(100%);
+  }
+}
+@media (max-width: 360px) {
+  .swiper {
   }
 }
 </style>

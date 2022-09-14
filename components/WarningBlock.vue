@@ -89,7 +89,7 @@ import Corner from './Corner.vue';
       }
     }
   }
-  @media (min-width: 390px) and (max-width: 768px) {
+  @media (min-width: 361px) and (max-width: 768px) {
     .warning {
       margin-top: 100px;
       padding: 64px 0;
@@ -104,6 +104,10 @@ import Corner from './Corner.vue';
           gap: 32px;
         }
       }
+    }
+  }
+  @media (max-width: 360px) {
+    .warning {
     }
   }
 </style>

@@ -171,7 +171,7 @@
     }
   }
 
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 361px) and (max-width: 768px) {
   .header {
     &__top {
       &_links {
@@ -205,6 +205,9 @@
       }
     }
   }
-
+}
+@media (max-width: 360px) {
+  .header {
+  }
 }
 </style>

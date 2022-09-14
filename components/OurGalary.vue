@@ -42,7 +42,7 @@ import Swiper from './Swiper.vue';
     color: #000000;
   }
 }
-@media (min-width: 390px) and (max-width: 768px) {
+@media (min-width: 361px) and (max-width: 768px) {
     .galary {
       margin-top: 100px;
       &__title {
@@ -52,6 +52,10 @@ import Swiper from './Swiper.vue';
         font-size: 32px;
         line-height: 40px;
       }
+    }
+  }
+  @media (max-width: 360px) {
+    .galary {
     }
   }
 </style>
