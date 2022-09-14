@@ -1,57 +1,28 @@
 <template>
-  <div>
-    <div class="small-form">
-      <div class="small-form__inter">
-        <div class="small-form__inter_title">Наши контакты</div>
-        <div class="small-form__inter_divider"></div>
-        <div class="small-form__inter_wrapp">
-          <div class="small-form__inter_info">
-            <div class="small-form__inter_info-addr">
-              <div class="small-form__inter_info-addr--title">Адрес офиса</div>
-              <div class="small-form__inter_info-addr--address">г. Ростов-на-Дону, ул. Механизаторов 10</div>
+  <div class="contact-form">
+    <div class="contact-form__inter">
+      <div class="contact-form__inter_title">Наши контакты</div>
+      <div class="contact-form__inter_divider"></div>
+      <div class="contact-form__inter_wrapp">
+        <div class="contact-form__inter_info">
+          <div class="contact-form__inter_info-addr">
+            <div class="contact-form__inter_info-addr--title">Адрес офиса</div>
+            <div class="contact-form__inter_info-addr--address">г. Ростов-на-Дону, ул. Механизаторов 10</div>
+          </div>
+          <div class="contact-form__inter_info-cont">
+            <div class="contact-form__inter_info-cont--phone">
+              <div class="contact-form__inter_info-cont--phone_title">Телефон</div>
+              <div class="contact-form__inter_info-cont--phone_num">8 (800) 600-90-91</div>
             </div>
-            <div class="small-form__inter_info-cont">
-              <div class="small-form__inter_info-cont--phone">
-                <div class="small-form__inter_info-cont--phone_title">Телефон</div>
-                <div class="small-form__inter_info-cont--phone_num">8 (800) 600-90-91</div>
-              </div>
-              <div class="small-form__inter_info-cont--mail">
-                <div class="small-form__inter_info-cont--mail_title">E-mail</div>
-                <div class="small-form__inter_info-cont--mail_addr">info@lukras.ru</div>
-              </div>
+            <div class="contact-form__inter_info-cont--mail">
+              <div class="contact-form__inter_info-cont--mail_title">E-mail</div>
+              <div class="contact-form__inter_info-cont--mail_addr">info@lukras.ru</div>
             </div>
           </div>
-        </div>
-        <div class="small-form__inter_social">
-          <Social></Social>
         </div>
       </div>
-    </div>
-    <div class="contact-form">
-      <div class="contact-form__inter">
-        <div class="contact-form__inter_title">Наши контакты</div>
-        <div class="contact-form__inter_divider"></div>
-        <div class="contact-form__inter_wrapp">
-          <div class="contact-form__inter_info">
-            <div class="contact-form__inter_info-addr">
-              <div class="contact-form__inter_info-addr--title">Адрес офиса</div>
-              <div class="contact-form__inter_info-addr--address">г. Ростов-на-Дону, ул. Механизаторов 10</div>
-            </div>
-            <div class="contact-form__inter_info-cont">
-              <div class="contact-form__inter_info-cont--phone">
-                <div class="contact-form__inter_info-cont--phone_title">Телефон</div>
-                <div class="contact-form__inter_info-cont--phone_num">8 (800) 600-90-91</div>
-              </div>
-              <div class="contact-form__inter_info-cont--mail">
-                <div class="contact-form__inter_info-cont--mail_title">E-mail</div>
-                <div class="contact-form__inter_info-cont--mail_addr">info@lukras.ru</div>
-              </div>
-            </div>
-          </div>
-        </div>
-        <div class="contact-form__inter_social">
-          <Social></Social>
-        </div>
+      <div class="contact-form__inter_social">
+        <Social></Social>
       </div>
     </div>
   </div>
@@ -67,6 +38,7 @@ import Social from './Social.vue';
 <style lang="scss">
   .small-form {
     display: none;
+
   }
   .contact-form {
     max-width: 424px;
@@ -146,30 +118,37 @@ import Social from './Social.vue';
   }
   @media (min-width: 390px) and (max-width: 768px) {
     .contact-form {
-      max-width: 724px;
-      max-height: 280px;
+      display: flex;
+      max-width: 100%;
       &__inter {
         flex-direction: row;
+        justify-content: space-between;
         flex-wrap: wrap;
         &_title {
-          padding: 36px 32px 44px 32px;
+          width: 50%;
+          padding: 40px 32px;
+          order: 0;
+        }
+        &_divider {
+          display: none;
         }
         &_wrapp {
-          flex-direction: row;
-          padding: 40px 32px 32px 32px;
+          padding: 40px 32px;
+          border-top: 1px solid #E3E3E3;
+          border-bottom: none;
           order: 2;
         }
         &_info {
           width: 100%;
           flex-direction: row;
+          gap: 50px;
           &-cont {
-            gap: 32px;
+            column-gap: 48px;
           }
         }
         &_social {
+          padding: 36px 32px;
           order: 1;
-          padding: 36px 32px 44px 32px;
-          border-bottom: 1px solid #E3E3E3;
         }
       }
     }
