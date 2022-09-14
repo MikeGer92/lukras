@@ -155,6 +155,7 @@ import Social from './Social.vue';
   }
   @media (max-width: 360px) {
     .contact-form {
+      margin-top: 64px;
     }
   }
 </style>
