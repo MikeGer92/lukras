@@ -20,7 +20,14 @@ import ContactForm from './ContactForm.vue';
     margin: 0 auto;
     height: 800px;
     background: url('@/assets/images/map.png') 0px 0px/cover no-repeat;
-    padding: 136px  0;
+    padding: 136px 0;
+    display: flex;
+    align-items: flex-end;
   }
-
+  @media (min-width: 390px) and (max-width: 768px) {
+    .map {
+      background: url('@/assets/images/map-small.png') 0px 0px/cover no-repeat;
+      padding: 0 22px 22px 22px;
+    }
+  }
 </style>

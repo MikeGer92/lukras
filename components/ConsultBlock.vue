@@ -50,11 +50,10 @@ import Social from './Social.vue';
     margin: 160px 0;
     &__inter {
       border: 1px solid #E3E3E3;
-      display: flex;
-      // height: 618px;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
       &_image {
-        width: 100%;
-        max-width: 640px;
+        grid-column: span 6;
         background: url('@/assets/images/consultant.png') 0px 0px/cover no-repeat;
         &-title {
           max-width: 208px;
@@ -73,6 +72,7 @@ import Social from './Social.vue';
       &_consl {
         display: flex;
         flex-direction: column;
+        grid-column: span 6;
         gap: 48px;
         &-info {
           display: flex;
@@ -152,5 +152,28 @@ import Social from './Social.vue';
       }
     }
   }
-
+  @media (min-width: 390px) and (max-width: 768px) {
+    .consult {
+      margin: 100px 0;
+      grid-template-columns: repeat(12, 1fr);
+      &__inter {
+        flex-direction: column;
+        &_image {
+          grid-column: span 12;
+          height: 438px;
+          background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
+        }
+        &_consl {
+          grid-column: span 12;
+          gap: 40px;
+          &-info {
+            padding: 40px 40px 0 40px;
+          }
+          &-social {
+            padding: 40px;
+          }
+        }
+      }
+    }
+  }
 </style>

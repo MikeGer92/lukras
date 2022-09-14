@@ -116,10 +116,48 @@
           height: 688px;
           border: 1px solid #E3E3E3;
           object-fit: cover;
-          object-fit: cover;
         }
       }
     }
   }
-
+  @media (min-width: 390px) and (max-width: 768px) {
+    .steps {
+      padding-bottom: 0;
+      &__title {
+        padding: 100px 0 48px 40px;
+        font-size: 48px;
+        line-height: 56px;
+      }
+      &__main {
+        &_list {
+          gap: 48px;
+          &-item {
+            gap: 16px;
+            &--sqr {
+              padding: 14px 15px;
+            }
+            &--text {
+              font-size: 14px;
+              line-height: 16px;
+              padding-right: 16px;
+            }
+            &--divider {
+              width: 74px;
+            }
+          }
+        }
+        &_image {
+          &-inter {
+            width: 386px;
+            height: 512px;
+            object-fit: contain;
+            & img {
+              width: 100%;
+              height: auto;
+            }
+          }
+        }
+      }
+    }
+  }
 </style>
