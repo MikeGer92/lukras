@@ -8,27 +8,33 @@
             <li class="steps__main_list-item">
               <div class="steps__main_list-item--sqr">1</div>
               <div class="steps__main_list-item--text">ДОСТАВКА СЕПТИКА НА ОБЪЕКТ</div>
+              <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
               <div class="steps__main_list-item--sqr">2</div>
               <div class="steps__main_list-item--text">ПОДГОТОВКА КОТЛОВАНА И МАГИСТРАЛЕЙ</div>
+              <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
               <div class="steps__main_list-item--sqr">3</div>
               <div class="steps__main_list-item--text">УСТАНОВКА СЕПТИКА В КОТЛОВАН</div>
               <div class="steps__main_list-item--divider"></div>
+              <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
               <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">4</div>
               <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ПРОКЛАДКА ТРУБ И ЭЛЕКТОКАБЕЛЯ</div>
+              <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
               <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">5</div>
               <div class="steps__main_list-item--text steps__main_list-item--text_deactive">НАСТРОЙКИ И ПРОВЕРКА РАБОТОСПОСОБНОСТИ</div>
+              <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
               <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">6</div>
               <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ОБУЧЕНИЕ</div>
+              <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
           </ul>
           <div class="steps__main_image">
@@ -100,6 +106,9 @@
               color: #949494;
             }
           }
+          &--img {
+            display: none;
+          }
           &--divider {
             width: 370px;
             height: 1px;
@@ -162,6 +171,60 @@
   }
   @media (max-width: 360px) {
     .steps {
+      margin-top: 64px;
+      padding-bottom: 0;
+      &__title {
+        padding: 0px;
+        font-size: 38px;
+        line-height: 42px;
+      }
+      &__wrapper {
+        border-left: none;
+      }
+      &__main {
+        margin-top: 32px;
+        &_list {
+          gap: 24px;
+          &-item {
+            gap: 16px;
+            flex-wrap: wrap;
+            &--sqr {
+              padding: 14px 15px;
+            }
+            &--sqr {
+              &_deactive {
+                color: #000000;
+              }
+            }
+            &--text {
+              font-size: 14px;
+              line-height: 16px;
+              padding-right: 16px;
+              &_deactive {
+                color: #000000;
+              }
+            }
+            &--divider {
+              display: none;
+            }
+            &--img {
+              padding: 8px;
+              display: flex;
+              width: 100%;
+              background: #FCFCFC;
+              border: 1px solid #E3E3E3;
+              & img {
+                width: 100%;
+                height: auto;
+                border: 1px solid #E3E3E3;
+              }
+            }
+          }
+        }
+        &_image {
+          display: none;
+        }
+      }
     }
   }
 </style>
