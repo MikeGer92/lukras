@@ -134,6 +134,21 @@ export default {
   }
   @media (max-width: 360px) {
     .works {
+      margin-top: 64px;
+      &__title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 24px;
+      }
+      &__cases {
+        &_items {
+          &-item {
+            padding: 12px 24px;
+            font-size: 14px;
+            line-height: 16px;
+          }
+        }
+      }
     }
   }
 </style>

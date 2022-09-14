@@ -106,8 +106,23 @@ import Corner from './Corner.vue';
       }
     }
   }
-  @media (max-width: 360px) {
-    .warning {
+@media (max-width: 360px) {
+  .warning {
+    margin-top: 64px;
+    padding: 48px 0;
+    &__title {
+      font-size: 38px;
+      line-height: 42px;
+    }
+    &__info {
+      max-width: 100%;
+      flex-wrap: wrap;
+      justify-content: center;
+      &_item {
+        padding: 32px;
+        gap: 32px;
+      }
     }
   }
+}
 </style>

@@ -230,10 +230,9 @@ import Corner from './Corner.vue';
       }
       &-benefsmall {
         display: none;
+        margin-right: 24px;
         order: 2;
         position: relative;
-        width: 452px;
-        // height: 587px;
         &_main {
           width: 328px;
           height: 423px;
@@ -253,7 +252,7 @@ import Corner from './Corner.vue';
           &-top {
             width: 212px;
             top: -92px;
-            right: 100px;
+            right: -24px;
             padding: 24px 16px;
             &--text {
               font-weight: 500;
@@ -504,6 +503,7 @@ import Corner from './Corner.vue';
         margin-bottom: 20px;
       }
       &_title {
+        width: 100%;
         &-black, &-span {
           font-size: 56px;
           line-height: 64px;
@@ -516,12 +516,12 @@ import Corner from './Corner.vue';
       }
       &_add {
         margin-top: 56px;
-        column-gap: unset;
         width: 100%;
         justify-content: space-between;
         flex-wrap: wrap;
         &-choise {
           order: 3;
+          display: flex;
         }
         .corner {
          order: 1;
@@ -530,16 +530,18 @@ import Corner from './Corner.vue';
          height: 56px;
         }
         &-benefsmall {
+
           order: 2;
           display: block;
         }
         &-how {
           margin-top: 0px;
-          max-height: 166px;
+          width: 301px;
+          max-height: 165px;
         }
         &-int {
           &--item {
-            padding: 16px 16px 16px 18.21px;
+            padding: 16px 16px 16px 14px;
           }
         }
         &-choise {

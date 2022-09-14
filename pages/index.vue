@@ -1,16 +1,16 @@
 <template>
   <div class="main">
-    <!-- <MainBlock></MainBlock>
-    <CalcBlock></CalcBlock> -->
+    <MainBlock></MainBlock>
+    <CalcBlock></CalcBlock>
     <CatalogBlock></CatalogBlock>
-    <!-- <AdvantagesBlock></AdvantagesBlock>
+    <AdvantagesBlock></AdvantagesBlock>
     <CertificateBlock></CertificateBlock>
     <WarningBlock></WarningBlock>
     <WorksGalary></WorksGalary>
-    <StepsBlock></StepsBlock>
+    <!-- <StepsBlock></StepsBlock> -->
     <OurGalary></OurGalary>
-    <ConsultBlock></ConsultBlock>
-    <MapBlock></MapBlock> -->
+    <!-- <ConsultBlock></ConsultBlock> -->
+    <!-- <MapBlock></MapBlock> -->
 </div>
 </template>
 

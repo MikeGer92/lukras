@@ -1,7 +1,7 @@
 <template>
   <section class="galary">
     <div class="container">
-      <div class="galary__title">Собственный склад<br>оборудования в Ростове на Дону</div>
+      <div class="galary__title">Собственный склад оборудования <br>в Ростове на Дону</div>
     </div>
     <Swiper :imageList="slideList"></Swiper>
   </section>
@@ -56,6 +56,12 @@ import Swiper from './Swiper.vue';
   }
   @media (max-width: 360px) {
     .galary {
+      margin-top: 64px;
+      &__title {
+        font-size: 24px;
+        line-height: 32px;
+        margin-bottom: 32px;
+      }
     }
   }
 </style>

@@ -115,7 +115,24 @@
   }
   @media (max-width: 360px) {
     .advantage {
-
+      width: 100%;
+      &__inter {
+        height: 230px;
+        gap: 16px;
+        &_top {
+          margin-bottom: 16px;
+        }
+        &_title {
+          padding: 0 16px;
+          font-size: 18px;
+          line-height: 18px;
+        }
+        &_descr {
+          padding: 0 16px 24px 16px;
+          font-size: 14px;
+          line-height: 20px;
+        }
+      }
     }
   }
 </style>

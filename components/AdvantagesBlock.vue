@@ -122,7 +122,7 @@ export default {
     .advant {
       margin-top: 100px;
       &__swiper {
-        // width: 100%;
+        width: 100%;
         width: 724px;
         overflow-x: hidden;
         &_wrapp {
@@ -132,9 +132,26 @@ export default {
       }
     }
   }
-  @media (max-width: 360px) {
-    .advant {
-
+@media (max-width: 360px) {
+  .advant {
+    margin-top: 64px;
+    &__title {
+      font-size: 38px;
+      line-height: 42px;
+      &_license {
+        font-size: 12px;
+        line-height: 12px;
+      }
+    }
+    &__swiper {
+      width: 100%;
+      overflow-x: hidden;
+      &_wrapp {
+        gap: 0px;
+        flex-wrap: wrap;
+        margin-top: 24px;
+      }
     }
   }
+}
 </style>
