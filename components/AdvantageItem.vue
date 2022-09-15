@@ -96,7 +96,7 @@
       }
     }
   }
-  @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 541px) and (max-width: 768px) {
     .advantage {
       width: 352px;
       &__inter {
@@ -113,7 +113,7 @@
       }
     }
   }
-  @media (max-width: 360px) {
+  @media (max-width: 540px) {
     .advantage {
       width: 100%;
       &__inter {

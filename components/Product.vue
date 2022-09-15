@@ -173,7 +173,7 @@
       }
     }
   }
-  @media (min-width: 451px) and (max-width: 768px) {
+  @media (min-width: 541px) and (max-width: 768px) {
     .product {
       max-width: 100%;
       padding: 40px;
@@ -191,7 +191,7 @@
       }
     }
   }
-  @media (max-width: 450px) {
+  @media (max-width: 540px) {
     .product {
       max-width: 100%;
       padding: 24px;
@@ -228,6 +228,7 @@
           flex-wrap: wrap;
           justify-content: space-between;
           &-item {
+            width: 50%;
             &--descr {
               font-size: 12px;
               line-height: 14px;

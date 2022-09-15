@@ -1,6 +1,8 @@
 <template>
   <section class="warning" id="warning">
-    <h2 class="warning__title">ОСТЕРЕГАЙТЕСЬ КОМПАНИЙ ОДНОДНЕВОК</h2>
+    <div class="container">
+      <h2 class="warning__title">ОСТЕРЕГАЙТЕСЬ КОМПАНИЙ ОДНОДНЕВОК</h2>
+    </div>
     <div class="warning__info">
       <div class="warning__info_wrap">
         <Corner :style="{'width': '64px', 'height': '64px', 'transform': 'rotate(90deg)'}"></Corner>
@@ -89,11 +91,12 @@ import Corner from './Corner.vue';
       }
     }
   }
-  @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 541px) and (max-width: 768px) {
     .warning {
       margin-top: 100px;
       padding: 64px 0;
       &__title {
+        width: 100%;
         font-size: 48px;
         line-height: 56px;
       }
@@ -106,7 +109,7 @@ import Corner from './Corner.vue';
       }
     }
   }
-@media (max-width: 360px) {
+@media (max-width: 540px) {
   .warning {
     margin-top: 64px;
     padding: 48px 0;

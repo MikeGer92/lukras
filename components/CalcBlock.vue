@@ -208,7 +208,7 @@
       }
     }
   }
-  @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 541px) and (max-width: 768px) {
     .calc {
       margin-top: 100px;
       &__main {
@@ -221,7 +221,7 @@
       }
     }
   }
-  @media (max-width: 360px) {
+  @media (max-width: 540px) {
     .calc {
       margin-top: 64px;
       &__main {

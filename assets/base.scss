@@ -16,13 +16,15 @@
   max-width: 1320px;
   margin: 0 auto;
 }
-@media (min-width: 361px) and (max-width: 768px) {
+@media (min-width: 426px) and (max-width: 768px) {
   .container {
     padding: 0 23px;
+    margin: 0 auto;
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 425px) {
   .container {
     padding: 0 16px;
+    margin: 0 auto;
   }
 }
