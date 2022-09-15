@@ -73,11 +73,15 @@ import Product from './Product.vue';
     }
     &__products {
       width: 100%;
-      display: flex;
+      display: grid;
+      grid-template-columns: repeat(12, 1fr);
       column-gap: 24px;
+      & .product {
+        grid-column: span 4;
+      }
     }
   }
-  @media (min-width: 541px) and (max-width: 768px) {
+  @media (min-width: 691px) and (max-width: 768px) {
     .catalog {
       margin-top: 100px;
       padding: 64px 0;
@@ -93,7 +97,7 @@ import Product from './Product.vue';
       }
     }
   }
-  @media (max-width: 540px) {
+  @media (max-width: 690px) {
     .catalog {
       margin-top: 64px;
       padding: 0;
@@ -108,6 +112,9 @@ import Product from './Product.vue';
       &__products {
         flex-direction: column;
         gap: 20px;
+        & .product {
+          grid-column: span 12;
+        }
       }
     }
   }

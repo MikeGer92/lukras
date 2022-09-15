@@ -118,7 +118,7 @@ export default {
       }
     }
   }
-  @media (min-width: 541px) and (max-width: 768px) {
+  @media (min-width: 691px) and (max-width: 768px) {
     .advant {
       margin-top: 100px;
       &__swiper {
@@ -132,7 +132,7 @@ export default {
       }
     }
   }
-@media (max-width: 540px) {
+@media (max-width: 690px) {
   .advant {
     margin-top: 64px;
     &__title {

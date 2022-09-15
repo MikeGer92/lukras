@@ -55,6 +55,7 @@
     border: 1px solid #E3E3E3;
     &__wrapper {
       display: flex;
+      width: 100%;
       flex-direction: column;
       gap: 40px;
     }
@@ -119,7 +120,8 @@
     &__main {
       width: 100%;
       display: flex;
-      column-gap: 72px;
+      justify-content: space-between;
+      // column-gap: 72px;
       &_info {
         display: flex;
         flex-direction: column;
@@ -168,12 +170,19 @@
         height: 184px;
         background: url('../assets/images/barrel.png') 0px 0px/ contain no-repeat;
         &:hover {
-          background: url('../assets/images/barrel-active.png') -40px 0px/ cover no-repeat;
+          background: url('../assets/images/barrel-active.png') center 0px/ cover no-repeat;
         }
       }
     }
   }
-  @media (min-width: 541px) and (max-width: 768px) {
+  @media (min-width: 769x) and (max-width: 1280px) {
+    .product {
+      &__main {
+        grid-column-gap: 36px;
+      }
+    }
+  }
+  @media (min-width: 691px) and (max-width: 768px) {
     .product {
       max-width: 100%;
       padding: 40px;
@@ -181,7 +190,6 @@
         width: 100%;
       }
       &__main {
-        column-gap: 130px;
         &_image {
           display: flex;
           width: 254px;
@@ -191,7 +199,7 @@
       }
     }
   }
-  @media (max-width: 540px) {
+  @media (max-width: 690px) {
     .product {
       max-width: 100%;
       padding: 24px;

@@ -39,13 +39,15 @@ import Corner from './Corner.vue';
 <style lang="scss">
   .warning {
     display: flex;
-    align-items: center;
+    margin: 0 auto;
     flex-direction: column;
+    align-items: center;
     margin-top: 120px;
     background: #FCFCFC;
     padding: 80px 0;
     &__title {
       max-width: 813px;
+      margin: 0 auto;
       font-family: 'Roboto Condensed';
       font-weight: 700;
       font-size: 72px;
@@ -91,7 +93,7 @@ import Corner from './Corner.vue';
       }
     }
   }
-  @media (min-width: 541px) and (max-width: 768px) {
+  @media (min-width: 691px) and (max-width: 768px) {
     .warning {
       margin-top: 100px;
       padding: 64px 0;
@@ -109,7 +111,7 @@ import Corner from './Corner.vue';
       }
     }
   }
-@media (max-width: 540px) {
+@media (max-width: 690px) {
   .warning {
     margin-top: 64px;
     padding: 48px 0;

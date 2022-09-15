@@ -151,7 +151,7 @@
       }
     }
   }
-  @media (min-width: 541px) and (max-width: 768px) {
+  @media (min-width: 691px) and (max-width: 768px) {
     .cert {
       margin-top: 100px;
       &__inter {
@@ -164,7 +164,7 @@
       }
     }
   }
-  @media (max-width: 540px) {
+  @media (max-width: 690px) {
     .cert {
       margin-top: 64px;
       &__inter {

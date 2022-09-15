@@ -151,7 +151,7 @@ export default {
       }
     }
   }
-  @media (min-width: 541px) and (max-width: 768px) {
+  @media (min-width: 691px) and (max-width: 768px) {
     .footer {
       &__wrapper {
         row-gap: 48px;
@@ -187,7 +187,7 @@ export default {
       }
     }
   }
-  @media (max-width: 540px) {
+  @media (max-width: 690px) {
     .footer {
       margin-top: 358px;
       &__wrapper {
