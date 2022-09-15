@@ -48,6 +48,7 @@
 
 <style lang="scss">
   .product {
+    width: 100%;
     max-width: 424px;
     display: flex;
     padding: 24px;
@@ -168,7 +169,7 @@
         order: 1;
         width: 182.89px;
         height: 184px;
-        background: url('../assets/images/barrel-small.svg') 35px 0px/ contain no-repeat;
+        background: url('../assets/images/barrel-small.svg') center 0px/ contain no-repeat;
         &:hover {
           background: url('../assets/images/barrel-small-active.png') center 0px/ cover no-repeat;
         }
@@ -177,8 +178,20 @@
   }
   @media (min-width: 769x) and (max-width: 1280px) {
     .product {
+      display: flex;
+      width: 100%;
+      max-width: 450px;
       &__main {
         grid-column-gap: 36px;
+        &_image {
+        order: 1;
+        width: 182.89px;
+        height: 184px;
+        background: url('../assets/images/barrel-small.svg') center 0px/ contain no-repeat;
+        &:hover {
+          background: url('../assets/images/barrel-small-active.png') center 0px/ cover no-repeat;
+        }
+      }
       }
     }
   }
@@ -186,6 +199,7 @@
     .product {
       max-width: 100%;
       padding: 40px;
+      grid-column: span 12;
       &__wrapper {
         width: 100%;
       }

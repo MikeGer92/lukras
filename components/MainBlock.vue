@@ -261,7 +261,7 @@ import Corner from './Corner.vue';
           &-top {
             width: 212px;
             top: -92px;
-            right: -74px;
+            right: -24px;
             padding: 24px 16px;
             &--text {
               font-weight: 500;
@@ -503,7 +503,7 @@ import Corner from './Corner.vue';
     }
   }
 }
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .main-block {
     margin: 100px auto 0 auto;
     &__info {
@@ -526,171 +526,7 @@ import Corner from './Corner.vue';
       &_add {
         margin-top: 56px;
         width: 100%;
-        column-gap: 80px;
-        justify-content: center;
-        flex-wrap: wrap;
-        &-choise {
-          order: 3;
-          display: flex;
-        }
-        .corner {
-         order: 1;
-         margin-top: 64px;
-         margin-bottom: 64px;
-         width: 56px;
-         height: 56px;
-        }
-        &-benefsmall {
-          order: 0;
-          display: block;
-          &_add {
-            &-top {
-              width: 240px;
-              top: -50px;
-              right: -74px;
-            }
-            &-bot {
-              bottom: -60px;
-            }
-
-          }
-        }
-        &-how {
-          margin-top: 87px;
-          width: 301px;
-          max-height: 165px;
-          order: 1;
-        }
-        &-int {
-          &--item {
-            padding: 16px 16px 16px 14px;
-          }
-        }
-        &-choise {
-          margin-top: 0px;
-          justify-content: space-between;
-          & .corner {
-            margin-top: 64px;
-          }
-          &--btn {
-            margin-top: 0;
-            padding: 24px 48px;
-            order: 2;
-          }
-        }
-      }
-    }
-    &__benefit {
-      display: none;
-    }
-  }
-}
-@media (min-width: 696px) and (max-width: 768px) {
-  .main-block {
-    margin: 100px auto 0 auto;
-    &__info {
-      margin-top: 0px;
-      &_descr {
-        margin-bottom: 20px;
-      }
-      &_title {
-        width: 100%;
-        &-black, &-span {
-          font-size: 56px;
-          line-height: 64px;
-        }
-        &-license {
-          font-size: 16px;
-          line-height: 16px;
-          margin-left: -12px;
-        }
-      }
-      &_add {
-        margin-top: 56px;
-        width: 100%;
-        column-gap: 80px;
-        justify-content: center;
-        flex-wrap: wrap;
-        &-choise {
-          order: 3;
-          display: flex;
-        }
-        .corner {
-         order: 1;
-         margin-top: 64px;
-         margin-bottom: 64px;
-         width: 56px;
-         height: 56px;
-        }
-        &-benefsmall {
-          order: 0;
-          display: block;
-          &_add {
-            &-top {
-              width: 240px;
-              top: -50px;
-              right: -74px;
-            }
-            &-bot {
-              bottom: -60px;
-            }
-
-          }
-        }
-        &-how {
-          margin-top: 87px;
-          width: 301px;
-          max-height: 165px;
-          order: 1;
-        }
-        &-int {
-          &--item {
-            padding: 16px 16px 16px 14px;
-          }
-        }
-        &-choise {
-          margin-top: 0px;
-          justify-content: space-between;
-          & .corner {
-            margin-top: 64px;
-          }
-          &--btn {
-            margin-top: 0;
-            padding: 24px 48px;
-            order: 2;
-          }
-        }
-      }
-    }
-    &__benefit {
-      display: none;
-    }
-  }
-}
-@media (min-width: 577px) and (max-width: 695px) {
-  .main-block {
-    margin: 100px auto 0 auto;
-    &__info {
-      margin-top: 0px;
-      &_descr {
-        margin-bottom: 20px;
-      }
-      &_title {
-        width: 100%;
-        &-black, &-span {
-          font-size: 56px;
-          line-height: 64px;
-        }
-        &-license {
-          font-size: 16px;
-          line-height: 16px;
-          margin-left: -12px;
-        }
-      }
-      &_add {
-        margin-top: 56px;
-        width: 100%;
-        justify-content: center;
+        justify-content: space-between;
         flex-wrap: wrap;
         &-choise {
           order: 3;
@@ -703,25 +539,14 @@ import Corner from './Corner.vue';
          height: 56px;
         }
         &-benefsmall {
-          order: 0;
-          display: block;
-          &_add {
-            &-top {
-              width: 240px;
-              top: -50px;
-              right: -74px;
-            }
-            &-bot {
-              bottom: -60px;
-            }
 
-          }
+          order: 2;
+          display: block;
         }
         &-how {
-          margin-top: 87px;
+          margin-top: 0px;
           width: 301px;
           max-height: 165px;
-          order: 1;
         }
         &-int {
           &--item {
@@ -729,14 +554,11 @@ import Corner from './Corner.vue';
           }
         }
         &-choise {
-          margin-top: 24px;
-          & .corner {
-            display: none;
-          }
+          margin-top: -211px;
           &--btn {
             margin-top: 0;
             padding: 24px 48px;
-            order: 2;
+            order: 0;
           }
         }
       }
