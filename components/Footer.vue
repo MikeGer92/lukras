@@ -189,6 +189,7 @@ export default {
   }
   @media (max-width: 360px) {
     .footer {
+      margin-top: 358px;
       &__wrapper {
         row-gap: 32px;
         grid-template-columns: repeat(12, 1fr );
