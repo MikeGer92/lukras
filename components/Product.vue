@@ -168,9 +168,9 @@
         order: 1;
         width: 182.89px;
         height: 184px;
-        background: url('../assets/images/barrel.png') 0px 0px/ contain no-repeat;
+        background: url('../assets/images/barrel-small.svg') 35px 0px/ contain no-repeat;
         &:hover {
-          background: url('../assets/images/barrel-active.png') center 0px/ cover no-repeat;
+          background: url('../assets/images/barrel-small-active.png') center 0px/ cover no-repeat;
         }
       }
     }
@@ -193,8 +193,8 @@
         &_image {
           display: flex;
           width: 254px;
-          height: 256px;
-          margin-top: -72px;
+          height: unset;
+          margin-top: -20px;
         }
       }
     }

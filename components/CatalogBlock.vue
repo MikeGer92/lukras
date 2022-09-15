@@ -93,7 +93,10 @@ import Product from './Product.vue';
       }
       &__products {
         flex-direction: column;
-        gap: 20px;
+        gap: 24px;
+        & .product {
+          grid-column: span 12;
+        }
       }
     }
   }
