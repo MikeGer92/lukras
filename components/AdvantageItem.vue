@@ -97,9 +97,26 @@
       }
     }
   }
-  @media (min-width: 577px) and (max-width: 768px) {
+  @media (min-width: 725px) and (max-width: 768px) {
     .advantage {
-      width: 352px;
+      width: 346px;
+      &__inter {
+        gap: 24px;
+        &_top {
+          margin-bottom: 16px;
+        }
+        &_title {
+          padding: 0 32px;
+        }
+        &_descr {
+          padding: 0 32px 32px 32px;
+        }
+      }
+    }
+  }
+  @media (min-width: 577px) and (max-width: 724px) {
+    .advantage {
+      width: 100%;
       &__inter {
         gap: 24px;
         &_top {
