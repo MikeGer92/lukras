@@ -182,7 +182,7 @@
       }
     }
   }
-  @media (min-width: 691px) and (max-width: 768px) {
+  @media (min-width: 577px) and (max-width: 768px) {
     .product {
       max-width: 100%;
       padding: 40px;
@@ -199,7 +199,7 @@
       }
     }
   }
-  @media (max-width: 690px) {
+  @media (max-width: 576px) {
     .product {
       max-width: 100%;
       padding: 24px;

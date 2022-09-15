@@ -81,7 +81,7 @@ import Product from './Product.vue';
       }
     }
   }
-  @media (min-width: 691px) and (max-width: 768px) {
+  @media (min-width: 577px) and (max-width: 768px) {
     .catalog {
       margin-top: 100px;
       padding: 64px 0;
@@ -97,7 +97,7 @@ import Product from './Product.vue';
       }
     }
   }
-  @media (max-width: 690px) {
+  @media (max-width: 576px) {
     .catalog {
       margin-top: 64px;
       padding: 0;

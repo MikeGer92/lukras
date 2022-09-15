@@ -123,7 +123,7 @@ export default {
       }
     }
   }
-  @media (min-width: 691px) and (max-width: 768px) {
+  @media (min-width: 577px) and (max-width: 768px) {
     .works {
       margin-top: 100px;
       &__title {
@@ -132,7 +132,7 @@ export default {
       }
     }
   }
-  @media (max-width: 690px) {
+  @media (max-width: 576px) {
     .works {
       margin-top: 64px;
       &__title {

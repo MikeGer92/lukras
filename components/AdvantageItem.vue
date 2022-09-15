@@ -28,7 +28,8 @@
 
 <style lang="scss">
   .advantage {
-    width: 424px;
+    width: 99%;
+    max-width: 424px;
     padding: 8px;
     background: #FCFCFC;
     border: 1px solid #E3E3E3;
@@ -96,7 +97,7 @@
       }
     }
   }
-  @media (min-width: 691px) and (max-width: 768px) {
+  @media (min-width: 577px) and (max-width: 768px) {
     .advantage {
       width: 352px;
       &__inter {
@@ -113,7 +114,7 @@
       }
     }
   }
-  @media (max-width: 690px) {
+  @media (max-width: 576px) {
     .advantage {
       width: 100%;
       &__inter {

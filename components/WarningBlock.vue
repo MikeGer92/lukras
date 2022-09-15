@@ -93,7 +93,7 @@ import Corner from './Corner.vue';
       }
     }
   }
-  @media (min-width: 691px) and (max-width: 768px) {
+  @media (min-width: 577px) and (max-width: 768px) {
     .warning {
       margin-top: 100px;
       padding: 64px 0;
@@ -111,7 +111,7 @@ import Corner from './Corner.vue';
       }
     }
   }
-@media (max-width: 690px) {
+@media (max-width: 576px) {
   .warning {
     margin-top: 64px;
     padding: 48px 0;
@@ -120,6 +120,7 @@ import Corner from './Corner.vue';
       line-height: 42px;
     }
     &__info {
+      margin-top: 32px;
       max-width: 100%;
       flex-wrap: wrap;
       justify-content: center;
