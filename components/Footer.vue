@@ -189,6 +189,40 @@ export default {
   }
   @media (max-width: 360px) {
     .footer {
+      &__wrapper {
+        row-gap: 32px;
+        grid-template-columns: repeat(12, 1fr );
+        column-gap: 0;
+        display: flex;
+        flex-direction: column;
+      }
+      &__contact {
+        margin-top: 25px;
+        display: grid;
+        grid-column: span 12;
+        grid-template-columns: repeat(12, 1fr );
+        row-gap: 32px;
+        column-gap: 0;
+        padding: 0 0px 32px 0;
+        border-bottom: 1px solid #E3E3E3;
+        &_contacts {
+          flex-direction: column;
+          padding-bottom: 0px;
+          &-wrapper {
+            flex-direction: column;
+            grid-column: span 12;
+          }
+          &-mail {
+            padding-bottom: 32px;
+          }
+        }
+      }
+      &__menu {
+        grid-column: span 6;
+      }
+      &__inform {
+        grid-column: span 6;
+      }
     }
   }
 </style>

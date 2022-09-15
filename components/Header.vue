@@ -4,7 +4,7 @@
       <div class="header__top">
         <div class="header__top_brand"></div>
         <div
-          :class="{'header__top_links': true, 'header__top_links-active': isShowLinks}"
+          :class="{'header__top_links': true, 'header__top_links-active': showLinks}"
         >
           <li
             v-for="link in links"
@@ -18,18 +18,22 @@
           </li>
         </div>
         <div
-          :class="{'header__top_contacts': true, 'header__top_contacts-deactive': isShowLinks}"
+          :class="{'header__top_contacts': true, 'header__top_contacts-deactive': showLinks}"
         >
           <div class="header__top_contacts-contact">Ул. Механизаторов 10</div>
           <div class="header__top_contacts-contact">info@lukras.ru</div>
           <div class="header__top_contacts-contact">Звоните ПН - ВС: 9:00 - 18:00</div>
         </div>
         <div
-          :class="{'header__top_popup': true, 'header__top_popup-deactive': isShowLinks}"
-          @click="isLinks"
+          :class="{'header__top_popup': true, 'header__top_popup-deactive': showLinks}"
+          @click="isShowLinks"
         >
         </div>
-
+        <div
+          :class="{'header__top_popupxs': true, 'header__top_popupxs-deactive': showModal}"
+          @click="isShowModal"
+        >
+        </div>
       </div>
       <div class="header__divider"></div>
       <div class="header__bottom">
@@ -43,32 +47,39 @@
           <div class="header__bottom_social-request">Оставить заявку</div>
         </div>
       </div>
+      <ModalHeader v-if="showModal"></ModalHeader>
     </header>
   </div>
 </template>
 
 <script>
+import ModalHeader from './ModalHeader.vue';
   export default {
-    name: 'Header',
+    name: "Header",
     data() {
       return {
-        isShowLinks: false,
+        showModal: false,
+        showLinks: false,
         links: [
-          {title: 'Рассчет стоимости', url: 'main', exact: true},
-          {title: 'Каталог', url: 'catalog'},
-          {title: 'Преимущества', url: 'advant'},
-          {title: 'Осторожно', url: 'warning'},
-          {title: 'Этапы работы', url: 'steps'},
-          {title: 'Контакты', url: 'contacts'},
+          { title: "Рассчет стоимости", url: "main", exact: true },
+          { title: "Каталог", url: "catalog" },
+          { title: "Преимущества", url: "advant" },
+          { title: "Осторожно", url: "warning" },
+          { title: "Этапы работы", url: "steps" },
+          { title: "Контакты", url: "contacts" },
         ],
-      }
+      };
     },
     methods: {
-      isLinks() {
-        this.isShowLinks = !this.isShowLinks
+      isShowLinks() {
+        this.showLinks = !this.showLinks;
+      },
+      isShowModal() {
+        this.showModal = !this.showModal
       }
-    }
-  }
+    },
+    components: { ModalHeader }
+}
 </script>
 
 <style lang="scss">
@@ -105,7 +116,7 @@
           cursor: pointer;
         }
       }
-      &_popup {
+      &_popup, &_popupxs {
         width: 18px;
         height: 16px;
         background: url('@/assets/images/show.svg');
@@ -221,23 +232,14 @@
       &_brand {
         display: flex;
       }
-      &_links {
-        margin-top: 24px;
+      &_popupxs {
+        display: flex;
+      }
+      &_popup {
         display: none;
-        flex-direction: column;
-        position: fixed;
-        top: 5%;
-        left: 50%;
-        transform: translateX(-50%);
-        gap: 24px;
-        background-color: #fff;
-        &-link {
-          width: 100%;
-          font-weight: 500;
-          color: #000000;
-          align-items: center;
-          background-color: #fff;
-        }
+      }
+      &_links {
+        display: none;
 
         &-active {
           display: flex;
@@ -245,12 +247,6 @@
       }
       &_contacts {
         display: none;
-        &-deactive {
-          display: none;
-        }
-      }
-      &_popup {
-        display: flex;
       }
     }
     &__divider {
@@ -258,10 +254,6 @@
     }
     &__bottom {
       display: none;
-      &_brand {
-        width: 120.58px;
-        background-size: contain;
-      }
       &_social {
         column-gap: 20px;
         &-divider {
