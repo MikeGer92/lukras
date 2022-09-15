@@ -208,6 +208,19 @@
       }
     }
   }
+  @media (min-width: 769px) and (max-width: 992px) {
+    .calc {
+      margin-top: 100px;
+      &__main {
+        &_top {
+          &-title {
+            font-size: 32px;
+            line-height: 40px;
+          }
+        }
+      }
+    }
+  }
   @media (min-width: 577px) and (max-width: 768px) {
     .calc {
       margin-top: 100px;

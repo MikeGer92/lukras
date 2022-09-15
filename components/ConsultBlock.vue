@@ -153,6 +153,46 @@ import Social from './Social.vue';
       }
     }
   }
+  @media (min-width: 769px) and (max-width: 992px) {
+    .consult {
+      margin: 100px 0;
+      grid-template-columns: repeat(12, 1fr);
+      &__inter {
+        flex-direction: column;
+        &_image {
+          grid-column: span 12;
+          height: 438px;
+          background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
+        }
+        &_consl {
+          grid-column: span 12;
+          gap: 40px;
+          &-info {
+            padding: 40px 40px 0 40px;
+          }
+          &-form {
+            padding: 0;
+            &--inputs {
+              width: 100%;
+              column-gap: 0px;
+              justify-content: space-around;
+              &_inp {
+                width: 100%;
+                max-width: 240px;
+              }
+            }
+            &--add {
+              column-gap: 0px;
+              justify-content: space-around;
+            }
+          }
+          &-social {
+            padding: 40px;
+          }
+        }
+      }
+    }
+  }
   @media (min-width: 671px) and (max-width: 768px) {
     .consult {
       margin: 100px 0;

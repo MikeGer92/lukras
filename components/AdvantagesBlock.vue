@@ -119,6 +119,26 @@ export default {
       }
     }
   }
+  @media (min-width: 769px) and (max-width: 992px) {
+    .advant {
+      margin-top: 100px;
+      & .container {
+        padding: 0 12px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      &__swiper {
+        max-width: 724px;
+        overflow-x: hidden;
+        margin: 0 auto;
+        &_wrapp {
+          justify-content: center;
+          gap: 0px;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
   @media (min-width: 725px) and (max-width: 768px) {
     .advant {
       margin-top: 100px;

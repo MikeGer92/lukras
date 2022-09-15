@@ -151,6 +151,27 @@
       }
     }
   }
+  @media (min-width: 769px) and (max-width: 992px) {
+    .cert {
+      margin-top: 100px;
+      &__inter {
+        &_left {
+          grid-column: span 12;
+          &-main {
+            display: flex;
+            padding: 35px;
+            justify-content: center;
+          }
+        }
+        &_right {
+          grid-column: span 12;
+          &-whatsup {
+            padding: 16px;
+          }
+        }
+      }
+    }
+  }
   @media (min-width: 661px) and (max-width: 768px) {
     .cert {
       margin-top: 100px;

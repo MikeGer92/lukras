@@ -151,6 +151,42 @@ export default {
       }
     }
   }
+  @media (min-width: 769px) and (max-width: 992px) {
+    .footer {
+      &__wrapper {
+        row-gap: 48px;
+        grid-template-columns: repeat(12, 1fr );
+        column-gap: 0;
+      }
+      &__contact {
+        display: grid;
+        grid-template-columns: repeat(12, 1fr );
+        grid-column: span 12;
+        column-gap: 0;
+        padding: 0 0px 48px 0;
+        border-bottom: 1px solid #E3E3E3;
+        flex-direction: row;
+        justify-content: space-between;
+        &_logo {
+          grid-column: span 6;
+        }
+        &_contacts {
+          flex-direction: column;
+          padding-bottom: 48px;
+          &-wrapper {
+            flex-direction: column;
+            grid-column: span 6;
+          }
+        }
+      }
+      &__menu {
+        grid-column: span 6;
+      }
+      &__inform {
+        grid-column: span 6;
+      }
+    }
+  }
   @media (min-width: 577px) and (max-width: 768px) {
     .footer {
       &__wrapper {

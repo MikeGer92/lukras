@@ -189,6 +189,59 @@ import ModalHeader from './ModalHeader.vue';
       }
     }
   }
+  @media (min-width: 769px) and (max-width: 992px) {
+  .header {
+    &__top {
+      &_links {
+        gap: 16px;
+        display: none;
+        &-active {
+          display: flex;
+        }
+        &-link {
+          font-size: 14px;
+        }
+      }
+      &_contacts {
+        gap: 16px;
+        &-deactive {
+          display: none;
+        }
+        &-contact {
+          font-size: 14px;
+        }
+      }
+      &_popup {
+        display: flex;
+      }
+    }
+    &__bottom {
+      &_brand {
+        width: 110px;
+        background-size: contain;
+      }
+      &_social {
+        column-gap: 16px;
+        &-divider {
+          margin: auto 0;
+        }
+        &-item {
+          font-size: 14px;
+        }
+        &-phone {
+          margin-right: 0px;
+          font-size: 14px;
+          margin-right: 0px;
+        }
+        &-request {
+          width: 130px;
+          padding: 12px 6px;
+          font-size: 14px;
+        }
+      }
+    }
+  }
+}
   @media (min-width: 661px) and (max-width: 768px) {
   .header {
     &__top {

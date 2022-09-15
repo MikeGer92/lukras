@@ -122,7 +122,6 @@
         background: #FCFCFC;
         border: 1px solid #E3E3E3;
         &-inter {
-          height: 688px;
           border: 1px solid #E3E3E3;
           object-fit: cover;
         }
@@ -156,13 +155,17 @@
           }
         }
         &_image {
+          width: 100%;
+          max-width: 402px;
           &-inter {
-            width: 386px;
+            width: 100%;
             height: 512px;
-            object-fit: contain;
+            object-fit: cover;
+            display: flex;
             & img {
+              display: flex;
               width: 100%;
-              height: auto;
+              align-self: center;
             }
           }
         }
