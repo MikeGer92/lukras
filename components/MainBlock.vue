@@ -495,7 +495,7 @@ import Corner from './Corner.vue';
     }
   }
 }
-@media (min-width: 541px) and (max-width: 768px) {
+@media (min-width: 691px) and (max-width: 768px) {
   .main-block {
     margin: 100px auto 0 auto;
     &__info {
@@ -560,7 +560,7 @@ import Corner from './Corner.vue';
     }
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 690px) {
   .main-block {
     margin: 0 auto 0;
     flex-direction: column;

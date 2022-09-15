@@ -55,6 +55,7 @@
     border: 1px solid #E3E3E3;
     &__wrapper {
       display: flex;
+      width: 100%;
       flex-direction: column;
       gap: 40px;
     }
@@ -119,7 +120,8 @@
     &__main {
       width: 100%;
       display: flex;
-      column-gap: 72px;
+      justify-content: space-between;
+      // column-gap: 72px;
       &_info {
         display: flex;
         flex-direction: column;
@@ -173,7 +175,14 @@
       }
     }
   }
-  @media (min-width: 541px) and (max-width: 768px) {
+  @media (min-width: 769x) and (max-width: 1280px) {
+    .product {
+      &__main {
+        grid-column-gap: 36px;
+      }
+    }
+  }
+  @media (min-width: 691px) and (max-width: 768px) {
     .product {
       max-width: 100%;
       padding: 40px;
@@ -190,7 +199,7 @@
       }
     }
   }
-  @media (max-width: 540px) {
+  @media (max-width: 690px) {
     .product {
       max-width: 100%;
       padding: 24px;

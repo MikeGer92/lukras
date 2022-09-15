@@ -16,6 +16,12 @@
   max-width: 1320px;
   margin: 0 auto;
 }
+@media (min-width: 769px) and (max-width: 1340px) {
+  .container {
+    padding: 0 23px;
+    margin: 0 auto;
+  }
+}
 @media (min-width: 426px) and (max-width: 768px) {
   .container {
     padding: 0 23px;
