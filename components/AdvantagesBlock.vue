@@ -123,7 +123,7 @@ export default {
     .advant {
       margin-top: 100px;
       & .container {
-        padding: 0 12px;
+        padding: 0 23px;
         margin: 0 auto;
         overflow: hidden;
       }
@@ -133,7 +133,7 @@ export default {
         margin: 0 auto;
         &_wrapp {
           justify-content: center;
-          gap: 0px;
+          gap: 16px;
           flex-wrap: wrap;
         }
       }
