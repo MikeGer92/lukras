@@ -248,6 +248,12 @@ import ModalHeader from './ModalHeader.vue';
       &_links {
         gap: 12px;
         display: none;
+        &-active {
+          display: flex;
+        }
+        &-link {
+          font-size: 12px;
+        }
       }
       &_contacts {
         gap: 12px;
@@ -269,11 +275,16 @@ import ModalHeader from './ModalHeader.vue';
       }
       &_social {
         column-gap: 12px;
+        &-divider {
+          margin: auto 0;
+        }
         &-item {
           font-size: 12px;
         }
         &-phone {
+          margin-right: 0px;
           font-size: 12px;
+          margin-right: 0px;
         }
         &-request {
           width: 120px;
