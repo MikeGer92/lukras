@@ -76,8 +76,25 @@ import Product from './Product.vue';
       display: grid;
       grid-template-columns: repeat(12, 1fr);
       column-gap: 24px;
-      & .product {
-        grid-column: span 4;
+    }
+  }
+  @media (min-width: 769px) and (max-width: 992px) {
+    .catalog {
+      display: flex;
+      flex-direction: column;
+      margin-top: 100px;
+      padding: 64px 0;
+      &__title {
+        max-width: 424px;
+        font-size: 32px;
+        line-height: 40px;
+        margin-bottom: 32px;
+      }
+      &__products {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+        gap: 24px;
       }
     }
   }
@@ -93,7 +110,10 @@ import Product from './Product.vue';
       }
       &__products {
         flex-direction: column;
-        gap: 20px;
+        gap: 24px;
+        // & .product {
+        //   grid-column: span 12;
+        // }
       }
     }
   }

@@ -93,7 +93,7 @@ import Corner from './Corner.vue';
       }
     }
   }
-  @media (min-width: 577px) and (max-width: 768px) {
+  @media (min-width: 671px) and (max-width: 768px) {
     .warning {
       margin-top: 100px;
       padding: 64px 0;
@@ -101,10 +101,33 @@ import Corner from './Corner.vue';
         width: 100%;
         font-size: 48px;
         line-height: 56px;
+        gap: 24px;
       }
       &__info {
         max-width: 724px;
+        gap: 24px;
         &_item {
+          justify-content: space-between;
+          padding: 24px;
+        }
+      }
+    }
+  }
+  @media (min-width: 577px) and (max-width: 670px) {
+    .warning {
+      margin-top: 80px;
+      padding: 48px 0;
+      &__title {
+        width: 100%;
+        font-size: 48px;
+        line-height: 56px;
+      }
+      &__info {
+        max-width: 724px;
+        flex-wrap: wrap;
+        justify-content: center;
+        &_item {
+          justify-content: space-between;
           padding: 32px;
           gap: 32px;
         }

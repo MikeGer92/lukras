@@ -1,6 +1,6 @@
 <template>
-  <div class="container">
-    <section class="advant" id="advant">
+  <section class="advant" id="advant">
+    <div class="container">
       <h3 class="advant__title">Преимущества<br>септиков
         <span class="advant__title_span">ТВЕРЬ
           <div class="advant__title_license">&#174;</div>
@@ -15,8 +15,8 @@
           ></AdvantageItem>
         </div>
       </div>
-    </section>
-  </div>
+    </div>
+  </section>
 </template>
 
 <script>
@@ -82,7 +82,7 @@ export default {
     margin-top: 120px;
     display: flex;
     flex-direction: column;
-    overflow: hidden;
+    // overflow: hidden;
     &__title {
       text-align: left;
       font-family: 'Roboto Condensed';
@@ -119,16 +119,56 @@ export default {
       }
     }
   }
-  @media (min-width: 577px) and (max-width: 768px) {
+  @media (min-width: 769px) and (max-width: 992px) {
+    .advant {
+      margin-top: 100px;
+      & .container {
+        padding: 0 12px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      &__swiper {
+        max-width: 724px;
+        overflow-x: hidden;
+        margin: 0 auto;
+        &_wrapp {
+          justify-content: center;
+          gap: 0px;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  @media (min-width: 725px) and (max-width: 768px) {
+    .advant {
+      margin-top: 100px;
+      & .container {
+        padding: 0 12px;
+        margin: 0 auto;
+        overflow: hidden;
+      }
+      &__swiper {
+        max-width: 724px;
+        overflow-x: hidden;
+        margin: 0 auto;
+        &_wrapp {
+          justify-content: center;
+          gap: 0px;
+          flex-wrap: wrap;
+        }
+      }
+    }
+  }
+  @media (min-width: 577px) and (max-width: 724px) {
     .advant {
       margin-top: 100px;
       &__swiper {
-        width: 100%;
-        width: 724px;
+        max-width: 100%;
         overflow-x: hidden;
         &_wrapp {
           gap: 20px;
           flex-wrap: wrap;
+          justify-content: center;
         }
       }
     }
