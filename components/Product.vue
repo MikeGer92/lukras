@@ -168,7 +168,7 @@
         height: 184px;
         background: url('../assets/images/barrel.png') 0px 0px/ contain no-repeat;
         &:hover {
-          background: url('../assets/images/barrel-active.png') -40px 0px/ cover no-repeat;
+          background: url('../assets/images/barrel-active.png') center 0px/ cover no-repeat;
         }
       }
     }
@@ -181,7 +181,6 @@
         width: 100%;
       }
       &__main {
-        column-gap: 130px;
         &_image {
           display: flex;
           width: 254px;
