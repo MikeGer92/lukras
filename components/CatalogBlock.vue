@@ -78,6 +78,16 @@ import Product from './Product.vue';
       column-gap: 24px;
     }
   }
+  @media (min-width: 993px) and (max-width: 1160px) {
+    .catalog {
+      &__products {
+        display: flex;
+        flex-wrap: wrap;
+        row-gap: 24px;
+        justify-content: center;
+      }
+    }
+  }
   @media (min-width: 769px) and (max-width: 992px) {
     .catalog {
       display: flex;

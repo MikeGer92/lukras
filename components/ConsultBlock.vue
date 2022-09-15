@@ -153,7 +153,7 @@ import Social from './Social.vue';
       }
     }
   }
-  @media (min-width: 769px) and (max-width: 992px) {
+  @media (min-width: 1191px) and (max-width: 1320px) {
     .consult {
       margin: 100px 0;
       grid-template-columns: repeat(12, 1fr);
@@ -166,16 +166,16 @@ import Social from './Social.vue';
         }
         &_consl {
           grid-column: span 12;
-          gap: 40px;
+          gap: 0px;
           &-info {
-            padding: 40px 40px 0 40px;
+            padding: 24px 24px 0 24px;
           }
           &-form {
-            padding: 0;
+            padding: 24px;
             &--inputs {
               width: 100%;
-              column-gap: 0px;
-              justify-content: space-around;
+              gap: 0px;
+              justify-content: space-between;
               &_inp {
                 width: 100%;
                 max-width: 240px;
@@ -183,7 +183,47 @@ import Social from './Social.vue';
             }
             &--add {
               column-gap: 0px;
-              justify-content: space-around;
+              justify-content: space-between;
+            }
+          }
+          &-social {
+            padding: 40px;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 769px) and (max-width: 1190px) {
+    .consult {
+      margin: 100px 0;
+      grid-template-columns: repeat(12, 1fr);
+      &__inter {
+        flex-direction: column;
+        &_image {
+          grid-column: span 12;
+          height: 438px;
+          background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
+        }
+        &_consl {
+          grid-column: span 12;
+          gap: 0px;
+          &-info {
+            padding: 40px 40px 0 40px;
+          }
+          &-form {
+            padding: 40px;
+            &--inputs {
+              width: 100%;
+              gap: 0px;
+              justify-content: space-between;
+              &_inp {
+                width: 100%;
+                max-width: 340px;
+              }
+            }
+            &--add {
+              column-gap: 0px;
+              justify-content: space-between;
             }
           }
           &-social {
@@ -206,16 +246,16 @@ import Social from './Social.vue';
         }
         &_consl {
           grid-column: span 12;
-          gap: 40px;
+          gap: 0px;
           &-info {
             padding: 40px 40px 0 40px;
           }
           &-form {
-            padding: 0;
+            padding: 40px;
             &--inputs {
               width: 100%;
-              column-gap: 0px;
-              justify-content: space-around;
+              gap: 0px;
+              justify-content: space-between;
               &_inp {
                 width: 100%;
                 max-width: 240px;
@@ -223,7 +263,7 @@ import Social from './Social.vue';
             }
             &--add {
               column-gap: 0px;
-              justify-content: space-around;
+              justify-content: space-between;
             }
           }
           &-social {

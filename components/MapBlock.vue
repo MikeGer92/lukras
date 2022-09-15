@@ -27,7 +27,7 @@ import ContactForm from './ContactForm.vue';
       padding: 136px 140px;
     }
   }
-  @media (min-width: 768px) and (max-width: 1340px) {
+  @media (min-width: 768px) and (max-width: 1160px) {
     .map {
     width: 100%;
     margin: 0 auto;
