@@ -28,7 +28,7 @@ import ContactForm from './ContactForm.vue';
       padding: 136px 140px;
     }
   }
-  @media (min-width: 691px) and (max-width: 768px) {
+  @media (min-width: 577px) and (max-width: 768px) {
     .map {
       &__main {
         background: url('@/assets/images/map-small.png') 0px 0px/cover no-repeat;
@@ -40,7 +40,7 @@ import ContactForm from './ContactForm.vue';
       }
     }
   }
-  @media (max-width: 690px) {
+  @media (max-width: 576px) {
     .map {
       &__main {
         width: 100%;

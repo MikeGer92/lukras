@@ -189,7 +189,7 @@ import ModalHeader from './ModalHeader.vue';
       }
     }
   }
-@media (min-width: 691px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .header {
     &__top {
       &_links {
@@ -224,7 +224,7 @@ import ModalHeader from './ModalHeader.vue';
     }
   }
 }
-@media (max-width: 690px) {
+@media (max-width: 576px) {
   .header {
     &__top {
       position: relative;

@@ -54,21 +54,6 @@ export default {
       ]
     }
   },
-  computed: {
-    getOffset() {
-      if (window.innerWidth > 1600) {
-        this.offset = -168
-      } else if (window.innerWidth < 500) {
-        this.offset = -103
-      } else {
-        this.offset = -210
-      }
-      return this.offset
-    }
-  },
-  beforeMount() {
-    this.getOffset
-  },
   mounted() {
     console.log(window.innerWidth)
     console.log(this.offset)
@@ -76,9 +61,8 @@ export default {
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
       loop: true,
-      slidesPerView: 3,
+      slidesPerView: 'auto',
       centeredSlides: true,
-      slidesOffsetBefore: this.offset, // big - 168 small - 210 xs -
       modules: [Navigation, Pagination, Autoplay],
       pagination: {
         el: '.swiper__manage_photo-num',
@@ -155,6 +139,7 @@ export default {
   display: flex;
 }
 .swiper-slide {
+  width: 55%;
   font-size: 18px;
   background: #fff;
   display: flex;
@@ -163,13 +148,12 @@ export default {
   filter: brightness(60%);
 }
 .swiper-slide-active {
-  width: 872px  !important;
   filter: brightness(100%);
 }
 .slider-content {
   color: #000;
 }
-@media (min-width: 691px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .swiper {
     width: 100%;
     height: 400px;
@@ -179,12 +163,14 @@ export default {
       }
     }
   }
+  .swiper-slide {
+    width: 87%;
+  }
   .swiper-slide-active {
-    width: 670px  !important;
     filter: brightness(100%);
   }
 }
-@media (max-width: 540px) {
+@media (max-width: 576px) {
   .swiper {
     width: 100%;
     height: 328px;
@@ -210,8 +196,10 @@ export default {
       }
     }
   }
+  .swiper-slide {
+    width: 92%;
+  }
   .swiper-slide-active {
-    width: 328px  !important;
     filter: brightness(100%);
   }
 }

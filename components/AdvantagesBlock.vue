@@ -82,6 +82,7 @@ export default {
     margin-top: 120px;
     display: flex;
     flex-direction: column;
+    overflow: hidden;
     &__title {
       text-align: left;
       font-family: 'Roboto Condensed';
@@ -118,7 +119,7 @@ export default {
       }
     }
   }
-  @media (min-width: 691px) and (max-width: 768px) {
+  @media (min-width: 577px) and (max-width: 768px) {
     .advant {
       margin-top: 100px;
       &__swiper {
@@ -132,7 +133,7 @@ export default {
       }
     }
   }
-@media (max-width: 690px) {
+@media (max-width: 576px) {
   .advant {
     margin-top: 64px;
     &__title {
@@ -147,6 +148,9 @@ export default {
       width: 100%;
       overflow-x: hidden;
       &_wrapp {
+        width: 100%;
+        display: flex;
+        justify-content: center;
         gap: 0px;
         flex-wrap: wrap;
         margin-top: 24px;

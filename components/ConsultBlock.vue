@@ -153,7 +153,7 @@ import Social from './Social.vue';
       }
     }
   }
-  @media (min-width: 691px) and (max-width: 768px) {
+  @media (min-width: 577px) and (max-width: 768px) {
     .consult {
       margin: 100px 0;
       grid-template-columns: repeat(12, 1fr);
@@ -177,7 +177,7 @@ import Social from './Social.vue';
       }
     }
   }
-  @media (max-width: 690px) {
+  @media (max-width: 576px) {
     .consult {
       margin: 64px -16px;
       grid-template-columns: repeat(12, 1fr);

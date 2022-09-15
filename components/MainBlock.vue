@@ -2,7 +2,9 @@
   <div class="container">
     <section class="main-block" id="main">
       <div class="main-block__small">
-        <div class="main-block__small_inter"></div>
+        <div class="main-block__small_inter">
+          <div class="main-block__small_inter-img"></div>
+        </div>
       </div>
       <div class="main-block__info">
         <div class="main-block__info_descr">— За счет официального диллерского договора</div>
@@ -118,11 +120,17 @@ import Corner from './Corner.vue';
     padding: 8px;
     border: 1px solid #E3E3E3;
     &_inter {
+      display: flex;
+      justify-content: center;
       border: 1px solid #E3E3E3;
       padding: 24px 55px 19px 68px;
-      background: url('../assets/images/barrel.png') center 0px/contain no-repeat;
-      &:hover {
-        background: url('../assets/images/barrel-active.png') 0px 0px/contain no-repeat;
+      &-img {
+        width: 181px;
+        height: 183px;
+        background: url('@/assets/images/barrel-small.svg') center 0px/cover no-repeat;
+        &:hover {
+          background: url('@/assets/images/barrel-small-active.png') center 0px/cover no-repeat;
+        }
       }
     }
   }
@@ -495,7 +503,7 @@ import Corner from './Corner.vue';
     }
   }
 }
-@media (min-width: 691px) and (max-width: 768px) {
+@media (min-width: 577px) and (max-width: 768px) {
   .main-block {
     margin: 100px auto 0 auto;
     &__info {
@@ -560,7 +568,7 @@ import Corner from './Corner.vue';
     }
   }
 }
-@media (max-width: 690px) {
+@media (max-width: 576px) {
   .main-block {
     margin: 0 auto 0;
     flex-direction: column;
@@ -604,6 +612,7 @@ import Corner from './Corner.vue';
           display: none;
         }
         &-benefsmall {
+          width: 100%;
           display: flex;
           flex-direction: column;
           margin-right: 0;
