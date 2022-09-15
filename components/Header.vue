@@ -193,14 +193,22 @@ import ModalHeader from './ModalHeader.vue';
   .header {
     &__top {
       &_links {
+        gap: 12px;
         display: none;
         &-active {
           display: flex;
         }
+        &-link {
+          font-size: 12px;
+        }
       }
       &_contacts {
+        gap: 12px;
         &-deactive {
           display: none;
+        }
+        &-contact {
+          font-size: 12px;
         }
       }
       &_popup {
@@ -209,16 +217,29 @@ import ModalHeader from './ModalHeader.vue';
     }
     &__bottom {
       &_brand {
-        width: 120.58px;
+        width: 100px;
         background-size: contain;
       }
       &_social {
-        column-gap: 20px;
+        column-gap: 12px;
         &-divider {
           margin: auto 0;
         }
+        &-item {
+          font-size: 12px;
+        }
+        &-divider {
+
+        }
         &-phone {
           margin-right: 0px;
+          font-size: 12px;
+          margin-right: 0px;
+        }
+        &-request {
+          width: 120px;
+          padding: 12px 6px;
+          font-size: 12px;
         }
       }
     }
