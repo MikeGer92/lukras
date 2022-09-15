@@ -129,7 +129,7 @@
       }
     }
   }
-  @media (min-width: 361px) and (max-width: 768px) {
+  @media (min-width: 541px) and (max-width: 768px) {
     .steps {
       padding-bottom: 0;
       &__title {
@@ -169,7 +169,7 @@
       }
     }
   }
-  @media (max-width: 360px) {
+  @media (max-width: 540px) {
     .steps {
       margin-top: 64px;
       padding-bottom: 0;

@@ -1,5 +1,5 @@
 <template>
-  <section class="modal-header">
+  <section class="modal-header" @click="closeModal">
     <div class="container">
       <div class="modal-header__wrapper">
         <div
@@ -50,10 +50,13 @@
           {title: 'Этапы работы', url: 'steps'},
           {title: 'Контакты', url: 'contacts'},
         ],
-
+      }
+    },
+    methods: {
+      closeModal() {
+        this.$emit('closeModal')
       }
     }
-
   }
 </script>
 

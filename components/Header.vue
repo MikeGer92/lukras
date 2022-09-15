@@ -47,7 +47,7 @@
           <div class="header__bottom_social-request">Оставить заявку</div>
         </div>
       </div>
-      <ModalHeader v-if="showModal"></ModalHeader>
+      <ModalHeader v-if="showModal" @closeModal="isShowModal"></ModalHeader>
     </header>
   </div>
 </template>
@@ -189,7 +189,7 @@ import ModalHeader from './ModalHeader.vue';
       }
     }
   }
-@media (min-width: 451px) and (max-width: 768px) {
+@media (min-width: 541px) and (max-width: 768px) {
   .header {
     &__top {
       &_links {
@@ -224,7 +224,7 @@ import ModalHeader from './ModalHeader.vue';
     }
   }
 }
-@media (max-width: 450px) {
+@media (max-width: 540px) {
   .header {
     &__top {
       position: relative;

@@ -120,7 +120,7 @@ import Corner from './Corner.vue';
     &_inter {
       border: 1px solid #E3E3E3;
       padding: 24px 55px 19px 68px;
-      background: url('../assets/images/barrel.png') 50px 0px/contain no-repeat;
+      background: url('../assets/images/barrel.png') center 0px/contain no-repeat;
       &:hover {
         background: url('../assets/images/barrel-active.png') 0px 0px/contain no-repeat;
       }
@@ -188,6 +188,7 @@ import Corner from './Corner.vue';
         border: 1px solid #E3E3E3;
         &--item {
           display: flex;
+          width: 100%;
           max-width: 300px;
           padding: 16px 21px 16px 26.42px;
           border-bottom: 1px solid #E3E3E3;
@@ -313,7 +314,7 @@ import Corner from './Corner.vue';
             margin: 95px auto 19px auto;
             width: 346px;
             height: 259px;
-            background: url('../assets/images/barrel.png') 50px 0px/contain no-repeat;
+            background: url('../assets/images/barrel.png') center 0px/contain no-repeat;
             &:hover {
               background: url('../assets/images/barrel-active.png') 0px 0px/contain no-repeat;
             }
@@ -494,7 +495,7 @@ import Corner from './Corner.vue';
     }
   }
 }
-@media (min-width: 361px) and (max-width: 768px) {
+@media (min-width: 541px) and (max-width: 768px) {
   .main-block {
     margin: 100px auto 0 auto;
     &__info {
@@ -559,7 +560,7 @@ import Corner from './Corner.vue';
     }
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 540px) {
   .main-block {
     margin: 0 auto 0;
     flex-direction: column;
@@ -635,10 +636,10 @@ import Corner from './Corner.vue';
         &-how {
           margin-top: 0px;
           width: 100%;
-          max-height: 166px;
         }
         &-int {
           &--item {
+            max-width: 100%;
             padding: 16px 16px 16px 18.21px;
           }
         }

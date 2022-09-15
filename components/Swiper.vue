@@ -12,17 +12,19 @@
         </div>
       </div>
       <div class="swiper__manage">
-        <div class="swiper__manage_wrapper">
-          <div class="swiper__manage_photo">
-            <div class="swiper__manage_photo-title">Фото</div>
-            <div class="swiper__manage_photo-num">
+        <div class="container">
+          <div class="swiper__manage_wrapper">
+            <div class="swiper__manage_photo">
+              <div class="swiper__manage_photo-title">Фото</div>
+              <div class="swiper__manage_photo-num">
+              </div>
+            </div>
+            <div class="swiper__manage_btn">
+              <div class="swiper__manage_btn-prev"><img src="@/assets/images/prev.png"></div>
+              <div class="swiper__manage_btn-next"><img src="@/assets/images/next.png"></div>
             </div>
           </div>
-          <div class="swiper__manage_btn">
-            <div class="swiper__manage_btn-prev"><img src="@/assets/images/prev.png"></div>
-            <div class="swiper__manage_btn-next"><img src="@/assets/images/next.png"></div>
-          </div>
-        </div>
+      </div>
     </div>
     </div>
   </div>
@@ -167,7 +169,7 @@ export default {
 .slider-content {
   color: #000;
 }
-@media (min-width: 361px) and (max-width: 768px) {
+@media (min-width: 541px) and (max-width: 768px) {
   .swiper {
     width: 100%;
     height: 400px;
@@ -182,7 +184,7 @@ export default {
     filter: brightness(100%);
   }
 }
-@media (max-width: 360px) {
+@media (max-width: 540px) {
   .swiper {
     width: 100%;
     height: 328px;
