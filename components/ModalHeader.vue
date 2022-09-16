@@ -63,6 +63,7 @@
 <style lang="scss">
   .modal-header {
     position: absolute;
+    overflow: hidden;
     top: 64px;
     left: 0px;
     background: #fff;

@@ -51,8 +51,10 @@
           border-right: 1px solid #E3E3E3;
           &--num {
             display: flex;
-            width: 100%;
+            width: 40px;
             height: 40px;
+            justify-content: center;
+            align-items: center;
             font-weight: 400;
             font-size: 16px;
             line-height: 24px;

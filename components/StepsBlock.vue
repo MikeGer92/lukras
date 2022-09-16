@@ -142,7 +142,15 @@
           &-item {
             gap: 16px;
             &--sqr {
-              padding: 14px 15px;
+              padding: 0;
+              display: flex;
+              width: 64px;
+              height: 64px;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #E3E3E3;
+              font-size: 16px;
+              line-height: 18px;
             }
             &--text {
               font-size: 14px;
@@ -187,7 +195,15 @@
           &-item {
             gap: 16px;
             &--sqr {
-              padding: 14px 15px;
+              padding: 0;
+              display: flex;
+              width: 48px;
+              height: 48px;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #E3E3E3;
+              font-size: 16px;
+              line-height: 18px;
             }
             &--text {
               font-size: 14px;
@@ -220,6 +236,9 @@
   @media (min-width: 577px) and (max-width: 768px) {
     .steps {
       padding-bottom: 0;
+      &__wrapper {
+        border-left: none;
+      }
       &__title {
         padding: 100px 0 48px 40px;
         font-size: 48px;
@@ -231,7 +250,16 @@
           &-item {
             gap: 16px;
             &--sqr {
-              padding: 14px 15px;
+              padding: 0;
+              display: flex;
+              width: 48px;
+              height: 48px;
+              flex: 0 0 auto;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #E3E3E3;
+              font-size: 16px;
+              line-height: 18px;
             }
             &--text {
               font-size: 14px;
@@ -281,7 +309,16 @@
             gap: 16px;
             flex-wrap: wrap;
             &--sqr {
-              padding: 14px 15px;
+              padding: 0;
+              display: flex;
+              width: 48px;
+              height: 48px;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #E3E3E3;
+              font-size: 16px;
+              line-height: 18px;
+
             }
             &--sqr {
               &_deactive {
