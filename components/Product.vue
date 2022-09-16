@@ -122,7 +122,6 @@
       width: 100%;
       display: flex;
       justify-content: space-between;
-      // column-gap: 72px;
       &_info {
         display: flex;
         flex-direction: column;
@@ -145,6 +144,7 @@
             color: #000000;
           }
           &--descr {
+            margin-top: 8px;
             font-family: 'Roboto';
             font-style: normal;
             font-weight: 400;
@@ -176,7 +176,7 @@
       }
     }
   }
-  @media (min-width: 769x) and (max-width: 1280px) {
+  @media (min-width: 769x) and (max-width: 1160px) {
     .product {
       display: flex;
       width: 100%;

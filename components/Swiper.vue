@@ -55,8 +55,8 @@ export default {
     }
   },
   mounted() {
-    console.log(window.innerWidth)
-    console.log(this.offset)
+    // console.log(window.innerWidth)
+    // console.log(this.offset)
     Swiper.use([Navigation, Pagination, Autoplay])
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
@@ -122,7 +122,11 @@ export default {
     &_btn {
       display: flex;
       &-prev, &-next {
-        padding: 24px;
+        width: 66px;
+          height: 66px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
         border-left: 1px solid #E3E3E3;
         cursor: pointer;
       }
@@ -161,6 +165,25 @@ export default {
       &_wrapper {
         max-width: 724px;
       }
+      &_photo {
+        font-size: 14px;
+        line-height: 16px;
+        &-title, &-num {
+          padding: 12px 24px;
+        }
+      }
+      &_btn {
+        &-prev, &-next {
+          width: 40px;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
+          & img {
+            width: 11px;
+            height: 11px;
+          }
+        }
+      }
     }
   }
   .swiper-slide {
@@ -187,7 +210,10 @@ export default {
       }
       &_btn {
         &-prev, &-next {
-          padding: 13px;
+          width: 40px;
+          height: 40px;
+          justify-content: center;
+          align-items: center;
           & img {
             width: 11px;
             height: 11px;

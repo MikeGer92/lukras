@@ -80,7 +80,7 @@
       }
     },
     mounted() {
-     this.activeTab =  this.actQuest.variants[0]
+    //  this.activeTab =  this.actQuest.variants[0]
     },
     methods: {
       prevQuest() {
@@ -90,20 +90,26 @@
       nextQuest() {
         const key = this.actQuest.name
         this.answers[key] = this.activeTab
-        if (this.questNum < this.questList.length) {
-          this.questNum += 1
-        } else {
-          alert(`Проверьте Ваши ответы:
-          1. На сколько человек: ${this.answers.people}
-          2. Площадь дома: ${this.answers.square}
-          3. Желаемая стоимость: ${this.answers.coast}
-          4. Когда начинаем: ${this.answers.deadline}`)
-          this.answers = {people: '', square: '', coast: '', deadline: ''}
-          this.questNum = 1
-        }
-        this.activeTab = this.actQuest.variants[0]
+        console.log (this.activeTab)
+        if (this.activeTab !== '') {
+          if (this.questNum < this.questList.length) {
+            this.questNum += 1
+          } else {
+            alert(`Проверьте Ваши ответы:
+            1. На сколько человек: ${this.answers.people}
+            2. Площадь дома: ${this.answers.square}
+            3. Желаемая стоимость: ${this.answers.coast}
+            4. Когда начинаем: ${this.answers.deadline}`)
+            this.answers = {people: '', square: '', coast: '', deadline: ''}
+            this.questNum = 1
+          }
+      } else {
+        alert('Сделайте выбор!')
+      }
+      this.activeTab = ''
+        // this.activeTab = this.actQuest.variants[0]
 
-        console.log(this.answers)
+        // console.log(this.answers)
       },
       changeActive(item) {
         this.activeTab = item
@@ -150,7 +156,11 @@
           padding-left: 40px;
           column-gap: 22px;
           &--sqr {
-            padding: 22px 24px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-left: 1px solid #E3E3E3;
             border-right: 1px solid #E3E3E3;
             font-weight: 400;
@@ -252,8 +262,10 @@
             border-bottom: none;
             padding-left: 15px;
             &--sqr {
-              max-width: 40px;
-              padding: 11px 15px;
+              width: 40px;
+              height: 40px;
+             justify-content: center;
+             align-items: center;
               border-top: 1px solid #E3E3E3;
               border-bottom: 1px solid #E3E3E3;
               margin-bottom: 16px;

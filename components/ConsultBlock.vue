@@ -54,10 +54,10 @@ import Social from './Social.vue';
       grid-template-columns: repeat(12, 1fr);
       &_image {
         grid-column: span 6;
-        background: url('@/assets/images/consultant.png') 0px 0px/cover no-repeat;
+        background: url('@/assets/images/consultant.png') center 0px/cover no-repeat;
         &-title {
-          max-width: 208px;
-          padding: 12px 62px;
+          max-width: 188px;
+          padding: 12px 36px;
           font-weight: 400;
           font-size: 14px;
           line-height: 16px;
@@ -103,8 +103,9 @@ import Social from './Social.vue';
           &--inputs {
             display: flex;
             column-gap: 24px;
+            justify-content: space-between;
             &_inp {
-              width: 272px;
+              width: 50%;
               padding: 23px 24px;
               border: 1px solid #E3E3E3;
               font-weight: 400;
@@ -162,28 +163,27 @@ import Social from './Social.vue';
         &_image {
           grid-column: span 12;
           height: 438px;
-          background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
+          background: url('@/assets/images/consultant-small.png') center 0px/cover no-repeat;
         }
         &_consl {
           grid-column: span 12;
-          gap: 40px;
+          gap: 0px;
           &-info {
             padding: 40px 40px 0 40px;
           }
           &-form {
-            padding: 0;
+            padding: 40px;
             &--inputs {
               width: 100%;
-              column-gap: 0px;
-              justify-content: space-around;
+              gap: 48px;
+              justify-content: space-between;
               &_inp {
-                width: 100%;
-                max-width: 240px;
+                width: 50%;
               }
             }
             &--add {
               column-gap: 0px;
-              justify-content: space-around;
+              justify-content: space-between;
             }
           }
           &-social {
@@ -206,24 +206,23 @@ import Social from './Social.vue';
         }
         &_consl {
           grid-column: span 12;
-          gap: 40px;
+          gap: 0px;
           &-info {
             padding: 40px 40px 0 40px;
           }
           &-form {
-            padding: 0;
+            padding: 40px;
             &--inputs {
               width: 100%;
-              column-gap: 0px;
-              justify-content: space-around;
+              gap: 48px;
+              justify-content: space-between;
               &_inp {
-                width: 100%;
-                max-width: 240px;
+                width: 50%;
               }
             }
             &--add {
               column-gap: 0px;
-              justify-content: space-around;
+              justify-content: space-between;
             }
           }
           &-social {
@@ -248,10 +247,19 @@ import Social from './Social.vue';
           grid-column: span 12;
           gap: 40px;
           &-info {
-            padding: 40px 40px 0 40px;
+            padding: 24px 24px 0 24px;
+          }
+          &-form {
+            padding: 24px;
+            &--inputs {
+              &_inp {
+                padding: 24px 12px;
+                width: 50%;
+              }
+            }
           }
           &-social {
-            padding: 40px;
+            padding: 24px;
           }
         }
       }

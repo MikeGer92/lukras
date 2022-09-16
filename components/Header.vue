@@ -189,7 +189,7 @@ import ModalHeader from './ModalHeader.vue';
       }
     }
   }
-  @media (min-width: 769px) and (max-width: 992px) {
+  @media (min-width: 769px) and (max-width: 1160px) {
   .header {
     &__top {
       &_links {

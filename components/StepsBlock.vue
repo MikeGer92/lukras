@@ -128,6 +128,59 @@
       }
     }
   }
+  @media (min-width: 993px) and (max-width: 1160px) {
+    .steps {
+      padding-bottom: 0;
+      &__title {
+        padding: 100px 0 48px 40px;
+        font-size: 48px;
+        line-height: 56px;
+      }
+      &__main {
+        &_list {
+          gap: 48px;
+          &-item {
+            gap: 16px;
+            &--sqr {
+              padding: 0;
+              display: flex;
+              width: 64px;
+              height: 64px;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #E3E3E3;
+              font-size: 16px;
+              line-height: 18px;
+            }
+            &--text {
+              font-size: 14px;
+              line-height: 16px;
+              padding-right: 16px;
+            }
+            &--divider {
+              width: 36px;
+              display: none;
+            }
+          }
+        }
+        &_image {
+          width: 100%;
+          max-width: 402px;
+          &-inter {
+            width: 100%;
+            height: 512px;
+            object-fit: cover;
+            display: flex;
+            & img {
+              display: flex;
+              width: 100%;
+              align-self: center;
+            }
+          }
+        }
+      }
+    }
+  }
   @media (min-width: 769px) and (max-width: 992px) {
     .steps {
       padding-bottom: 0;
@@ -142,7 +195,15 @@
           &-item {
             gap: 16px;
             &--sqr {
-              padding: 14px 15px;
+              padding: 0;
+              display: flex;
+              width: 48px;
+              height: 48px;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #E3E3E3;
+              font-size: 16px;
+              line-height: 18px;
             }
             &--text {
               font-size: 14px;
@@ -175,6 +236,9 @@
   @media (min-width: 577px) and (max-width: 768px) {
     .steps {
       padding-bottom: 0;
+      &__wrapper {
+        border-left: none;
+      }
       &__title {
         padding: 100px 0 48px 40px;
         font-size: 48px;
@@ -186,7 +250,16 @@
           &-item {
             gap: 16px;
             &--sqr {
-              padding: 14px 15px;
+              padding: 0;
+              display: flex;
+              width: 48px;
+              height: 48px;
+              flex: 0 0 auto;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #E3E3E3;
+              font-size: 16px;
+              line-height: 18px;
             }
             &--text {
               font-size: 14px;
@@ -236,7 +309,16 @@
             gap: 16px;
             flex-wrap: wrap;
             &--sqr {
-              padding: 14px 15px;
+              padding: 0;
+              display: flex;
+              width: 48px;
+              height: 48px;
+              justify-content: center;
+              align-items: center;
+              border: 1px solid #E3E3E3;
+              font-size: 16px;
+              line-height: 18px;
+
             }
             &--sqr {
               &_deactive {
