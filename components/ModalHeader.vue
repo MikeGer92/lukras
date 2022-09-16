@@ -63,11 +63,12 @@
 <style lang="scss">
   .modal-header {
     position: absolute;
-    overflow: hidden;
     top: 64px;
     left: 0px;
     background: #fff;
+    height: 100%;
     width: 100%;
+    z-index: 3;
     text-align: center;
     &__wrapper {
       width: 100%;
