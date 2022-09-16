@@ -137,7 +137,11 @@
           padding: 48px;
           gap: 24px;
           &--icon {
-            padding: 14px 13px 15px 13px;
+            width: 48px;
+            height: 48px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             background: #FCFCFC;
             border: 1px solid #E3E3E3;
           }
@@ -146,6 +150,32 @@
             font-size: 16px;
             line-height: 24px;
             color: #3F3F3F;
+          }
+        }
+      }
+    }
+  }
+  @media (min-width: 993px) and (max-width: 1170px) {
+    .cert {
+      margin-top: 100px;
+      &__inter {
+        &_left {
+          grid-column: span 6;
+          &-main {
+            display: flex;
+            padding: 35px;
+            justify-content: center;
+          }
+        }
+        &_right {
+          &-info {
+            padding: 32px;
+          }
+          &-whatsup {
+            padding: 32px;
+          }
+          &-social {
+            padding: 32px;
           }
         }
       }
@@ -172,6 +202,7 @@
       }
     }
   }
+
   @media (min-width: 661px) and (max-width: 768px) {
     .cert {
       margin-top: 100px;

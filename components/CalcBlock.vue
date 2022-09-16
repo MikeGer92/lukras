@@ -150,7 +150,11 @@
           padding-left: 40px;
           column-gap: 22px;
           &--sqr {
-            padding: 22px 24px;
+            width: 60px;
+            height: 60px;
+            display: flex;
+            justify-content: center;
+            align-items: center;
             border-left: 1px solid #E3E3E3;
             border-right: 1px solid #E3E3E3;
             font-weight: 400;
@@ -252,8 +256,10 @@
             border-bottom: none;
             padding-left: 15px;
             &--sqr {
-              max-width: 40px;
-              padding: 11px 15px;
+              width: 40px;
+              height: 40px;
+             justify-content: center;
+             align-items: center;
               border-top: 1px solid #E3E3E3;
               border-bottom: 1px solid #E3E3E3;
               margin-bottom: 16px;

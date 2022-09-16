@@ -116,7 +116,7 @@ import Social from './Social.vue';
       }
     }
   }
-  @media (min-width: 577px) and (max-width: 768px) {
+  @media (min-width: 698px) and (max-width: 768px) {
     .contact-form {
       display: flex;
       max-width: 100%;
@@ -145,6 +145,21 @@ import Social from './Social.vue';
           &-cont {
             column-gap: 48px;
           }
+          &-addr {
+            &--title, &--address {
+              font-size: 14px;
+              line-height: 16px;
+            }
+          }
+          &-cont {
+            column-gap: 48px;
+            &--phone, &--mail {
+              &_title, &_num, &_addr {
+                font-size: 14px;
+                line-height: 16px;
+              }
+            }
+          }
         }
         &_social {
           padding: 36px 32px;
@@ -153,7 +168,7 @@ import Social from './Social.vue';
       }
     }
   }
-  @media (max-width: 576px) {
+  @media (max-width: 697px) {
     .contact-form {
       margin-bottom: 64px;
       display: flex;
