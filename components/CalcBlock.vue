@@ -109,7 +109,7 @@
       this.activeTab = ''
         // this.activeTab = this.actQuest.variants[0]
 
-        console.log(this.answers)
+        // console.log(this.answers)
       },
       changeActive(item) {
         this.activeTab = item
