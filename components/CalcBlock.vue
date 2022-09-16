@@ -80,7 +80,7 @@
       }
     },
     mounted() {
-     this.activeTab =  this.actQuest.variants[0]
+    //  this.activeTab =  this.actQuest.variants[0]
     },
     methods: {
       prevQuest() {
@@ -90,18 +90,24 @@
       nextQuest() {
         const key = this.actQuest.name
         this.answers[key] = this.activeTab
-        if (this.questNum < this.questList.length) {
-          this.questNum += 1
-        } else {
-          alert(`Проверьте Ваши ответы:
-          1. На сколько человек: ${this.answers.people}
-          2. Площадь дома: ${this.answers.square}
-          3. Желаемая стоимость: ${this.answers.coast}
-          4. Когда начинаем: ${this.answers.deadline}`)
-          this.answers = {people: '', square: '', coast: '', deadline: ''}
-          this.questNum = 1
-        }
-        this.activeTab = this.actQuest.variants[0]
+        console.log (this.activeTab)
+        if (this.activeTab !== '') {
+          if (this.questNum < this.questList.length) {
+            this.questNum += 1
+          } else {
+            alert(`Проверьте Ваши ответы:
+            1. На сколько человек: ${this.answers.people}
+            2. Площадь дома: ${this.answers.square}
+            3. Желаемая стоимость: ${this.answers.coast}
+            4. Когда начинаем: ${this.answers.deadline}`)
+            this.answers = {people: '', square: '', coast: '', deadline: ''}
+            this.questNum = 1
+          }
+      } else {
+        alert('Сделайте выбор!')
+      }
+      this.activeTab = ''
+        // this.activeTab = this.actQuest.variants[0]
 
         console.log(this.answers)
       },
