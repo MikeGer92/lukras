@@ -169,46 +169,67 @@
         order: 1;
         width: 182.89px;
         height: 184px;
-        background: url('../assets/images/barrel-small.svg') center 0px/ contain no-repeat;
+        background: url('../assets/images/barrel-small.svg') center 0px/ cover no-repeat;
         &:hover {
-          background: url('../assets/images/barrel-small-active.png') center 0px/ cover no-repeat;
+          background: url('../assets/images/barrel-active.png') -60px 0px/ cover no-repeat;
         }
       }
     }
   }
-  @media (min-width: 769x) and (max-width: 1160px) {
+  @media (min-width: 769px) and (max-width: 1160px) {
     .product {
       display: flex;
       width: 100%;
-      max-width: 450px;
+      max-width: 724px;
+      padding: 40px;
       &__main {
         grid-column-gap: 36px;
+        max-width: 504px;
         &_image {
-        order: 1;
-        width: 182.89px;
-        height: 184px;
-        background: url('../assets/images/barrel-small.svg') center 0px/ contain no-repeat;
-        &:hover {
-          background: url('../assets/images/barrel-small-active.png') center 0px/ cover no-repeat;
+          margin-top: -35px;
+          order: 1;
+          width: 254px;
+          height: 256px;
         }
-      }
       }
     }
   }
-  @media (min-width: 577px) and (max-width: 768px) {
+  @media (min-width: 700px) and (max-width: 768px) {
     .product {
-      max-width: 100%;
+      display: flex;
+      width: 100%;
+      max-width: 724px;
       padding: 40px;
-      grid-column: span 12;
-      &__wrapper {
-        width: 100%;
-      }
       &__main {
+        grid-column-gap: 36px;
+        max-width: 78.7%;
         &_image {
-          display: flex;
+          margin-top: -15%;
+          order: 1;
           width: 254px;
-          height: unset;
-          margin-top: -20px;
+          height: 256px;
+        }
+      }
+    }
+  }
+  @media (min-width: 577px) and (max-width: 699px) {
+    .product {
+      display: flex;
+      width: 100%;
+      max-width: 724px;
+      padding: 40px;
+      &__main {
+        grid-column-gap: 36px;
+        max-width: 78.7%;
+        &_image {
+          margin-top: 0%;
+          order: 1;
+          width: 181px;
+          height: 183px;
+          background: url('../assets/images/barrel-small.svg') center 0px/ cover no-repeat;
+          &:hover {
+            background: url('../assets/images/barrel-active.png') -35px 0px/ cover no-repeat;
+          }
         }
       }
     }

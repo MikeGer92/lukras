@@ -73,8 +73,8 @@ import Product from './Product.vue';
     }
     &__products {
       width: 100%;
-      display: grid;
-      grid-template-columns: repeat(12, 1fr);
+      display: flex;
+      // grid-template-columns: repeat(12, 1fr);
       column-gap: 24px;
     }
   }
