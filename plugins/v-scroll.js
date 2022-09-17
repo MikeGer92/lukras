@@ -17,12 +17,12 @@ Vue.use(VueScrollTo, {
 });
 Vue.directive('scroll', {
   inserted: function (el, binding) {
-    console.log(el)
+    console.log(el);
     let f = function (evt) {
       if (binding.value(evt, el)) {
-        window.removeEventListener('scroll', f)
+        window.removeEventListener('scroll', f);
       }
-    }
-    window.addEventListener('scroll', f)
+    };
+    window.addEventListener('scroll', f);
   }
-})
+});
