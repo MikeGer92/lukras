@@ -246,6 +246,8 @@
   }
   @media (max-width: 576px) {
     .calc {
+      width:100vw;
+      margin: 0 -16px;
       margin-top: 64px;
       &__main {
         &_top {
