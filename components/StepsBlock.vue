@@ -83,7 +83,7 @@
     }
     &__main {
       display: flex;
-      justify-content: space-between;
+      // justify-content: space-between;
       &_list {
         list-style: none;
         display: flex;
@@ -127,7 +127,7 @@
           &--divider {
             width: 370px;
             height: 1px;
-            margin-left: -24px;
+            margin-left: 24px;
             background: #E3E3E3;
           }
         }
@@ -175,8 +175,8 @@
               padding-right: 16px;
             }
             &--divider {
-              width: 36px;
-              display: none;
+              width: 114px;
+              // display: none;
             }
           }
         }
@@ -230,6 +230,7 @@
               padding-right: 16px;
             }
             &--divider {
+              margin-left: 16px;
               width: 74px;
             }
           }
@@ -289,6 +290,7 @@
             }
             &--divider {
               width: 74px;
+              margin-left: 16px;
             }
           }
         }
