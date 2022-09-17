@@ -174,7 +174,7 @@ export default {
 @import '~/assets/_variables.scss';
 .main-block {
   & transition {
-    transition: opacity 5s;
+    transition: opacity 2s;
   }
 }
 .content {
