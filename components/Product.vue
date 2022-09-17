@@ -163,6 +163,11 @@
           font-size: 14px;
           line-height: 16px;
           color: #FF0000;
+          &:hover {
+            transition: all .2s;
+            background: #FF0000;
+            color: #fff;
+          }
         }
       }
       &_image {

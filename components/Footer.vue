@@ -117,6 +117,10 @@ export default {
           color: #4D4D4D;
           word-break: nowrap;
           cursor: pointer;
+          &:hover {
+            font-weight: 600;
+            color: #000000;
+          }
         }
       }
     }

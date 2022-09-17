@@ -116,9 +116,17 @@ export default {
           font-size: 16px;
           line-height: 18px;
           border-right: 1px solid #E3E3E3;
+          &:hover {
+            border: 1px solid #000000;
+            font-size: 18px;
+          }
           &--active {
             border: 1px solid #BF0000;
             color: #BF0000;
+            &:hover {
+              border: 1px solid#FF0000;
+              color: #FF0000;
+            }
           }
         }
       }

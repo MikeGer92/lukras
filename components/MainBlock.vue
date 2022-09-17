@@ -235,6 +235,11 @@ import Corner from './Corner.vue';
           border: 2px solid #FF0000;
           border-radius: 4px;
           order: 1;
+          &:hover {
+            transition: all .2s;
+            background: #FF0000;
+            color: #fff;
+          }
         }
       }
       &-benefsmall {
@@ -410,6 +415,10 @@ import Corner from './Corner.vue';
           font-size: 14px;
           line-height: 16px;
           color: #BF0000;
+          &:hover {
+            transition: all .2s;
+            font-size: 16px;
+          }
           & img {
             width: 10.67px;
             height: 10.67px;
@@ -435,6 +444,10 @@ import Corner from './Corner.vue';
           font-size: 14px;
           line-height: 16px;
           color: #BF0000;
+          &:hover {
+            transition: all .2s;
+            font-size: 16px;
+          }
           & img {
             width: 10.67px;
             height: 10.67px;
