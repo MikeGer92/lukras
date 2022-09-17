@@ -176,7 +176,7 @@
         height: 184px;
         background: url('../assets/images/barrel-small.svg') center 0px/ cover no-repeat;
         &:hover {
-          background: url('../assets/images/barrel-active.png') -60px 0px/ cover no-repeat;
+          background: url('../assets/images/barrel-active.png') -40px 0px/ cover no-repeat;
         }
       }
     }
@@ -195,6 +195,10 @@
           order: 1;
           width: 254px;
           height: 256px;
+          background: url('../assets/images/barrel-small.svg') center 0px/ cover no-repeat;
+          &:hover {
+            background: url('../assets/images/barrel-active.png') -55px -10px/ cover no-repeat;
+          }
         }
       }
     }
@@ -213,6 +217,10 @@
           order: 1;
           width: 254px;
           height: 256px;
+          background: url('../assets/images/barrel-small.svg') center 0px/ cover no-repeat;
+          &:hover {
+            background: url('../assets/images/barrel-active.png') -55px -10px/ cover no-repeat;
+          }
         }
       }
     }
@@ -233,7 +241,7 @@
           height: 183px;
           background: url('../assets/images/barrel-small.svg') center 0px/ cover no-repeat;
           &:hover {
-            background: url('../assets/images/barrel-active.png') -35px 0px/ cover no-repeat;
+            background: url('../assets/images/barrel-active.png') -40px -10px/ cover no-repeat;
           }
         }
       }

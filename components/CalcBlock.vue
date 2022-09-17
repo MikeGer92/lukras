@@ -85,7 +85,7 @@
     methods: {
       prevQuest() {
         this.questNum -= 1 ? this.questNum > 1: ''
-        this.activeTab = this.actQuest.variants[0]
+        this.activeTab = ''
       },
       nextQuest() {
         const key = this.actQuest.name

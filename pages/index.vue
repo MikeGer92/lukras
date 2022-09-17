@@ -1,8 +1,10 @@
 <template>
   <div class="main">
     <MainBlock></MainBlock>
+
     <CalcBlock></CalcBlock>
-    <CatalogBlock></CatalogBlock>
+    <div class="content" v-intersect="onIntersect"></div>
+    <CatalogBlock :showBlock="watchNextBlock"></CatalogBlock>
     <AdvantagesBlock></AdvantagesBlock>
     <CertificateBlock></CertificateBlock>
     <WarningBlock></WarningBlock>
@@ -27,11 +29,33 @@ import ConsultBlock from '~/components/ConsultBlock.vue';
 import OurGalary from '~/components/OurGalary.vue';
 import WorksGalary from '../components/WorksGalary.vue';
 export default {
-    name: "IndexPage",
-    components: { MainBlock, CalcBlock, CatalogBlock, AdvantagesBlock, CertificateBlock, WarningBlock, StepsBlock, MapBlock, ConsultBlock, OurGalary, WorksGalary }
+  name: "IndexPage",
+  components: { MainBlock, CalcBlock, CatalogBlock, AdvantagesBlock, CertificateBlock, WarningBlock, StepsBlock, MapBlock,ConsultBlock, OurGalary, WorksGalary },
+  data() {
+    return {
+      nextBlock: false
+    }
+  },
+  computed: {
+    watchNextBlock() {
+      return this.nextBlock
+    }
+
+  },
+  methods: {
+    onIntersect(observer){
+    this.isVisible = observer.isIntersecting
+    console.log('NextBlock')
+    this.nextBlock = true
+    console.log(this.nextBlock)
+}
+  }
 }
 </script>
 <style lang="scss">
 @import '~/assets/_variables.scss';
+// .calc {
+//   display: none;
+// }
 
 </style>

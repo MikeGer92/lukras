@@ -1,5 +1,5 @@
 <template>
-  <section class="catalog" id="catalog">
+  <section class="catalog" id="catalog" v-if="showBlock">
     <div class="container">
       <h2 class="catalog__title">Каталог систем очистки для загородных домов</h2>
       <div class="catalog__products"
@@ -20,6 +20,12 @@ import Product from './Product.vue';
   export default {
     name: "CatalogBlock",
     components: { Product },
+    props: {
+      showBlock: {
+        type: Boolean,
+        default: false
+      }
+    },
     data() {
       return {
         prodList: [
