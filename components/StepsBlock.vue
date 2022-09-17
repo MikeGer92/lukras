@@ -176,7 +176,6 @@
             }
             &--divider {
               width: 114px;
-              // display: none;
             }
           }
         }
