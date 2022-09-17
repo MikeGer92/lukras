@@ -104,6 +104,7 @@ export default {
         width: 100%;
         max-width: 1320px;
         margin: 0 auto;
+        padding-left: 23px;
       }
       &_items {
         display: flex;

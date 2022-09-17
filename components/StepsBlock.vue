@@ -6,34 +6,46 @@
         <div class="steps__main">
           <ul class="steps__main_list">
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--sqr">1</div>
-              <div class="steps__main_list-item--text">ДОСТАВКА СЕПТИКА НА ОБЪЕКТ</div>
+              <div class="steps__main_list-item--wrapp">
+                <div class="steps__main_list-item--sqr">1</div>
+                <div class="steps__main_list-item--text">ДОСТАВКА СЕПТИКА НА ОБЪЕКТ</div>
+              </div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--sqr">2</div>
-              <div class="steps__main_list-item--text">ПОДГОТОВКА КОТЛОВАНА И МАГИСТРАЛЕЙ</div>
+              <div class="steps__main_list-item--wrapp">
+                <div class="steps__main_list-item--sqr">2</div>
+                <div class="steps__main_list-item--text">ПОДГОТОВКА КОТЛОВАНА И МАГИСТРАЛЕЙ</div>
+              </div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--sqr">3</div>
-              <div class="steps__main_list-item--text">УСТАНОВКА СЕПТИКА В КОТЛОВАН</div>
+              <div class="steps__main_list-item--wrapp">
+                <div class="steps__main_list-item--sqr">3</div>
+                <div class="steps__main_list-item--text">УСТАНОВКА СЕПТИКА В КОТЛОВАН</div>
+              </div>
               <div class="steps__main_list-item--divider"></div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">4</div>
-              <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ПРОКЛАДКА ТРУБ И ЭЛЕКТОКАБЕЛЯ</div>
+              <div class="steps__main_list-item--wrapp">
+                <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">4</div>
+                <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ПРОКЛАДКА ТРУБ И ЭЛЕКТОКАБЕЛЯ</div>
+              </div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">5</div>
-              <div class="steps__main_list-item--text steps__main_list-item--text_deactive">НАСТРОЙКИ И ПРОВЕРКА РАБОТОСПОСОБНОСТИ</div>
+              <div class="steps__main_list-item--wrapp">
+                <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">5</div>
+                <div class="steps__main_list-item--text steps__main_list-item--text_deactive">НАСТРОЙКИ И ПРОВЕРКА РАБОТОСПОСОБНОСТИ</div>
+              </div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">6</div>
-              <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ОБУЧЕНИЕ</div>
+              <div class="steps__main_list-item--wrapp">
+                <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">6</div>
+                <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ОБУЧЕНИЕ</div>
+              </div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
           </ul>
@@ -54,10 +66,8 @@
 
 <style lang="scss">
   .steps {
-    background: #FCFCFC;
     padding-bottom: 120px;
     &__wrapper {
-      background: #FCFCFC;
       border-left: 1px solid #E3E3E3;
       display: flex;
       flex-direction: column;
@@ -82,10 +92,15 @@
         &-item {
           display: flex;
           align-items: center;
-          gap: 48px;
+          &--wrapp {
+            display: flex;
+            align-items: center;
+            gap: 48px;
+          }
           &--sqr {
             padding: 22px 27px;
             border: 1px solid #E3E3E3;
+            background: #FCFCFC;
             border-left: none;
             font-weight: 400;
             font-size: 16px;
@@ -140,7 +155,9 @@
         &_list {
           gap: 48px;
           &-item {
-            gap: 16px;
+            &--wrapp {
+              gap: 24px;
+            }
             &--sqr {
               padding: 0;
               display: flex;
@@ -193,7 +210,9 @@
         &_list {
           gap: 48px;
           &-item {
-            gap: 16px;
+            &--wrapp {
+              gap: 20px;
+            }
             &--sqr {
               padding: 0;
               display: flex;
@@ -248,7 +267,9 @@
         &_list {
           gap: 48px;
           &-item {
-            gap: 16px;
+            &--wrapp {
+              gap: 16px;
+            }
             &--sqr {
               padding: 0;
               display: flex;
@@ -306,8 +327,11 @@
         &_list {
           gap: 24px;
           &-item {
-            gap: 16px;
+            gap: 24px;
             flex-wrap: wrap;
+            &--wrapp {
+              gap: 16px;
+            }
             &--sqr {
               padding: 0;
               display: flex;
@@ -326,9 +350,12 @@
               }
             }
             &--text {
+              display: flex;
+              flex-wrap: wrap;
               font-size: 14px;
               line-height: 16px;
               padding-right: 16px;
+
               &_deactive {
                 color: #000000;
               }

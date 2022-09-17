@@ -122,11 +122,6 @@ export default {
   @media (min-width: 769px) and (max-width: 992px) {
     .advant {
       margin-top: 100px;
-      & .container {
-        padding: 0 23px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
       &__swiper {
         max-width: 724px;
         overflow-x: hidden;
@@ -139,27 +134,22 @@ export default {
       }
     }
   }
-  @media (min-width: 725px) and (max-width: 768px) {
+  @media (min-width: 758px) and (max-width: 768px) {
     .advant {
       margin-top: 100px;
-      & .container {
-        padding: 0 12px;
-        margin: 0 auto;
-        overflow: hidden;
-      }
       &__swiper {
         max-width: 724px;
         overflow-x: hidden;
-        margin: 0 auto;
+        // margin: 0 auto;
         &_wrapp {
+          gap: 20px;
           justify-content: center;
-          gap: 0px;
           flex-wrap: wrap;
         }
       }
     }
   }
-  @media (min-width: 577px) and (max-width: 724px) {
+  @media (min-width: 577px) and (max-width: 757px) {
     .advant {
       margin-top: 100px;
       &__swiper {

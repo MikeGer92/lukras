@@ -157,7 +157,43 @@ export default {
 .slider-content {
   color: #000;
 }
-@media (min-width: 577px) and (max-width: 768px) {
+@media (min-width: 691px) and (max-width: 768px) {
+  .swiper {
+    width: 100%;
+    height: 400px;
+    &__manage {
+      &_wrapper {
+        max-width: 724px;
+      }
+      &_photo {
+        font-size: 14px;
+        line-height: 16px;
+        &-title, &-num {
+          padding: 12px 24px;
+        }
+      }
+      &_btn {
+        &-prev, &-next {
+          width: 66px;
+          height: 66px;
+          justify-content: center;
+          align-items: center;
+          & img {
+            width: 11px;
+            height: 11px;
+          }
+        }
+      }
+    }
+  }
+  .swiper-slide {
+    width: 87%;
+  }
+  .swiper-slide-active {
+    filter: brightness(100%);
+  }
+}
+@media (min-width: 577px) and (max-width: 690px) {
   .swiper {
     width: 100%;
     height: 400px;

@@ -74,7 +74,6 @@ import Product from './Product.vue';
     &__products {
       width: 100%;
       display: flex;
-      // grid-template-columns: repeat(12, 1fr);
       column-gap: 24px;
     }
   }
@@ -129,7 +128,7 @@ import Product from './Product.vue';
   }
   @media (max-width: 576px) {
     .catalog {
-      margin-top: 64px;
+      margin-top: 32px;
       padding: 0;
       &__title {
         max-width: 100%;
