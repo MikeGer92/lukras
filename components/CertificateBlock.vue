@@ -76,7 +76,6 @@
           flex-direction: column;
           padding: 48px 69px 48px 48px;
           border-bottom: 1px solid #E3E3E3;
-          background: #FCFCFC;
           &--title {
             font-family: 'Roboto Condensed';
             font-weight: 700;
@@ -195,6 +194,9 @@
         }
         &_right {
           grid-column: span 12;
+          &-info {
+            border-top: 1px solid #E3E3E3;
+          }
           &-whatsup {
             padding: 16px;
           }
@@ -216,6 +218,9 @@
           }
         }
         &_right {
+          &-info {
+            border-top: 1px solid #E3E3E3;
+          }
           grid-column: span 12;
           &-whatsup {
             padding: 16px;
