@@ -54,10 +54,8 @@
 
 <style lang="scss">
   .steps {
-    background: #FCFCFC;
     padding-bottom: 120px;
     &__wrapper {
-      background: #FCFCFC;
       border-left: 1px solid #E3E3E3;
       display: flex;
       flex-direction: column;
@@ -86,6 +84,7 @@
           &--sqr {
             padding: 22px 27px;
             border: 1px solid #E3E3E3;
+            background: #FCFCFC;
             border-left: none;
             font-weight: 400;
             font-size: 16px;
