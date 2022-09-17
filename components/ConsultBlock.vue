@@ -126,6 +126,11 @@ import Social from './Social.vue';
               font-size: 16px;
               line-height: 18px;
               color: #FF0000;
+              &:hover {
+                transition: all .2s;
+                background: #FF0000;
+                color: #fff;
+              }
             }
             &_text {
               max-width: 275px;

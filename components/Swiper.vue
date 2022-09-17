@@ -117,6 +117,9 @@ export default {
         padding: 22px 40px;
         border-right: 1px solid #E3E3E3;
         align-items: center;
+        &:hover {
+          border: 1px solid #000;
+        }
       }
     }
     &_btn {
@@ -129,6 +132,9 @@ export default {
           align-items: center;
         border-left: 1px solid #E3E3E3;
         cursor: pointer;
+        &:hover {
+          border: 1px solid #000;
+        }
       }
     }
   }

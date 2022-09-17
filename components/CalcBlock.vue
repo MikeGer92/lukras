@@ -212,6 +212,15 @@
               font-size: 16px;
               line-height: 18px;
               color: #FF0000;
+              &-deactive {
+                border: 1px solid #E3E3E3;
+                color: #E3E3E3;;
+              }
+              &:hover {
+                transition: all .2s;
+                background: #FF0000;
+                color: #fff;
+              }
             }
           }
         }

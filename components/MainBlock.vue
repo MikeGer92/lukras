@@ -25,7 +25,7 @@
           </div>
           <div class="main-block__info_add-choise">
             <Corner></Corner>
-            <div class="main-block__info_add-choise--btn">Подобрать нужную модель</div>
+            <button class="main-block__info_add-choise--btn">Подобрать нужную модель</button>
           </div>
           <div class="main-block__info_add-benefsmall">
             <div class="main-block__info_add-benefsmall_add-top">
@@ -235,6 +235,11 @@ import Corner from './Corner.vue';
           border: 2px solid #FF0000;
           border-radius: 4px;
           order: 1;
+          &:hover {
+            transition: all .2s;
+            background: #FF0000;
+            color: #fff;
+          }
         }
       }
       &-benefsmall {
@@ -410,6 +415,10 @@ import Corner from './Corner.vue';
           font-size: 14px;
           line-height: 16px;
           color: #BF0000;
+          &:hover {
+            transition: all .2s;
+            font-size: 16px;
+          }
           & img {
             width: 10.67px;
             height: 10.67px;
@@ -435,6 +444,10 @@ import Corner from './Corner.vue';
           font-size: 14px;
           line-height: 16px;
           color: #BF0000;
+          &:hover {
+            transition: all .2s;
+            font-size: 16px;
+          }
           & img {
             width: 10.67px;
             height: 10.67px;
@@ -527,7 +540,6 @@ import Corner from './Corner.vue';
       &_add {
         margin-top: 56px;
         width: 100%;
-        // justify-content: center;
         flex-wrap: wrap;
         &-benefsmall {
           display: none;
@@ -653,7 +665,80 @@ import Corner from './Corner.vue';
     }
   }
 }
-@media (min-width: 769px) and (max-width: 992px) {
+@media (min-width: 841px) and (max-width: 992px) {
+  .main-block {
+    margin: 100px auto 0 auto;
+    &__info {
+      margin-top: 0px;
+      &_descr {
+        margin-bottom: 20px;
+      }
+      &_title {
+        width: 100%;
+        &-black, &-span {
+          font-size: 56px;
+          line-height: 64px;
+        }
+        &-license {
+          font-size: 16px;
+          line-height: 16px;
+          margin-left: -12px;
+        }
+      }
+      &_add {
+        margin-top: 56px;
+        width: 90%;
+        justify-content: space-between;
+        flex-wrap: wrap;
+        &-choise {
+          order: 3;
+          display: flex;
+        }
+        .corner {
+         order: 1;
+         margin-top: 170px;
+         width: 56px;
+         height: 56px;
+        }
+        &-benefsmall {
+          order: 2;
+          display: block;
+          &_add {
+            &-top {
+              width: 212px;
+              top: -92px;
+              right: -80px;
+              padding: 24px 16px;
+            }
+          }
+        }
+        &-how {
+          margin-top: 0px;
+          width: 301px;
+          max-height: 165px;
+        }
+        &-int {
+          &--item {
+            padding: 16px 16px 16px 14px;
+          }
+        }
+        &-choise {
+          margin-top: -211px;
+          &--btn {
+            margin-top: 0;
+            padding: 24px 48px;
+            order: 0;
+          }
+        }
+      }
+    }
+    &__benefit {
+      display: none;
+    }
+  }
+}
+
+@media (min-width: 769px) and (max-width: 840px) {
   .main-block {
     margin: 100px auto 0 auto;
     &__info {
@@ -825,16 +910,26 @@ import Corner from './Corner.vue';
           order: 0;
           display: block;
           align-self: center;
+          &_add {
+            &-top {
+              width: 212px;
+              top: -92px;
+              right: -80px;
+              padding: 24px 16px;
+            }
+          }
         }
         &-how {
-          margin-top: 114px;
-          width: 301px;
+          margin-top: 134px;
+          width: 401px;
           max-height: 165px;
           order: 1;
           align-self: center;
         }
         &-int {
           &--item {
+            width: 100%;
+            max-width: 100%;
             padding: 16px 16px 16px 14px;
           }
         }
@@ -842,8 +937,8 @@ import Corner from './Corner.vue';
           order: 2;
           align-self: center;
           &--btn {
-            margin-top: 24px;
-            padding: 24px 48px;
+            margin-top: 44px;
+            padding: 24px 94px;
             order: 0;
           }
           & .corner {

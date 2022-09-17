@@ -114,6 +114,10 @@ import ModalHeader from './ModalHeader.vue';
           line-height: 16px;
           color: #9D9D9D;
           cursor: pointer;
+          &:hover {
+            color: #000000;
+            font-weight: 600;
+          }
         }
       }
       &_popup, &_popupxs {
