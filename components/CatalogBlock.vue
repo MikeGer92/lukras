@@ -20,6 +20,12 @@ import Product from './Product.vue';
   export default {
     name: "CatalogBlock",
     components: { Product },
+    // props: {
+    //   showBlock: {
+    //     type: Boolean,
+    //     default: false
+    //   }
+    // },
     data() {
       return {
         prodList: [

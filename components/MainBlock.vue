@@ -1,6 +1,9 @@
 <template>
   <div class="container">
-    <section class="main-block" id="main">
+    <section
+      class="main-block"
+      id="main"
+      >
       <div class="main-block__small">
         <div class="main-block__small_inter">
           <div class="main-block__small_inter-img"></div>
@@ -103,9 +106,15 @@
 
 <script>
 import Corner from './Corner.vue';
-  export default {
-    name: "MainBlock",
-    components: { Corner }
+export default {
+  name: "MainBlock",
+  components: { Corner },
+  data() {
+    return {
+      comp: '#',
+      styles: {}
+    }
+  },
 }
 </script>
 
@@ -115,6 +124,7 @@ import Corner from './Corner.vue';
   display: flex;
   margin: 128px auto 0 auto;
   column-gap: 44px;
+  transition: 1.5s all cubic-bezier(0.39, 0.575, 0.565, 1);
   &__small {
     display: none;
     padding: 8px;

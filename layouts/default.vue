@@ -1,6 +1,6 @@
 <template>
   <div>
-    <div>
+    <div id="app">
       <Header></Header>
       <nuxt />
       <Footer></Footer>
