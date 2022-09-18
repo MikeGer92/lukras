@@ -18,7 +18,7 @@ export default {
   components: { ContactForm },
   data() {
     return {
-
+      placies: [{location: {lng: 39.775883, lat: 47.269713}, description: 'LUKRAS'}]
     }
   },
   mounted() {
@@ -29,7 +29,13 @@ export default {
           style: 'mapbox://styles/mapbox/streets-v9', // default style
           center: [39.775883, 47.269713],// starting position as [lng, lat]
           zoom: 10
-   })
+    })
+    this.placies.map((marker) => {
+      const LngLat = [marker.location.lng, marker.location.lat]
+      new mapboxgl.Marker()
+          .setLngLat(LngLat)
+          .addTo(map) // Initialized above
+      })
   }
 }
 </script>
