@@ -28,7 +28,12 @@
                 <input v-model="answers.phone" type="text" class="consult__inter_consl-form--inputs_inp" placeholder="Телефон" name="phone">
               </div>
               <div class="consult__inter_consl-form--add">
-                <button type="submit" class="consult__inter_consl-form--add_btn" @click="nextQuest">Отправить</button>
+                <button type="submit"
+                :class="{'calc__main_bottom-main--buttons_btn': true, 'calc__main_bottom-main--buttons_btn-active': this.answers.name !== '' && this.answers.phone !== ''}"
+                  @click="nextQuest"
+                  >
+                    Отправить ответы
+                </button>
                 <div type="submit" class="consult__inter_consl-form--add_text">Нажимая кнопку “отправить”, вы соглашаетесь
                   с условиями обработки персональных данных
                 </div>
