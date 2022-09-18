@@ -13,7 +13,7 @@
           </div>
           </div>
           <div class="calc__main_bottom-main">
-            <div class="calc__main_bottom-main--choise">
+            <div class="calc__main_bottom-main--choise" v-if="!showForm">
               <div class="calc__main_bottom-main--choise_item"
                 v-for="item in actQuest.variants"
                 :key="item"
@@ -22,10 +22,36 @@
               > {{ item }}
               </div>
             </div>
+            <div class="consult__inter_consl-form" v-if="questNum===5">
+              <div class="consult__inter_consl-form--inputs">
+                <input v-model="answers.name" type="text" class="consult__inter_consl-form--inputs_inp" placeholder="Имя" name="name">
+                <input v-model="answers.phone" type="text" class="consult__inter_consl-form--inputs_inp" placeholder="Телефон" name="phone">
+              </div>
+              <div class="consult__inter_consl-form--add">
+                <button type="submit" class="consult__inter_consl-form--add_btn" @click="nextQuest">Отправить</button>
+                <div type="submit" class="consult__inter_consl-form--add_text">Нажимая кнопку “отправить”, вы соглашаетесь
+                  с условиями обработки персональных данных
+                </div>
+              </div>
+            </div>
             <div class="calc__main_bottom-main--buttons">
-              <button type="button" class="calc__main_bottom-main--buttons_btn" v-if="questNum>1" @click="prevQuest">Предыдущий вопрос</button>
-              <button type="button" class="calc__main_bottom-main--buttons_btn" v-if="questNum<4"  @click="nextQuest">Следующий вопрос</button>
-              <button type="submit" class="calc__main_bottom-main--buttons_btn" v-if="questNum===4" @click="nextQuest">Отправить форму</button>
+              <button
+                type="button"
+                :class="{'calc__main_bottom-main--buttons_btn-active': true }"
+                v-if="questNum>1 && questNum<5"
+                @click="prevQuest"
+              >
+                Предыдущий вопрос
+              </button>
+              <button
+                type="button"
+                :class="{'calc__main_bottom-main--buttons_btn': true, 'calc__main_bottom-main--buttons_btn-active': this.activeTab !== ''}"
+                v-if="questNum<5"
+                @click="nextQuest"
+              >
+                Следующий вопрос
+              </button>
+              <!-- <button type="submit" class="calc__main_bottom-main--buttons_btn" v-if="questNum===4" @click="nextQuest">Отправить форму</button> -->
           </div>
           </div>
         </div>
@@ -37,6 +63,7 @@
     name: 'CalcBlock',
     data() {
       return {
+        showForm: false,
         questNum: 1,
         activeQuest: null,
         activeTab:'',
@@ -44,7 +71,9 @@
           people: '',
           square: '',
           coast: '',
-          deadline: ''
+          deadline: '',
+          name: '',
+          phone: ''
         },
         questList: [
           {
@@ -70,6 +99,12 @@
             name: 'deadline',
             title: 'Как быстро нужно начать работы?',
             variants: ['завтра', 'в течении месяца', 'в течении полугода' ]
+          },
+          {
+            id: 5,
+            name: 'contacts',
+            title: 'Заполните, пожалуйста котактные данные и мы с Вами свяжемся в ближайшее время',
+            variants: [ ]
           }
         ]
       }
@@ -77,6 +112,9 @@
     computed: {
       actQuest() {
         return this.activeQuest = this.questList.find(quest => quest.id === this.questNum)
+      },
+      isActiveTab() {
+        return this.activeTab !== ''
       }
     },
     mounted() {
@@ -84,35 +122,48 @@
     },
     methods: {
       prevQuest() {
+        console.log (this.answers)
         this.questNum -= 1 ? this.questNum > 1: ''
-        this.activeTab = ''
+        const key = this.actQuest.name
+        this.activeTab = this.answers[key]
       },
       nextQuest() {
+        console.log (this.showForm)
         const key = this.actQuest.name
-        this.answers[key] = this.activeTab
-        console.log (this.activeTab)
+        if (this.answers[key] !== '') {
+          this.activeTab = this.answers[key]
+        } else {
+          this.answers[key] = this.activeTab
+        }
+        console.log (this.answers)
         if (this.activeTab !== '') {
           if (this.questNum < this.questList.length) {
             this.questNum += 1
           } else {
-            alert(`Проверьте Ваши ответы:
-            1. На сколько человек: ${this.answers.people}
-            2. Площадь дома: ${this.answers.square}
-            3. Желаемая стоимость: ${this.answers.coast}
-            4. Когда начинаем: ${this.answers.deadline}`)
-            this.answers = {people: '', square: '', coast: '', deadline: ''}
-            this.questNum = 1
-          }
+            this.sendAnswers(this.answers)
+        }
       } else {
         alert('Сделайте выбор!')
       }
       this.activeTab = ''
-        // this.activeTab = this.actQuest.variants[0]
-
-        // console.log(this.answers)
       },
       changeActive(item) {
         this.activeTab = item
+      },
+      sendAnswers(form) {
+        if (form.name !== '' && form.phone !== '') {
+          alert(`Проверьте Ваши ответы:
+            1. На сколько человек: ${this.answers.people}
+            2. Площадь дома: ${this.answers.square}
+            3. Желаемая стоимость: ${this.answers.coast}
+            4. Когда начинаем: ${this.answers.deadline}
+            5. Ваше Имя ${this.answers.name}
+            6. Ваш Телефон ${this.answers.phone}`)
+            this.answers = {people: '', square: '', coast: '', deadline: '', name: '', phone: ''}
+            this.questNum = 1
+        } else {
+          alert('Заполните поля формы')
+        }
       }
     }
   }
@@ -206,20 +257,27 @@
               max-width: 236px;
               display: flex;
               padding: 24px 36px;
-              border: 2px solid #FF0000;
+              border: 1px solid #E3E3E3;
+              color: #E3E3E3;
               border-radius: 4px;
               font-weight: 500;
               font-size: 16px;
               line-height: 18px;
-              color: #FF0000;
-              &-deactive {
-                border: 1px solid #E3E3E3;
-                color: #E3E3E3;;
-              }
-              &:hover {
-                transition: all .2s;
-                background: #FF0000;
-                color: #fff;
+              &-active {
+                max-width: 236px;
+                display: flex;
+                padding: 24px 36px;
+                border: 2px solid #FF0000;
+                border-radius: 4px;
+                font-weight: 500;
+                font-size: 16px;
+                line-height: 18px;
+                color: #FF0000;
+                &:hover {
+                  transition: all .2s;
+                  background: #FF0000;
+                  color: #fff;
+                }
               }
             }
           }
