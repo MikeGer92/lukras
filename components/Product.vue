@@ -204,30 +204,7 @@
   }
 }
 
-  @media (min-width: 769px) and (max-width: 1160px) {
-    .product {
-      display: flex;
-      width: 100%;
-      max-width: 724px;
-      padding: 40px;
-      &__main {
-        grid-column-gap: 36px;
-        max-width: 504px;
-        &_image {
-          margin-top: -35px;
-          order: 1;
-          width: 254px;
-          height: 256px;
-          background: url('../assets/images/barrel-small.svg') center 0px/ cover no-repeat;
-          &:hover {
-            background: url('../assets/images/barrel-active.png') -55px -10px/ cover no-repeat;
-          }
-        }
-      }
-    }
-  }
-}
-@media (min-width: 700px) and (max-width: 768px) {
+@media (min-width: 769px) and (max-width: 1160px) {
   .product {
     display: flex;
     width: 100%;
@@ -235,9 +212,9 @@
     padding: 40px;
     &__main {
       grid-column-gap: 36px;
-      max-width: 78.7%;
+      max-width: 504px;
       &_image {
-        margin-top: -15%;
+        margin-top: -35px;
         order: 1;
         width: 254px;
         height: 256px;
