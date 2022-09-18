@@ -282,7 +282,7 @@ body, html {
 }
 .main-block {
   & transition {
-    transition: opacity 5s;
+    transition: opacity 2s;
   }
 }
 .content {
