@@ -32,8 +32,8 @@
     <transition name="consult"><ConsultBlock v-if="getConsult"></ConsultBlock></transition>
     <div class="consult" v-intersect="onConsultIntersect"></div>
 
-    <transition name="map"><MapBlock v-if="getMap"></MapBlock></transition>
-    <div class="map" v-intersect="onMapIntersect"></div>
+    <transition name="map"><MapBlock></MapBlock></transition>
+    <!-- <div class="map" v-intersect="onMapIntersect"></div> -->
 </div>
 </template>
 
@@ -74,12 +74,12 @@ export default {
     }
   },
   computed: {
-    // cursorCircle() {
-    //   return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`
-    // },
-    // cursorPoint() {
-    //   return `transform: translateX(${this.xChild - 3}px) translateY(${this.yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`
-    // },
+    cursorCircle() {
+      return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`
+    },
+    cursorPoint() {
+      return `transform: translateX(${this.xChild - 3}px) translateY(${this.yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`
+    },
     getCalc() {
       return this.calcShow
     },
@@ -110,21 +110,22 @@ export default {
     getMap() {
       return this.calcShow
     },
+
   },
   mounted() {
     // window.addEventListener('mousemove',this.mouseIsMoving)
-  //   document.addEventListener("mousemove", this.moveCursor);
-  //   document.addEventListener('mouseleave', e => {
-  //     this.hideCursor = true;
-  //   });
-  //   document.addEventListener('mouseenter', e => {
-  //     this.hideCursor = false;
-  //   });
+    // document.addEventListener("mousemove", this.moveCursor);
+    // document.addEventListener('mouseleave', e => {
+    //   this.hideCursor = true;
+    // });
+    // document.addEventListener('mouseenter', e => {
+    //   this.hideCursor = false;
+    // });
 
-  // },
+  },
   // destroyed() {
   //   window.removeEventListener('mousemove', this.mouseIsMoving);
-  },
+  // },
   methods: {
     // moveCursor(e) {
     //   this.xChild = e.clientX;
@@ -142,6 +143,7 @@ export default {
     //   // lastScrolledLeft = 0,
     //   // lastScrolledTop = 0;
     //   // console.log(x, y, xMouse, yMouse);
+    // },
     onCalcIntersect(observer){
       if (observer.isIntersecting) {
         setTimeout(() => {
@@ -211,7 +213,7 @@ export default {
           this.mapShow = observer.isIntersecting
         }, 1000);
       }
-    }
+    },
   }
 }
 </script>
