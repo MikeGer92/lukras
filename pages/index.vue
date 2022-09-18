@@ -32,8 +32,8 @@
     <transition name="consult"><ConsultBlock v-if="getConsult"></ConsultBlock></transition>
     <div class="consult" v-intersect="onConsultIntersect"></div>
 
-    <transition name="map"><MapBlock v-if="getMap"></MapBlock></transition>
-    <div class="map" v-intersect="onMapIntersect"></div>
+    <transition name="map"><MapBlock></MapBlock></transition>
+    <!-- <div class="map" v-intersect="onMapIntersect"></div> -->
 </div>
 </template>
 
