@@ -2,7 +2,10 @@
   <section class="map" id="contacts">
     <!-- <div class="container" :style="{'background': 'transparent'}"> -->
       <div class="map__main">
-      <ContactForm></ContactForm>
+      <div class="map__main_map" id="map">
+        <ContactForm></ContactForm>
+      </div>
+
       </div>
     <!-- </div> -->
   </section>
@@ -10,8 +13,24 @@
 
 <script>
 import ContactForm from './ContactForm.vue';
-  export default {
-    components: { ContactForm }
+export default {
+  name: 'MapBlock',
+  components: { ContactForm },
+  data() {
+    return {
+
+    }
+  },
+  mounted() {
+    const mapboxgl = require('mapbox-gl')
+    const map = new mapboxgl.Map({
+      accessToken: 'pk.eyJ1Ijoic2xpbWVzaG90IiwiYSI6ImNrcjI4M2Y1ODI2cDgzMXFodDFuMG9jYW8ifQ.nMAxLQ2UlUxVBCcM-M8vuQ',
+      container: 'map', // <div id="map"></div>
+          style: 'mapbox://styles/mapbox/streets-v9', // default style
+          center: [39.775883, 47.269713],// starting position as [lng, lat]
+          zoom: 10
+   })
+  }
 }
 </script>
 
@@ -23,8 +42,16 @@ import ContactForm from './ContactForm.vue';
     display: flex;
     &__main {
       width: 100%;
-      background: url('@/assets/images/map.png') 0px 0px/cover no-repeat;
-      padding: 136px 140px;
+      &_map {
+        padding: 136px 140px;
+        position: relative;
+        width: 100%;
+        height: 800px;
+        .contact-form {
+          position: absolute;
+          z-index: 2;
+        }
+      }
     }
   }
   @media (min-width: 768px) and (max-width: 1160px) {
@@ -34,22 +61,30 @@ import ContactForm from './ContactForm.vue';
     display: flex;
     &__main {
       width: 100%;
-      background: url('@/assets/images/map.png') 0px 0px/cover no-repeat;
-      padding: 136px 140px;
       display: flex;
       justify-content: center;
+      &_map {
+        padding: 136px 140px;
+      }
     }
   }
   }
   @media (min-width: 577px) and (max-width: 768px) {
     .map {
       &__main {
-        background: url('@/assets/images/map-small.png') 0px 0px/cover no-repeat;
-        padding: 0 22px 22px 22px;
         height: 800px;
         display: flex;
         flex-direction: column;
         justify-content: flex-end;
+        &_map {
+          width: 100%;
+          padding: 0 22px 22px 22px;
+          .contact-form {
+            bottom: 22px;
+            right: 22px;
+            left: 22px;
+          }
+        }
       }
     }
   }
@@ -58,9 +93,24 @@ import ContactForm from './ContactForm.vue';
       &__main {
         width: 100%;
         height: 360px;
-        background: url('@/assets/images/map-xs.png') 0px 0px/cover no-repeat;
-        padding: 360px 0 0 0;
         margin-bottom: 64px;
+        &_map {
+          width: 100%;
+          height: 100%;
+          display: flex;
+          flex-direction: column;
+          position: initial;
+          .contact-form {
+            position: absolute;
+            top: 100%;
+            left: 0;
+          }
+        }
+        .mapboxgl-map {
+          width: 100%;
+          max-height: 360px;
+          position: initial;
+        }
       }
     }
   }
