@@ -1,5 +1,5 @@
 <template>
-  <section class="warning" id="warning">
+  <section class="warning" id="warning" data-aos="new-animation" data-aos-duration="3000">
     <div class="container">
       <h2 class="warning__title">ОСТЕРЕГАЙТЕСЬ КОМПАНИЙ ОДНОДНЕВОК</h2>
     </div>
@@ -31,129 +31,138 @@
 
 <script>
 import Corner from './Corner.vue';
-  export default {
-    components: { Corner }
+export default {
+  components: { Corner }
 }
 </script>
 
 <style lang="scss">
-  .warning {
-    display: flex;
+[data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+
+  }
+}
+.warning {
+  display: flex;
+  margin: 0 auto;
+  flex-direction: column;
+  align-items: center;
+  margin-top: 120px;
+  background: #FCFCFC;
+  padding: 80px 0;
+  &__title {
+    max-width: 813px;
     margin: 0 auto;
-    flex-direction: column;
-    align-items: center;
-    margin-top: 120px;
-    background: #FCFCFC;
-    padding: 80px 0;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 80px;
+    text-align: center;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  &__info {
+    display: flex;
+    justify-content: space-between;
+    max-width: 896px;
+    margin-top: 64px;
+    display: flex;
+    gap: 50px;
+    &_wrap {
+      display: flex;
+      flex-direction: column;
+    }
+    &_item {
+      margin-top: -64px;
+      display: flex;
+      flex-direction: column;
+      padding: 48px 110px 48px 48px;
+      gap: 36px;
+      &-title {
+        max-width: 252px;
+        font-family: 'Roboto Condensed';
+        font-style: normal;
+        font-weight: 700;
+        font-size: 24px;
+        line-height: 24px;
+        text-transform: uppercase;
+        color: #BF0000;
+      }
+      &-descr {
+        font-weight: 400;
+        max-width: 265px;
+        font-size: 16px;
+        line-height: 24px;
+        color: #464646;
+      }
+    }
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .warning {
+    margin-top: 100px;
+    padding: 64px 0;
     &__title {
-      max-width: 813px;
-      margin: 0 auto;
-      font-family: 'Roboto Condensed';
-      font-weight: 700;
-      font-size: 72px;
-      line-height: 80px;
-      text-align: center;
-      text-transform: uppercase;
-      color: #000000;
+      width: 100%;
+      font-size: 48px;
+      line-height: 56px;
+      gap: 24px;
     }
     &__info {
-      display: flex;
-      justify-content: space-between;
-      max-width: 896px;
-      margin-top: 64px;
-      display: flex;
-      gap: 50px;
-      &_wrap {
-        display: flex;
-        flex-direction: column;
-      }
+      max-width: 724px;
+      gap: 24px;
       &_item {
-        margin-top: -64px;
-        display: flex;
-        flex-direction: column;
-        padding: 48px 110px 48px 48px;
-        gap: 36px;
-        &-title {
-          max-width: 252px;
-          font-family: 'Roboto Condensed';
-          font-style: normal;
-          font-weight: 700;
-          font-size: 24px;
-          line-height: 24px;
-          text-transform: uppercase;
-          color: #BF0000;
-        }
-        &-descr {
-          font-weight: 400;
-          max-width: 265px;
-          font-size: 16px;
-          line-height: 24px;
-          color: #464646;
-        }
+        justify-content: space-between;
+        padding: 24px;
       }
     }
   }
-  @media (min-width: 769px) and (max-width: 992px) {
-    .warning {
-      margin-top: 100px;
-      padding: 64px 0;
-      &__title {
-        width: 100%;
-        font-size: 48px;
-        line-height: 56px;
-        gap: 24px;
-      }
-      &__info {
-        max-width: 724px;
-        gap: 24px;
-        &_item {
-          justify-content: space-between;
-          padding: 24px;
-        }
+}
+@media (min-width: 671px) and (max-width: 768px) {
+  .warning {
+    margin-top: 100px;
+    padding: 64px 0;
+    &__title {
+      width: 100%;
+      font-size: 48px;
+      line-height: 56px;
+      gap: 24px;
+    }
+    &__info {
+      max-width: 724px;
+      gap: 24px;
+      &_item {
+        justify-content: space-between;
+        padding: 24px;
       }
     }
   }
-  @media (min-width: 671px) and (max-width: 768px) {
-    .warning {
-      margin-top: 100px;
-      padding: 64px 0;
-      &__title {
-        width: 100%;
-        font-size: 48px;
-        line-height: 56px;
-        gap: 24px;
-      }
-      &__info {
-        max-width: 724px;
-        gap: 24px;
-        &_item {
-          justify-content: space-between;
-          padding: 24px;
-        }
+}
+@media (min-width: 577px) and (max-width: 670px) {
+  .warning {
+    margin-top: 80px;
+    padding: 48px 0;
+    &__title {
+      width: 100%;
+      font-size: 48px;
+      line-height: 56px;
+    }
+    &__info {
+      max-width: 724px;
+      flex-wrap: wrap;
+      justify-content: center;
+      &_item {
+        justify-content: space-between;
+        padding: 32px;
+        gap: 32px;
       }
     }
   }
-  @media (min-width: 577px) and (max-width: 670px) {
-    .warning {
-      margin-top: 80px;
-      padding: 48px 0;
-      &__title {
-        width: 100%;
-        font-size: 48px;
-        line-height: 56px;
-      }
-      &__info {
-        max-width: 724px;
-        flex-wrap: wrap;
-        justify-content: center;
-        &_item {
-          justify-content: space-between;
-          padding: 32px;
-          gap: 32px;
-        }
-      }
-    }
-  }
+}
 @media (max-width: 576px) {
   .warning {
     margin-top: 64px;
