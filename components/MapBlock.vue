@@ -2,9 +2,7 @@
   <section class="map" id="contacts">
     <!-- <div class="container" :style="{'background': 'transparent'}"> -->
       <div class="map__main">
-      <div class="map__main_map" id="map">
-        <ContactForm></ContactForm>
-      </div>
+      <div class="map__main_map" id="map"><ContactForm></ContactForm></div>
 
       </div>
     <!-- </div> -->
@@ -44,18 +42,19 @@ export default {
   .map {
     width: 100%;
     max-width: 1600px;
-    margin: 0 auto;
     display: flex;
+    margin: 0 auto;
     &__main {
       width: 100%;
       &_map {
-        padding: 136px 140px;
         position: relative;
+        padding: 136px 140px;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 800px;
         .contact-form {
           position: absolute;
-          z-index: 2;
         }
       }
     }
@@ -105,9 +104,7 @@ export default {
           height: 100%;
           display: flex;
           flex-direction: column;
-          position: initial;
           .contact-form {
-            position: absolute;
             top: 100%;
             left: 0;
           }
@@ -115,7 +112,6 @@ export default {
         .mapboxgl-map {
           width: 100%;
           max-height: 360px;
-          position: initial;
         }
       }
     }

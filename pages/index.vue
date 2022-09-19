@@ -30,7 +30,7 @@
     <div class="galary" v-intersect="onGalaryIntersect"></div>
 
     <transition name="consult"><ConsultBlock v-show="getConsult"></ConsultBlock></transition>
-    <div class="consult" v-intersect="onConsultIntersect"></div>
+    <div class="consul" v-intersect="onConsultIntersect"></div>
 
     <transition name="map"><MapBlock></MapBlock></transition>
     <!-- <div class="map" v-intersect="onMapIntersect"></div> -->
@@ -285,7 +285,7 @@ export default {
     transition: opacity 2s;
   }
 }
-.content {
+.calc {
   width: 100%;
   height: 1px;
 }
