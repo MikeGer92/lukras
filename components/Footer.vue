@@ -17,7 +17,7 @@
           <div class="footer__menu_title">Меню</div>
           <ul class="footer__menu_list">
             <li class="footer__menu_list-link" v-scroll-to="'#main'">Главная</li>
-            <li class="footer__menu_list-link" v-scroll-to="'#calc'">Рассчитать стоимость</li>
+            <li class="footer__menu_list-link" v-scroll-to="'/#calc'">Рассчитать стоимость</li>
             <li class="footer__menu_list-link" v-scroll-to="'#catalog'">Каталог</li>
             <li class="footer__menu_list-link" v-scroll-to="'#advant'">Преимущества</li>
             <li class="footer__menu_list-link" v-scroll-to="'#certif'">Сертификат</li>

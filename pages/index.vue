@@ -5,31 +5,31 @@
       <div class="g-cursor__point" ref="point" :style="cursorPoint"></div>
     </div> -->
     <MainBlock></MainBlock>
-    <transition name="calc"><CalcBlock v-if="getCalc"></CalcBlock></transition>
+    <transition name="calc"><CalcBlock v-show="getCalc"></CalcBlock></transition>
     <div class="calc" v-intersect="onCalcIntersect"></div>
 
-    <transition name="catalog"></transition><CatalogBlock v-if="getCatalog"></CatalogBlock>
+    <transition name="catalog"></transition><CatalogBlock v-show="getCatalog"></CatalogBlock>
     <div class="catalog" v-intersect="onCatalogIntersect"></div>
 
-    <transition name="advant"><AdvantagesBlock v-if="getAdvant"></AdvantagesBlock></transition>
+    <transition name="advant"><AdvantagesBlock v-show="getAdvant"></AdvantagesBlock></transition>
     <div class="advant" v-intersect="onAdvantIntersect"></div>
 
-    <transition name="cert"><CertificateBlock v-if="getCert"></CertificateBlock></transition>
+    <transition name="cert"><CertificateBlock v-show="getCert"></CertificateBlock></transition>
     <div class="cert" v-intersect="onCertIntersect"></div>
 
-    <transition name="warn"><WarningBlock v-if="getWarn"></WarningBlock></transition>
+    <transition name="warn"><WarningBlock v-show="getWarn"></WarningBlock></transition>
     <div class="warn" v-intersect="onWarnIntersect"></div>
 
-    <transition name="works"><WorksGalary v-if="getWorks"></WorksGalary></transition>
+    <transition name="works"><WorksGalary v-show="getWorks"></WorksGalary></transition>
     <div class="works" v-intersect="onWorksIntersect"></div>
 
-    <transition name="steps"><StepsBlock v-if="getSteps"></StepsBlock></transition>
+    <transition name="steps"><StepsBlock v-show="getSteps"></StepsBlock></transition>
     <div class="steps" v-intersect="onStepsIntersect"></div>
 
-    <transition name="galary"><OurGalary v-if="getGalary"></OurGalary></transition>
+    <transition name="galary"><OurGalary v-show="getGalary"></OurGalary></transition>
     <div class="galary" v-intersect="onGalaryIntersect"></div>
 
-    <transition name="consult"><ConsultBlock v-if="getConsult"></ConsultBlock></transition>
+    <transition name="consult"><ConsultBlock v-show="getConsult"></ConsultBlock></transition>
     <div class="consult" v-intersect="onConsultIntersect"></div>
 
     <transition name="map"><MapBlock></MapBlock></transition>
