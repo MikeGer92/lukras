@@ -104,7 +104,7 @@ export default {
         &_map {
           width: 100%;
           max-height: 360px;
-          padding: 0 22px 22px 22px;
+          padding: 0;
           position: absolute;
           .contact-form {
             top: 200px;
