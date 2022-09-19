@@ -1,5 +1,5 @@
 <template>
-  <section class="works">
+  <section class="works" data-aos="new-animation" data-aos-duration="3000">
     <div class="container">
       <div class="works__title">За 7 лет работы мы установили более 1000 <br>cептиков. Посмотрите некоторые из них</div>
     </div>
@@ -82,82 +82,91 @@ export default {
 </script>
 
 <style lang="scss">
+[data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+
+  }
+}
+.works {
+  display: flex;
+  flex-direction: column;
+  margin-top: 160px;
+  &__title {
+    margin-bottom: 48px;
+    font-family: 'Roboto Condensed';
+    font-weight: 700;
+    font-size: 40px;
+    line-height: 48px;
+    text-transform: uppercase;
+    color: #000000;
+  }
+  &__cases {
+    width: 100%;
+    max-width: 1600px;
+    margin: 0 auto;
+    border-top: 1px solid #E3E3E3;
+    &_wrapper {
+      width: 100%;
+      max-width: 1320px;
+      margin: 0 auto;
+      padding-left: 23px;
+    }
+    &_items {
+      display: flex;
+      border-left: 1px solid #E3E3E3;
+      text-align: center;
+      &-item {
+        padding: 24px 40px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 18px;
+        border-right: 1px solid #E3E3E3;
+        &:hover {
+          border: 1px solid #000000;
+          font-size: 18px;
+        }
+        &--active {
+          border: 1px solid #BF0000;
+          color: #BF0000;
+          &:hover {
+            border: 1px solid#FF0000;
+            color: #FF0000;
+          }
+        }
+      }
+    }
+  }
+}
+@media (min-width: 577px) and (max-width: 768px) {
   .works {
-    display: flex;
-    flex-direction: column;
-    margin-top: 160px;
+    margin-top: 100px;
     &__title {
-      margin-bottom: 48px;
-      font-family: 'Roboto Condensed';
-      font-weight: 700;
-      font-size: 40px;
-      line-height: 48px;
-      text-transform: uppercase;
-      color: #000000;
+      font-size: 32px;
+      line-height: 40px;
+    }
+  }
+}
+@media (max-width: 576px) {
+  .works {
+    margin-top: 64px;
+    &__title {
+      font-size: 24px;
+      line-height: 32px;
+      margin-bottom: 24px;
     }
     &__cases {
-      width: 100%;
-      max-width: 1600px;
-      margin: 0 auto;
-      border-top: 1px solid #E3E3E3;
-      &_wrapper {
-        width: 100%;
-        max-width: 1320px;
-        margin: 0 auto;
-        padding-left: 23px;
-      }
       &_items {
-        display: flex;
-        border-left: 1px solid #E3E3E3;
-        text-align: center;
         &-item {
-          padding: 24px 40px;
-          font-weight: 400;
-          font-size: 16px;
-          line-height: 18px;
-          border-right: 1px solid #E3E3E3;
-          &:hover {
-            border: 1px solid #000000;
-            font-size: 18px;
-          }
-          &--active {
-            border: 1px solid #BF0000;
-            color: #BF0000;
-            &:hover {
-              border: 1px solid#FF0000;
-              color: #FF0000;
-            }
-          }
+          padding: 12px 24px;
+          font-size: 14px;
+          line-height: 16px;
         }
       }
     }
   }
-  @media (min-width: 577px) and (max-width: 768px) {
-    .works {
-      margin-top: 100px;
-      &__title {
-        font-size: 32px;
-        line-height: 40px;
-      }
-    }
-  }
-  @media (max-width: 576px) {
-    .works {
-      margin-top: 64px;
-      &__title {
-        font-size: 24px;
-        line-height: 32px;
-        margin-bottom: 24px;
-      }
-      &__cases {
-        &_items {
-          &-item {
-            padding: 12px 24px;
-            font-size: 14px;
-            line-height: 16px;
-          }
-        }
-      }
-    }
-  }
+}
 </style>

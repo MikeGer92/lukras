@@ -1,5 +1,5 @@
 <template>
-  <section class="map" id="contacts">
+  <section class="map" id="contacts" data-aos="new-animation" data-aos-duration="3000">
     <!-- <div class="container" :style="{'background': 'transparent'}"> -->
       <div class="map__main">
       <div class="map__main_map" id="map"><ContactForm></ContactForm></div>
@@ -39,81 +39,90 @@ export default {
 </script>
 
 <style lang="scss">
+  [data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+
+  }
+}
+.map {
+  width: 100%;
+  max-width: 1600px;
+  display: flex;
+  margin: 0 auto;
+  &__main {
+    width: 100%;
+    &_map {
+      padding: 136px 140px;
+      position: relative;
+      top: 0;
+      left: 0;
+      width: 100%;
+      height: 800px;
+      .contact-form {
+        position: absolute;
+        z-index: 2;
+      }
+    }
+  }
+}
+@media (min-width: 768px) and (max-width: 1160px) {
   .map {
+  width: 100%;
+  margin: 0 auto;
+  display: flex;
+  &__main {
     width: 100%;
-    max-width: 1600px;
     display: flex;
-    margin: 0 auto;
-    &__main {
-      width: 100%;
-      &_map {
-        padding: 136px 140px;
-        position: relative;
-        top: 0;
-        left: 0;
-        width: 100%;
-        height: 800px;
-        .contact-form {
-          position: absolute;
-          z-index: 2;
-        }
-      }
+    justify-content: center;
+    &_map {
+      padding: 136px 140px;
     }
   }
-  @media (min-width: 768px) and (max-width: 1160px) {
-    .map {
-    width: 100%;
-    margin: 0 auto;
-    display: flex;
+}
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .map {
     &__main {
-      width: 100%;
+      height: 800px;
       display: flex;
-      justify-content: center;
+      flex-direction: column;
+      justify-content: flex-end;
       &_map {
-        padding: 136px 140px;
-      }
-    }
-  }
-  }
-  @media (min-width: 577px) and (max-width: 768px) {
-    .map {
-      &__main {
-        height: 800px;
-        display: flex;
-        flex-direction: column;
-        justify-content: flex-end;
-        &_map {
-          width: 100%;
-          height: 100%;
-          padding: 0 22px 22px 22px;
-          .contact-form {
-            bottom: 22px;
-            right: 22px;
-            left: 22px;
-          }
+        width: 100%;
+        height: 100%;
+        padding: 0 22px 22px 22px;
+        .contact-form {
+          bottom: 22px;
+          right: 22px;
+          left: 22px;
         }
       }
     }
   }
-  @media (max-width: 576px) {
-    .map {
-      &__main {
-        width: unset;
-        height: unset;
-        margin-bottom: unset;
-        position: unset;
-        &_map {
-          width: 100%;
-          height: 100%;
-          padding: 0;
+}
+@media (max-width: 576px) {
+  .map {
+    &__main {
+      width: unset;
+      height: unset;
+      margin-bottom: unset;
+      position: unset;
+      &_map {
+        width: 100%;
+        height: 100%;
+        padding: 0;
+        position: relative;
+        .contact-form {
           position: relative;
-          .contact-form {
-            position: relative;
-            margin-top: 360px;
-            margin-bottom: 0;
-          }
+          margin-top: 360px;
+          margin-bottom: 0;
         }
       }
     }
   }
+}
 </style>

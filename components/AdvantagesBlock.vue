@@ -1,5 +1,9 @@
 <template>
-  <section class="advant" id="advant">
+  <section
+    class="advant"
+    id="advant"
+    data-aos="new-animation" data-aos-duration="3000"
+    >
     <div class="container">
       <h3 class="advant__title">Преимущества<br>септиков
         <span class="advant__title_span">ТВЕРЬ
@@ -78,6 +82,15 @@ export default {
     width: 0px;
     background: transparent;
   }
+  [data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+
+  }
+}
   .advant {
     margin-top: 120px;
     display: flex;

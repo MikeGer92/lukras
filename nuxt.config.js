@@ -18,6 +18,7 @@ export default {
       { rel: 'icon', type: 'image/x-icon', href: '/favicon.ico' },
       { rel: 'stylesheet', href:"https://fonts.googleapis.com/css2?family=Roboto+Condensed:wght@700&display=swap"},
       { rel: 'stylesheet', href: 'https://api.mapbox.com/mapbox-gl-js/v1.10.0/mapbox-gl.css'},
+      {rel: "stylesheet",  href: "https://cdn.jsdelivr.net/npm/@ajusa/lit@latest/dist/lit.css"}
     ]
   },
 
@@ -25,7 +26,7 @@ export default {
   css: [
     '@/assets/base.scss',
     '@/assets/normalize.scss',
-    
+
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins

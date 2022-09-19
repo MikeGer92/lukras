@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="calc" id="calc">
+    <section class="calc" id="calc" data-aos="new-animation" data-aos-duration="3000">
       <div class="calc__main">
         <div class="calc__main_top">
           <h2 class="calc__main_top-title">Рассчитайте стоимость установки Септика для вашего участка</h2>
@@ -175,6 +175,15 @@
 </script>
 
 <style lang="scss">
+  [data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+
+  }
+}
   .calc {
     margin-top: 160px;
     width: 100%;

@@ -1,5 +1,5 @@
 <template>
-  <section class="galary">
+  <section class="galary" data-aos="new-animation" data-aos-duration="3000">
     <div class="container">
       <div class="galary__title">Собственный склад оборудования <br>в Ростове на Дону</div>
     </div>
@@ -28,6 +28,15 @@ import Swiper from './Swiper.vue';
 </script>
 
 <style lang="scss">
+  [data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+
+  }
+}
 .galary {
   display: flex;
   flex-direction: column;

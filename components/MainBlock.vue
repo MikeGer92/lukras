@@ -3,6 +3,7 @@
     <section
       class="main-block"
       id="main"
+      data-aos="new-animation" data-aos-duration="3000"
       >
       <div class="main-block__small">
         <div class="main-block__small_inter">
@@ -119,6 +120,15 @@ export default {
 </script>
 
 <style lang="scss">
+  [data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+    
+  }
+}
 .main-block {
   width: 100%;
   display: flex;
