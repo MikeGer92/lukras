@@ -229,8 +229,8 @@ export default {
   }
   @media (max-width: 576px) {
     .footer {
-      margin-top: 358px;
       &__wrapper {
+        padding-top: 64px;
         row-gap: 32px;
         grid-template-columns: repeat(12, 1fr );
         column-gap: 0;
@@ -238,7 +238,7 @@ export default {
         flex-direction: column;
       }
       &__contact {
-        margin-top: 25px;
+        margin-top: 32px;
         display: grid;
         grid-column: span 12;
         grid-template-columns: repeat(12, 1fr );

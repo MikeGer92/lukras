@@ -253,7 +253,7 @@
     &__wrapper {
       width: 100%;
       max-width: 724px;
-      padding: 40px;
+      gap: 32px;
       &__main {
         grid-column-gap: 36px;
         max-width: 78.7%;

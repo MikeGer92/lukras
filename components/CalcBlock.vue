@@ -331,10 +331,11 @@
         }
         &_bottom {
           border-top: none;
+
           &-top {
             flex-direction: column;
             border-bottom: none;
-            padding-left: 15px;
+            padding: 24px 0 0 15px;
             &--sqr {
               width: 40px;
               height: 40px;

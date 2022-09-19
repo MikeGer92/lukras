@@ -335,11 +335,11 @@ export default {
           &-barrel {
             display: flex;
             margin: 95px auto 19px auto;
-            width: 346px;
+            width: 100%;
             height: 259px;
             background: url('../assets/images/barrel.png') center 0px/contain no-repeat;
             &:hover {
-              background: url('../assets/images/barrel-active.png') 0px 0px/contain no-repeat;
+              background: url('../assets/images/barrel-active.png') -10px -10px/contain no-repeat;
             }
           }
           &-block {
@@ -713,6 +713,11 @@ export default {
         &-benefsmall {
           order: 2;
           display: block;
+          &_int {
+            &-barrel {
+              width: 100%;
+            }
+          }
           &_add {
             &-top {
               width: 212px;
@@ -920,6 +925,7 @@ export default {
           order: 0;
           display: block;
           align-self: center;
+
           &_add {
             &-top {
               width: 212px;

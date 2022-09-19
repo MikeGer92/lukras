@@ -47,8 +47,8 @@ export default {
     &__main {
       width: 100%;
       &_map {
-        position: relative;
         padding: 136px 140px;
+        position: relative;
         top: 0;
         left: 0;
         width: 100%;
@@ -84,6 +84,7 @@ export default {
         justify-content: flex-end;
         &_map {
           width: 100%;
+          height: 100%;
           padding: 0 22px 22px 22px;
           .contact-form {
             bottom: 22px;
@@ -97,18 +98,19 @@ export default {
   @media (max-width: 576px) {
     .map {
       &__main {
-        width: 100%;
-        height: 100%;
-        margin-bottom: 64px;
-        position: relative;
+        width: unset;
+        height: unset;
+        margin-bottom: unset;
+        position: unset;
         &_map {
           width: 100%;
-          max-height: 360px;
+          height: 100%;
           padding: 0;
-          position: absolute;
+          position: relative;
           .contact-form {
-            top: 200px;
-            left: 0;
+            position: relative;
+            margin-top: 360px;
+            margin-bottom: 0;
           }
         }
       }
