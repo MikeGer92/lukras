@@ -2,9 +2,7 @@
   <section class="map" id="contacts">
     <!-- <div class="container" :style="{'background': 'transparent'}"> -->
       <div class="map__main">
-      <div class="map__main_map" id="map">
-        <ContactForm></ContactForm>
-      </div>
+      <div class="map__main_map" id="map"><ContactForm></ContactForm></div>
 
       </div>
     <!-- </div> -->
@@ -28,7 +26,7 @@ export default {
       container: 'map', // <div id="map"></div>
           style: 'mapbox://styles/mapbox/streets-v9', // default style
           center: [39.775883, 47.269713],// starting position as [lng, lat]
-          zoom: 10
+          zoom: 8
     })
     this.placies.map((marker) => {
       const LngLat = [marker.location.lng, marker.location.lat]
@@ -44,13 +42,15 @@ export default {
   .map {
     width: 100%;
     max-width: 1600px;
-    margin: 0 auto;
     display: flex;
+    margin: 0 auto;
     &__main {
       width: 100%;
       &_map {
-        padding: 136px 140px;
         position: relative;
+        padding: 136px 140px;
+        top: 0;
+        left: 0;
         width: 100%;
         height: 800px;
         .contact-form {
@@ -98,24 +98,18 @@ export default {
     .map {
       &__main {
         width: 100%;
-        height: 360px;
+        height: 100%;
         margin-bottom: 64px;
+        position: relative;
         &_map {
           width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
-          position: initial;
+          max-height: 360px;
+          padding: 0;
+          position: absolute;
           .contact-form {
-            position: absolute;
-            top: 100%;
+            top: 200px;
             left: 0;
           }
-        }
-        .mapboxgl-map {
-          width: 100%;
-          max-height: 360px;
-          position: initial;
         }
       }
     }

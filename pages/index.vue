@@ -6,31 +6,31 @@
     </div> -->
     <MainBlock></MainBlock>
     <transition name="calc"><CalcBlock v-show="getCalc"></CalcBlock></transition>
-    <div class="calc" v-intersect="onCalcIntersect"></div>
+    <div class="calcInt" v-intersect="onCalcIntersect"></div>
 
-    <transition name="catalog"></transition><CatalogBlock v-show="getCatalog"></CatalogBlock>
-    <div class="catalog" v-intersect="onCatalogIntersect"></div>
+    <transition name="catalog"><CatalogBlock v-show="getCatalog"></CatalogBlock></transition>
+    <div class="catalogInt" v-intersect="onCatalogIntersect"></div>
 
     <transition name="advant"><AdvantagesBlock v-show="getAdvant"></AdvantagesBlock></transition>
-    <div class="advant" v-intersect="onAdvantIntersect"></div>
+    <div class="advantInt" v-intersect="onAdvantIntersect"></div>
 
     <transition name="cert"><CertificateBlock v-show="getCert"></CertificateBlock></transition>
-    <div class="cert" v-intersect="onCertIntersect"></div>
+    <div class="certInt" v-intersect="onCertIntersect"></div>
 
     <transition name="warn"><WarningBlock v-show="getWarn"></WarningBlock></transition>
-    <div class="warn" v-intersect="onWarnIntersect"></div>
+    <div class="warnInt" v-intersect="onWarnIntersect"></div>
 
     <transition name="works"><WorksGalary v-show="getWorks"></WorksGalary></transition>
-    <div class="works" v-intersect="onWorksIntersect"></div>
+    <div class="worksInt" v-intersect="onWorksIntersect"></div>
 
     <transition name="steps"><StepsBlock v-show="getSteps"></StepsBlock></transition>
-    <div class="steps" v-intersect="onStepsIntersect"></div>
+    <div class="stepsInt" v-intersect="onStepsIntersect"></div>
 
     <transition name="galary"><OurGalary v-show="getGalary"></OurGalary></transition>
-    <div class="galary" v-intersect="onGalaryIntersect"></div>
+    <div class="galaryInt" v-intersect="onGalaryIntersect"></div>
 
     <transition name="consult"><ConsultBlock v-show="getConsult"></ConsultBlock></transition>
-    <div class="consult" v-intersect="onConsultIntersect"></div>
+    <div class="consultInt" v-intersect="onConsultIntersect"></div>
 
     <transition name="map"><MapBlock></MapBlock></transition>
     <!-- <div class="map" v-intersect="onMapIntersect"></div> -->
@@ -74,12 +74,12 @@ export default {
     }
   },
   computed: {
-    cursorCircle() {
-      return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`
-    },
-    cursorPoint() {
-      return `transform: translateX(${this.xChild - 3}px) translateY(${this.yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`
-    },
+    // cursorCircle() {
+    //   return `transform: translateX(${this.xParent}px) translateY(${this.yParent}px) translateZ(0) translate3d(0, 0, 0);`
+    // },
+    // cursorPoint() {
+    //   return `transform: translateX(${this.xChild - 3}px) translateY(${this.yChild - 3}px) translateZ(0) translate3d(0, 0, 0);`
+    // },
     getCalc() {
       return this.calcShow
     },
@@ -284,9 +284,5 @@ export default {
   & transition {
     transition: opacity 2s;
   }
-}
-.content {
-  width: 100%;
-  height: 1px;
 }
 </style>
