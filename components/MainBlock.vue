@@ -3,7 +3,7 @@
     <section
       class="main-block"
       id="main"
-      data-aos="new-animation" data-aos-duration="3000"
+      data-aos="new-animation"
       >
       <div class="main-block__small">
         <div class="main-block__small_inter">
@@ -126,7 +126,7 @@ export default {
 
   &.aos-animate {
     opacity: 1;
-    
+
   }
 }
 .main-block {

@@ -1,6 +1,6 @@
 <template>
   <div class="container">
-    <section class="calc" id="calc" data-aos="new-animation" data-aos-duration="3000">
+    <section class="calc" id="calc" data-aos="new-animation" data-aos-duration="800">
       <div class="calc__main">
         <div class="calc__main_top">
           <h2 class="calc__main_top-title">Рассчитайте стоимость установки Септика для вашего участка</h2>
@@ -175,7 +175,7 @@
 </script>
 
 <style lang="scss">
-  [data-aos="new-animation"] {
+[data-aos="new-animation"] {
   opacity: 0;
   transition-property: transform, opacity;
 
@@ -184,114 +184,113 @@
 
   }
 }
-  .calc {
-    margin-top: 160px;
-    width: 100%;
+.calc {
+  margin-top: 160px;
+  width: 100%;
+  border: 1px solid #E3E3E3;
+  padding: 8px;
+  &__main {
     border: 1px solid #E3E3E3;
-    padding: 8px;
-    &__main {
-      border: 1px solid #E3E3E3;
-      &_top {
-        padding: 40px;
-        &-title {
-          max-width: 695px;
-          margin-bottom: 24px;
-          font-family: 'Roboto Condensed';
-          font-weight: 700;
-          font-size: 40px;
-          line-height: 48px;
-          text-transform: uppercase;
-          color: #000000;
-        }
-        &-subtitle {
-          max-width: 409px;
+    &_top {
+      padding: 40px;
+      &-title {
+        max-width: 695px;
+        margin-bottom: 24px;
+        font-family: 'Roboto Condensed';
+        font-weight: 700;
+        font-size: 40px;
+        line-height: 48px;
+        text-transform: uppercase;
+        color: #000000;
+      }
+      &-subtitle {
+        max-width: 409px;
+        font-weight: 400;
+        font-size: 16px;
+        line-height: 24px;
+        color: #3F3F3F;
+      }
+    }
+    &_bottom {
+      border-top: 1px solid #E3E3E3;
+      &-top {
+        width: 100%;
+        display: flex;
+        border-bottom: 1px solid #E3E3E3;
+        background: #FCFCFC;
+        padding-left: 40px;
+        column-gap: 22px;
+        &--sqr {
+          width: 60px;
+          height: 60px;
+          display: flex;
+          justify-content: center;
+          align-items: center;
+          border-left: 1px solid #E3E3E3;
+          border-right: 1px solid #E3E3E3;
           font-weight: 400;
           font-size: 16px;
-          line-height: 24px;
-          color: #3F3F3F;
+          line-height: 18px;
+          text-align: center;
+          color: #000000;
+        }
+        &--text {
+          display: flex;
+          align-items: center;
         }
       }
-      &_bottom {
-        border-top: 1px solid #E3E3E3;
-        &-top {
-          width: 100%;
+      &-main {
+        display: flex;
+        flex-direction: column;
+        padding: 40px;
+        background: #FCFCFC;
+        &--choise {
           display: flex;
-          border-bottom: 1px solid #E3E3E3;
-          background: #FCFCFC;
-          padding-left: 40px;
-          column-gap: 22px;
-          &--sqr {
-            width: 60px;
-            height: 60px;
+          column-gap: 40px;
+          margin-bottom: 40px;
+          &_item {
             display: flex;
             justify-content: center;
             align-items: center;
-            border-left: 1px solid #E3E3E3;
-            border-right: 1px solid #E3E3E3;
-            font-weight: 400;
-            font-size: 16px;
-            line-height: 18px;
-            text-align: center;
-            color: #000000;
-          }
-          &--text {
-            display: flex;
-            align-items: center;
-          }
-        }
-        &-main {
-          display: flex;
-          flex-direction: column;
-          padding: 40px;
-          background: #FCFCFC;
-          &--choise {
-            display: flex;
-            column-gap: 40px;
-            margin-bottom: 40px;
-            &_item {
-              display: flex;
-              justify-content: center;
-              align-items: center;
-              padding: 32px 24px;
-              gap: 8px;
-              width: 200px;
-              height: 80px;
-              border: 1px solid #E3E3E3;
-              cursor: pointer;
-              &-active {
-                color: #000000;
-                border: 1px solid #000000;
-              }
+            padding: 32px 24px;
+            gap: 8px;
+            width: 200px;
+            height: 80px;
+            border: 1px solid #E3E3E3;
+            cursor: pointer;
+            &-active {
+              color: #000000;
+              border: 1px solid #000000;
             }
           }
-          &--buttons {
+        }
+        &--buttons {
+          display: flex;
+          gap: 40px;
+          &_btn {
+            max-width: 236px;
             display: flex;
-            gap: 40px;
-            &_btn {
+            padding: 24px 36px;
+            border: 1px solid #E3E3E3;
+            color: #E3E3E3;
+            border-radius: 4px;
+            font-weight: 500;
+            font-size: 16px;
+            line-height: 18px;
+            &-active {
               max-width: 236px;
               display: flex;
               padding: 24px 36px;
-              border: 1px solid #E3E3E3;
-              color: #E3E3E3;
+              border: 2px solid #FF0000;
               border-radius: 4px;
               font-weight: 500;
               font-size: 16px;
               line-height: 18px;
-              &-active {
-                max-width: 236px;
-                display: flex;
-                padding: 24px 36px;
-                border: 2px solid #FF0000;
-                border-radius: 4px;
-                font-weight: 500;
-                font-size: 16px;
-                line-height: 18px;
-                color: #FF0000;
-                &:hover {
-                  transition: all .2s;
-                  background: #FF0000;
-                  color: #fff;
-                }
+              color: #FF0000;
+              &:hover {
+                transition: all .2s;
+                background: #FF0000;
+                color: #fff;
               }
             }
           }
@@ -299,87 +298,91 @@
       }
     }
   }
-  @media (min-width: 769px) and (max-width: 992px) {
-    .calc {
-      margin-top: 100px;
-      &__main {
-        &_top {
-          &-title {
-            font-size: 32px;
-            line-height: 40px;
-          }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .calc {
+    margin-top: 100px;
+    &__main {
+      &_top {
+        &-title {
+          font-size: 32px;
+          line-height: 40px;
         }
       }
     }
   }
-  @media (min-width: 577px) and (max-width: 768px) {
-    .calc {
-      margin-top: 100px;
-      &__main {
-        &_top {
-          &-title {
-            font-size: 32px;
-            line-height: 40px;
-          }
+}
+@media (min-width: 577px) and (max-width: 768px) {
+  .calc {
+    margin-top: 100px;
+    &__main {
+      &_top {
+        &-title {
+          font-size: 32px;
+          line-height: 40px;
         }
       }
     }
   }
-  @media (max-width: 576px) {
-    .calc {
-      width:100vw;
-      margin: 0 -16px;
-      margin-top: 64px;
-      &__main {
-        &_top {
-          padding: 32px 10px 40px 16px;
-          &-title {
-            font-size: 24px;
-            line-height: 32px;
-          }
+}
+@media (max-width: 576px) {
+  .calc {
+    width:100vw;
+    margin: 0 -16px;
+    margin-top: 64px;
+    &__main {
+      &_top {
+        padding: 32px 10px 40px 16px;
+        &-title {
+          font-size: 24px;
+          line-height: 32px;
         }
-        &_bottom {
-          border-top: none;
+      }
+      &_bottom {
+        border-top: none;
 
-          &-top {
+        &-top {
+          flex-direction: column;
+          border-bottom: none;
+          padding: 24px 0 0 15px;
+          &--sqr {
+            width: 40px;
+            height: 40px;
+            justify-content: center;
+            align-items: center;
+            border-top: 1px solid #E3E3E3;
+            border-bottom: 1px solid #E3E3E3;
+            margin-bottom: 16px;
+          }
+        }
+        &-main {
+          padding: 15px;
+          &--choise {
+            max-width: 100%;
             flex-direction: column;
-            border-bottom: none;
-            padding: 24px 0 0 15px;
-            &--sqr {
-              width: 40px;
-              height: 40px;
-             justify-content: center;
-             align-items: center;
-              border-top: 1px solid #E3E3E3;
-              border-bottom: 1px solid #E3E3E3;
-              margin-bottom: 16px;
+            margin-bottom: 24px;
+            gap: 16px;
+            &_item {
+              width: 100%;
+              height: auto;
+              padding: 16px;
+              font-weight: 500;
+              font-size: 14px;
+              line-height: 16px;
+              color: #000000;
             }
           }
-          &-main {
-            padding: 15px;
-            &--choise {
+          &--buttons {
+            flex-direction: column;
+            max-width: 100%;
+            gap: 16px;
+            &_btn {
               max-width: 100%;
-              flex-direction: column;
-              margin-bottom: 24px;
-              gap: 16px;
-              &_item {
-                width: 100%;
-                height: auto;
-                padding: 16px;
-                font-weight: 500;
-                font-size: 14px;
-                line-height: 16px;
-                color: #000000;
-              }
-            }
-            &--buttons {
-              flex-direction: column;
-              max-width: 100%;
-              gap: 16px;
-              &_btn {
+              justify-content: center;
+              padding: 24px;
+              &-active {
                 max-width: 100%;
                 justify-content: center;
-                padding: 24px;
               }
             }
           }
@@ -387,4 +390,5 @@
       }
     }
   }
+}
 </style>

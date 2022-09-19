@@ -26,13 +26,14 @@ export default {
       container: 'map', // <div id="map"></div>
           style: 'mapbox://styles/mapbox/streets-v9', // default style
           center: [39.775883, 47.269713],// starting position as [lng, lat]
-          zoom: 8
+          zoom: 6
     })
     this.placies.map((marker) => {
       const LngLat = [marker.location.lng, marker.location.lat]
       new mapboxgl.Marker()
           .setLngLat(LngLat)
           .addTo(map) // Initialized above
+          marker.center
       })
   }
 }

@@ -39,12 +39,12 @@
       <div class="header__bottom">
         <div class="header__bottom_brand"></div>
         <div class="header__bottom_social">
-          <div class="header__bottom_social-item">Telegram</div>
-          <div class="header__bottom_social-item">WhatsApp</div>
-          <div class="header__bottom_social-item">Viber</div>
-          <div class="header__bottom_social-divider"></div>
-          <div class="header__bottom_social-phone">8 (800) 600-90-91</div>
-          <div class="header__bottom_social-request">Оставить заявку</div>
+          <a><div class="header__bottom_social-item">Telegram</div></a>
+          <a><div class="header__bottom_social-item">WhatsApp</div></a>
+          <a><div class="header__bottom_social-item">Viber</div></a>
+          <a><div class="header__bottom_social-divider"></div></a>
+          <a><div class="header__bottom_social-phone">8 (800) 600-90-91</div></a>
+          <a><div class="header__bottom_social-request">Оставить заявку</div></a>
         </div>
       </div>
       <ModalHeader v-if="showModal" @closeModal="isShowModal"></ModalHeader>
@@ -116,7 +116,6 @@ import ModalHeader from './ModalHeader.vue';
           cursor: pointer;
           &:hover {
             color: #000000;
-            font-weight: 600;
           }
         }
       }
@@ -160,6 +159,7 @@ import ModalHeader from './ModalHeader.vue';
           font-size: 14px;
           line-height: 16px;
           color: #000000;
+          cursor: pointer;
         }
         &-divider {
           width: 1px;
