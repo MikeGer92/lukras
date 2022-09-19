@@ -26,7 +26,7 @@ export default {
       container: 'map', // <div id="map"></div>
           style: 'mapbox://styles/mapbox/streets-v9', // default style
           center: [39.775883, 47.269713],// starting position as [lng, lat]
-          zoom: 10
+          zoom: 8
     })
     this.placies.map((marker) => {
       const LngLat = [marker.location.lng, marker.location.lat]
@@ -55,6 +55,7 @@ export default {
         height: 800px;
         .contact-form {
           position: absolute;
+          z-index: 2;
         }
       }
     }
@@ -97,21 +98,18 @@ export default {
     .map {
       &__main {
         width: 100%;
-        height: 360px;
+        height: 100%;
         margin-bottom: 64px;
+        position: relative;
         &_map {
           width: 100%;
-          height: 100%;
-          display: flex;
-          flex-direction: column;
+          max-height: 360px;
+          padding: 0 22px 22px 22px;
+          position: absolute;
           .contact-form {
-            top: 100%;
+            top: 200px;
             left: 0;
           }
-        }
-        .mapboxgl-map {
-          width: 100%;
-          max-height: 360px;
         }
       }
     }
