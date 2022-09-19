@@ -25,12 +25,14 @@ export default {
   css: [
     '@/assets/base.scss',
     '@/assets/normalize.scss',
+    
   ],
 
   // Plugins to run before rendering page: https://go.nuxtjs.dev/config-plugins
   plugins: [
     '@/plugins/v-scroll.js',
-    '@/plugins/v-intersect.js'
+    '@/plugins/v-intersect.js',
+    { src: '@/plugins/aos.js', ssr: false}
   ],
 
   // Auto import components: https://go.nuxtjs.dev/config-components
@@ -48,6 +50,7 @@ export default {
 
   // Build Configuration: https://go.nuxtjs.dev/config-build
   build: {
-    standalone: true
+    standalone: true,
+    vendor: ['aos']
   }
 };

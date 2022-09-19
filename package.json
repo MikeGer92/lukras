@@ -9,6 +9,7 @@
     "generate": "nuxt generate"
   },
   "dependencies": {
+    "aos": "^2.3.4",
     "core-js": "^3.19.3",
     "intersection-observer": "^0.7.0",
     "mapbox-gl": "^2.10.0",
