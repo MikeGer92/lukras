@@ -31,9 +31,11 @@ export default {
       } else if (this.maxWidth > 992) {
         this.center = [39.575883, 47.269713]
       } else if (this.maxWidth > 768) {
-        this.center = [39.605883, 47.169713]
-      } else if (this.maxWidth < 577) {
-        this.center = [39.775883, 47.139713]
+        this.center = [39.552883, 47.199713]
+      } else if (this.maxWidth > 700) {
+        this.center = [39.602883, 47.199713]
+      } else if (this.maxWidth > 576) {
+        this.center = [39.775883, 47.119713]
 
       }
       return this.center
