@@ -139,11 +139,26 @@
             достигается за счёт специально оборудованных систем переливов.
           </p>
         </div>
+        <div class="seo__image">
+          <div class="seo__image-mechanic">
+            <img src="@/assets/images/seo-set.png">
+            <img src="@/assets/images/seo-table.png">
+          </div>
+        </div>
       </section>
-
-
+      <section class="seo__setting">
+        <div class="seo__title">
+          <div class="seo__title-setting">Как правильно установить и подключить септик "Тверь"</div>
+        </div>
+        <div class="seo__text">
+          <p class="seo__text-paragr">Установку систем очистки стоков можно доверить профессионалам или произвести самостоятельно.
+            В первом случае специалисты знают все особенности монтажных работ и ваша помощь в этом не потребуется.
+            Если вы решили устанавливать септик "Тверь" самостоятельно, рекомендуем ознакомиться со стандартной схемой, которая
+            включает несколько этапов:
+          </p>
+        </div>
+      </section>
     </div>
-
   </section>
 </template>
 
@@ -281,6 +296,16 @@
         margin-top: 24px;
       }
 
+    }
+  }
+  &__setting {
+    .seo__title {
+      &-setting {
+        font-weight: 700;
+        font-size: 48px;
+        line-height: 56px;
+        font-family: 'Roboto Condensed';
+      }
     }
   }
 }
