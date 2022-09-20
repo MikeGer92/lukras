@@ -2,16 +2,15 @@
   <section
     class="advant"
     id="advant"
-    data-aos="new-animation" data-aos-duration="3000"
     >
     <div class="container">
-      <h3 class="advant__title">Преимущества<br>септиков
+      <h3 class="advant__title" data-aos="new-animation" data-aos-duration="800">Преимущества<br>септиков
         <span class="advant__title_span">ТВЕРЬ
           <div class="advant__title_license">&#174;</div>
         </span>
       </h3>
       <div class="advant__swiper">
-        <div class="advant__swiper_wrapp">
+        <div class="advant__swiper_wrapp" data-aos="new-animation" data-aos-duration="1600">
           <AdvantageItem
             v-for="item in advantList"
             :key="item.id"

@@ -1,12 +1,12 @@
 <template>
   <div class="container">
-    <section class="cert" id="certif" data-aos="new-animation" data-aos-duration="3000">
+    <section class="cert" id="certif">
       <div class="cert__inter">
-        <div class="cert__inter_left">
+        <div class="cert__inter_left" data-aos="new-animation" data-aos-duration="800">
           <div class="cert__inter_left-title">Сертификат диллерства</div>
           <div class="cert__inter_left-main"><img src="@/assets/images/certificate.png"></div>
         </div>
-        <div class="cert__inter_right">
+        <div class="cert__inter_right" data-aos="new-animation" data-aos-duration="1600">
           <div class="cert__inter_right-info">
             <h3 class="cert__inter_right-info--title">Давайте на чистоту</h3>
             <h4 class="cert__inter_right-info--subtitle">Чтобы узнать конечную стоимость септика, необходимо согласовать модель, доставку, ваш подарок и т. д.</h4>

@@ -3,14 +3,13 @@
     <section
       class="main-block"
       id="main"
-      data-aos="new-animation"
       >
       <div class="main-block__small">
         <div class="main-block__small_inter">
           <div class="main-block__small_inter-img"></div>
         </div>
       </div>
-      <div class="main-block__info">
+      <div class="main-block__info"  data-aos="new-animation" data-aos-duration="1600">
         <div class="main-block__info_descr">— За счет официального диллерского договора</div>
         <h1 class="main-block__info_title">
           <div class="main-block__info_title-black">СЕПТИК</div>
@@ -67,7 +66,7 @@
           </div>
         </div>
       </div>
-      <div class="main-block__benefit">
+      <div class="main-block__benefit" data-aos="new-animation" data-aos-duration="2000">
         <div class="main-block__benefit_add-top">
           <div class="main-block__benefit_add-top--text">Особые условия для
             строителей и прорабов</div>

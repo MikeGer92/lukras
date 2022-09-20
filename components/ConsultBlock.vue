@@ -1,19 +1,19 @@
 <template>
   <div class="container">
-    <section class="consult" data-aos="new-animation" data-aos-duration="3000">
+    <section class="consult">
       <div class="consult__inter">
-        <div class="consult__inter_image">
+        <div class="consult__inter_image" data-aos="new-animation" data-aos-duration="800">
           <div class="consult__inter_image-title">Консультант</div>
         </div>
-        <div class="consult__inter_consl">
-          <div class="consult__inter_consl-info">
+        <div class="consult__inter_consl" data-aos="new-animation" data-aos-duration="1200">
+          <div class="consult__inter_consl-info" data-aos-duration="1400">
             <h3 class="consult__inter_consl-info--title">Получите консультацию нашего специалиста прямо сейчас</h3>
             <div class="consult__inter_consl-info--subtitle">Оставьте ваши контакты или напишите нам на любой из
               наших мессенджеров. Мы поможем вам найти самое
               подходящее решение уже через 30 минут
             </div>
           </div>
-          <div class="consult__inter_consl-form">
+          <div class="consult__inter_consl-form" data-aos="new-animation" data-aos-duration="1600">
             <div class="consult__inter_consl-form--inputs">
               <input type="text" class="consult__inter_consl-form--inputs_inp" placeholder="Имя" name="name">
               <input type="text" class="consult__inter_consl-form--inputs_inp" placeholder="Телефон" name="phone">
@@ -25,7 +25,7 @@
               </div>
             </div>
           </div>
-          <div class="consult__inter_consl-social">
+          <div class="consult__inter_consl-social" data-aos="new-animation" data-aos-duration="1800">
             <div class="consult__inter_consl-social--text">Либо напишите нам в удобный мессенджер</div>
             <Social></Social>
           </div>

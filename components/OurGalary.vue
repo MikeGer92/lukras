@@ -1,7 +1,7 @@
 <template>
-  <section class="galary" data-aos="new-animation" data-aos-duration="3000">
+  <section class="galary">
     <div class="container">
-      <div class="galary__title">Собственный склад оборудования <br>в Ростове на Дону</div>
+      <div class="galary__title" data-aos="new-animation" data-aos-duration="800">Собственный склад оборудования <br>в Ростове на Дону</div>
     </div>
     <Swiper :imageList="slideList"></Swiper>
   </section>

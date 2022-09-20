@@ -1,9 +1,8 @@
 <template>
-  <section class="map" id="contacts" data-aos="new-animation" data-aos-duration="3000">
+  <section class="map" id="contacts">
     <!-- <div class="container" :style="{'background': 'transparent'}"> -->
       <div class="map__main">
-      <div class="map__main_map" id="map"><ContactForm></ContactForm></div>
-
+      <div class="map__main_map" id="map" data-aos="new-animation" data-aos-duration="1000"><ContactForm></ContactForm></div>
       </div>
     <!-- </div> -->
   </section>
@@ -40,7 +39,7 @@ export default {
 </script>
 
 <style lang="scss">
-  [data-aos="new-animation"] {
+[data-aos="new-animation"] {
   opacity: 0;
   transition-property: transform, opacity;
 

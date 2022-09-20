@@ -2,7 +2,7 @@
   <footer class="footer">
     <div class="container">
       <div class="footer__wrapper">
-        <div class="footer__contact">
+        <div class="footer__contact" data-aos="new-animation" data-aos-duration="800">
           <div class="footer__contact_logo"><img src="@/assets/images/logo.png"></div>
           <div class="footer__contact_contacts-wrapper">
             <div class="footer__contact_contacts">
@@ -13,7 +13,7 @@
             <Social></Social>
         </div>
         </div>
-        <div class="footer__menu">
+        <div class="footer__menu" data-aos="new-animation" data-aos-duration="1200">
           <div class="footer__menu_title">Меню</div>
           <ul class="footer__menu_list">
             <li class="footer__menu_list-link" v-scroll-to="'#main'">Главная</li>
@@ -25,7 +25,7 @@
             <li class="footer__menu_list-link" v-scroll-to="'#contacts'">Контакты</li>
           </ul>
         </div>
-        <div class="footer__inform">
+        <div class="footer__inform" data-aos="new-animation" data-aos-duration="1600">
           <div class="footer__inform_title">Информация</div>
           <div class="footer__inform_subtitle">Сайт не является публичной офертой. Вся информация
             носит ознакомительный характер и может отличаться от
@@ -52,6 +52,14 @@ export default {
 </script>
 
 <style lang="scss">
+  [data-aos="new-animation"] {
+    opacity: 0;
+    transition-property: transform, opacity;
+
+    &.aos-animate {
+      opacity: 1;
+    }
+  }
   .footer {
     width: 100%;
     background: #FCFCFC;
