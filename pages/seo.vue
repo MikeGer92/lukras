@@ -139,6 +139,12 @@
             достигается за счёт специально оборудованных систем переливов.
           </p>
         </div>
+        <div class="seo__image">
+          <div class="seo__image-mechanic">
+            <img src="@/assets/images/seo-set.png">
+            <img src="@/assets/images/seo-table.png">
+          </div>
+        </div>
       </section>
 
 
