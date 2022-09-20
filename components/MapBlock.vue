@@ -15,24 +15,49 @@ export default {
   components: { ContactForm },
   data() {
     return {
-      placies: [{location: {lng: 39.775883, lat: 47.269713}, description: 'LUKRAS'}]
+      placies: [{location: {lng: 39.775883, lat: 47.269713}, description: 'LUKRAS'}],
+      center: [39.775883, 47.269713],
+      maxWidth: '',
+      zoom: 10
     }
   },
+  computed: {
+    getCenter() {
+      this.maxWidth = window.innerWidth
+      if (this.maxWidth > 1600) {
+        this.center = [39.775883, 47.269713]
+      } else if (this.maxWidth > 1200) {
+        this.center = [39.475883, 47.269713]
+      } else if (this.maxWidth > 992) {
+        this.center = [39.575883, 47.269713]
+      } else if (this.maxWidth > 768) {
+        this.center = [39.605883, 47.169713]
+      } else if (this.maxWidth < 577) {
+        this.center = [39.775883, 47.139713]
+
+      }
+      return this.center
+    }
+  },
+  beforeMount() {
+    this.maxWidth = window.innerWidth
+    this.getCenter
+  },
   mounted() {
+    console.log(window.innerWidth, this.center)
     const mapboxgl = require('mapbox-gl')
     const map = new mapboxgl.Map({
       accessToken: 'pk.eyJ1Ijoic2xpbWVzaG90IiwiYSI6ImNrcjI4M2Y1ODI2cDgzMXFodDFuMG9jYW8ifQ.nMAxLQ2UlUxVBCcM-M8vuQ',
       container: 'map', // <div id="map"></div>
-          style: 'mapbox://styles/mapbox/streets-v9', // default style
-          center: [39.775883, 47.269713],// starting position as [lng, lat]
-          zoom: 6
+      style: 'mapbox://styles/mapbox/streets-v9', // default style
+      center: this.getCenter,//[39.575883, 47.169713],// starting position as [lng, lat]
+      zoom: 10
     })
     this.placies.map((marker) => {
       const LngLat = [marker.location.lng, marker.location.lat]
       new mapboxgl.Marker()
           .setLngLat(LngLat)
           .addTo(map) // Initialized above
-          marker.center
       })
   }
 }
@@ -79,7 +104,7 @@ export default {
     display: flex;
     justify-content: center;
     &_map {
-      padding: 136px 140px;
+      padding:150px 30px;
     }
   }
 }
@@ -94,11 +119,11 @@ export default {
       &_map {
         width: 100%;
         height: 100%;
-        padding: 0 22px 22px 22px;
+        padding: 0 20px 20px 20px;
         .contact-form {
-          bottom: 22px;
-          right: 22px;
-          left: 22px;
+          bottom: 20px;
+          right: 20px;
+          left: 20px;
         }
       }
     }
