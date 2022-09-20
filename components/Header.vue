@@ -1,7 +1,7 @@
 <template>
   <div class="container">
     <header class="header">
-      <div class="header__top">
+      <div class="header__top"  data-aos="new-animation" data-aos-duration="800">
         <div class="header__top_brand"></div>
         <div
           :class="{'header__top_links': true, 'header__top_links-active': showLinks}"
@@ -36,7 +36,7 @@
         </div>
       </div>
       <div class="header__divider"></div>
-      <div class="header__bottom">
+      <div class="header__bottom"  data-aos="new-animation" data-aos-duration="1200">
         <div class="header__bottom_brand"></div>
         <div class="header__bottom_social">
           <a><div class="header__bottom_social-item">Telegram</div></a>
@@ -83,6 +83,15 @@ import ModalHeader from './ModalHeader.vue';
 </script>
 
 <style lang="scss">
+[data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+
+  }
+}
   .header {
     width: 100%;
     margin: 0 auto;

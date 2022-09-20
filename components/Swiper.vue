@@ -1,6 +1,7 @@
 <template>
   <div>
     <div class="swiper"
+    data-aos="new-animation" data-aos-duration="1600"
     >
       <div class="swiper-wrapper">
         <div
@@ -82,6 +83,15 @@ export default {
 </script>
 
 <style lang="scss">
+  [data-aos="new-animation"] {
+  opacity: 0;
+  transition-property: transform, opacity;
+
+  &.aos-animate {
+    opacity: 1;
+
+  }
+}
 .swiper {
   display: flex;
   flex-direction: column;

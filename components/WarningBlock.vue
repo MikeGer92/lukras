@@ -1,9 +1,9 @@
 <template>
-  <section class="warning" id="warning" data-aos="new-animation" data-aos-duration="3000">
+  <section class="warning" id="warning">
     <div class="container">
-      <h2 class="warning__title">ОСТЕРЕГАЙТЕСЬ КОМПАНИЙ ОДНОДНЕВОК</h2>
+      <h2 class="warning__title" data-aos="new-animation" data-aos-duration="800">ОСТЕРЕГАЙТЕСЬ КОМПАНИЙ ОДНОДНЕВОК</h2>
     </div>
-    <div class="warning__info">
+    <div class="warning__info" data-aos="new-animation" data-aos-duration="1600">
       <div class="warning__info_wrap">
         <Corner :style="{'width': '64px', 'height': '64px', 'transform': 'rotate(90deg)'}"></Corner>
         <div class="warning__info_item">

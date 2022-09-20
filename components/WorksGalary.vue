@@ -1,10 +1,10 @@
 <template>
-  <section class="works" data-aos="new-animation" data-aos-duration="3000">
+  <section class="works">
     <div class="container">
-      <div class="works__title">За 7 лет работы мы установили более 1000 <br>cептиков. Посмотрите некоторые из них</div>
+      <div class="works__title" data-aos="new-animation" data-aos-duration="800">За 7 лет работы мы установили более 1000 <br>cептиков. Посмотрите некоторые из них</div>
     </div>
     <div class="works__cases">
-      <div class="works__cases_wrapper">
+      <div class="works__cases_wrapper" data-aos="new-animation" data-aos-duration="1200">
         <div class="works__cases_items">
           <button type="button" class="works__cases_items-item"
             v-for="unit in casesList"

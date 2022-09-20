@@ -1,26 +1,26 @@
 <template>
-  <section class="steps" data-aos="new-animation" data-aos-duration="3000">
+  <section class="steps">
     <div class="container">
       <div class="steps__wrapper">
-        <div class="steps__title" id="steps">Этапы<br>монтажных<br>работ</div>
+        <div class="steps__title" id="steps" data-aos="new-animation" data-aos-duration="800">Этапы<br>монтажных<br>работ</div>
         <div class="steps__main">
           <ul class="steps__main_list">
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--wrapp">
-                <div class="steps__main_list-item--sqr">1</div>
+              <div class="steps__main_list-item--wrapp" data-aos="new-animation" data-aos-duration="1200">
+                <div class="steps__main_list-item--sqr" data-aos="new-animation">1</div>
                 <div class="steps__main_list-item--text">ДОСТАВКА СЕПТИКА НА ОБЪЕКТ</div>
               </div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--wrapp">
+              <div class="steps__main_list-item--wrapp" data-aos="new-animation" data-aos-duration="1400">
                 <div class="steps__main_list-item--sqr">2</div>
                 <div class="steps__main_list-item--text">ПОДГОТОВКА КОТЛОВАНА И МАГИСТРАЛЕЙ</div>
               </div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--wrapp">
+              <div class="steps__main_list-item--wrapp" data-aos="new-animation" data-aos-duration="1600">
                 <div class="steps__main_list-item--sqr">3</div>
                 <div class="steps__main_list-item--text">УСТАНОВКА СЕПТИКА В КОТЛОВАН</div>
               </div>
@@ -28,21 +28,21 @@
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--wrapp">
+              <div class="steps__main_list-item--wrapp" data-aos="new-animation" data-aos-duration="1800">
                 <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">4</div>
                 <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ПРОКЛАДКА ТРУБ И ЭЛЕКТОКАБЕЛЯ</div>
               </div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--wrapp">
+              <div class="steps__main_list-item--wrapp" data-aos="new-animation" data-aos-duration="2000">
                 <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">5</div>
                 <div class="steps__main_list-item--text steps__main_list-item--text_deactive">НАСТРОЙКИ И ПРОВЕРКА РАБОТОСПОСОБНОСТИ</div>
               </div>
               <div class="steps__main_list-item--img"><img src="@/assets/images/steps-small.png"></div>
             </li>
             <li class="steps__main_list-item">
-              <div class="steps__main_list-item--wrapp">
+              <div class="steps__main_list-item--wrapp" data-aos="new-animation" data-aos-duration="2200">
                 <div class="steps__main_list-item--sqr steps__main_list-item--sqr_deactive">6</div>
                 <div class="steps__main_list-item--text steps__main_list-item--text_deactive">ОБУЧЕНИЕ</div>
               </div>

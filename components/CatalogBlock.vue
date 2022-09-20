@@ -1,8 +1,9 @@
 <template>
-  <section class="catalog" id="catalog" data-aos="new-animation" data-aos-duration="3000">
+  <section class="catalog" id="catalog">
     <div class="container">
-      <h2 class="catalog__title">Каталог систем очистки для загородных домов</h2>
+      <h2 class="catalog__title" data-aos="new-animation" data-aos-duration="800">Каталог систем очистки для загородных домов</h2>
       <div class="catalog__products"
+      data-aos="new-animation" data-aos-duration="1400"
         >
           <Product
             :product="item"
