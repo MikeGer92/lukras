@@ -562,5 +562,25 @@
     }
   }
 }
-
+@media (max-width: 577px) {
+  .seo {
+    margin: 0 auto;
+    &__title {
+      &-about, &-constr, &-mechanic, &-rules, &-addrules, &-profilac {
+        font-size: 32px;
+        line-height: 36px;
+      }
+    }
+    &__setting {
+      .seo__title {
+        font-size: 32px;
+        line-height: 36px;
+        &-setting {
+          font-size: 32px;
+          line-height: 36px;
+        }
+      }
+    }
+  }
+}
 </style>
