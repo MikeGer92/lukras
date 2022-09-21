@@ -156,6 +156,149 @@
             Если вы решили устанавливать септик "Тверь" самостоятельно, рекомендуем ознакомиться со стандартной схемой, которая
             включает несколько этапов:
           </p>
+          <div class="seo__divider"></div>
+          <div class="seo__text">
+            <ul class="seo__text-list">
+              <li class="seo__text-list_el">
+                <div class="seo__text-list_el-subtitle">Земельные работы</div>
+                <p class="seo__text-list_el-info">Подразумевают подготовку участка к установке септика (котлован, траншеи и прочее).
+                </p>
+              </li>
+              <li class="seo__text-list_el">
+                <div class="seo__text-list_el-subtitle">Установка воздухоотвода</div>
+                <p class="seo__text-list_el-info">В подготовленную для труб траншею помещается компрессорный воздухоотвод.</p>
+              </li>
+              <li class="seo__text-list_el">
+                <div class="seo__text-list_el-subtitle">Подготовка к установке септика</div>
+                <p class="seo__text-list_el-info">Рекомендовано обязательное создание песчаной подушки, чтобы септик надежно находился
+                  на одном уровне и не проседал.
+                </p>
+              </li>
+              <li class="seo__text-list_el">
+                <div class="seo__text-list_el-subtitle">Размещение септика в подготовленной яме</div>
+                <p class="seo__text-list_el-info">Важно обращать внимание на ровность расположения системы. Для этого следует выравнивать
+                  септик используя уровни. В противном случае (при наличии наклона), установка будет функционировать неправильно.
+                </p>
+              </li>
+              <li class="seo__text-list_el">
+                <div class="seo__text-list_el-subtitle">Подключение канализационной трубки</div>
+                <p class="seo__text-list_el-info">Для самых популярных моделей септиков "Тверь", используемых в частных домах, глубина прокладки
+                  составляет 30 см. Если магистраль располагается под фундаментом, то эта величина будет значительно больше.
+                </p>
+              </li>
+              <li class="seo__text-list_el">
+                <div class="seo__text-list_el-subtitle">Завершающий этап</div>
+                <p class="seo__text-list_el-info">Включает в себя утепление конструкции, засыпку песком и проведение пусконаладочных работ.</p>
+              </li>
+            </ul>
+            <p class="seo__text-paragr">Установку систем очистки стоков можно доверить профессионалам или произвести самостоятельно.
+              В первом случае специалисты знают все особенности монтажных работ и ваша помощь в этом не потребуется.
+              Если вы решили устанавливать септик "Тверь" самостоятельно, рекомендуем ознакомиться со стандартной схемой, которая
+              включает несколько этапов:
+            </p>
+          </div>
+        </div>
+        <div class="seo__divider-last"></div>
+      </section>
+      <section class="seo__rules">
+        <div class="seo__title">
+          <div class="seo__title-rules">Правила эксплуатации септика "Тверь"</div>
+        </div>
+        <div class="seo__text">
+          <ol class="seo__text-list">Для безотказной и долговечной работы очистной системы "Тверь" рекомендуем соблюдать следующие
+            правила эксплуатации:
+
+            <li class="seo__text-list_el">
+              <div class="seo__text-list_el-dot">	&#8226;</div>
+              <div class="seo__text-list_el-info">Исключить сброс в емкость материалов, способных вывести автономную канализацию из строя.
+                Это могут быть: строительный мусор, любые неразлагаемые элементы, бензин и машинное масло, кислоты и щелочи,
+                большой объем шерсти животных и прочее. Аэробные бактерии не способны воздействовать на подобные материалы.
+              </div>
+            </li>
+            <li class="seo__text-list_el">
+              <div class="seo__text-list_el-dot">	&#8226;</div>
+              <div class="seo__text-list_el-info">Произвести обязательную откачку стоков в зимний период. Рекомендовано в случае
+                отсутствия необходимости использования септика в течение длительного времени.
+              </div>
+            </li>
+            <li class="seo__text-list_el">
+              <div class="seo__text-list_el-dot">	&#8226;</div>
+              <div class="seo__text-list_el-info">Регулярно проводить профилактические работы с целью предотвращения заиливания и
+                засоров локальных канализационных систем.
+              </div>
+            </li>
+
+          </ol>
+          <p class="seo__text-paragr">В случаях кратковременного прекращения подачи электроэнергии производительность септика снижается.
+            Поэтому рекомендуется минимизировать объемы стоков.
+          </p>
+        </div>
+        <div class="seo__image">
+          <div class="seo__image-rules">
+            <img src="@/assets/images/seo-plan.png">
+          </div>
+        </div>
+      </section>
+      <section class="seo__addrules">
+        <div class="seo__title">
+          <div class="seo__title-addrules">Правила эксплуатации септика "Тверь"</div>
+        </div>
+        <div class="seo__text">
+          <div class="seo__text-paragr">Правила по эксплуатации включают в себя рекомендацию по регулярному проведению профилактических работ.
+            Поэтому информация о техническом обслуживании септика «Тверь» очень полезна.
+          </div>
+        </div>
+        <div class="seo__image">
+          <div class="seo__image-addrules">
+            <img src="@/assets/images/seo-var.png">
+          </div>
+        </div>
+      </section>
+      <section class="seo__profilac">
+        <div class="seo__title">
+          <div class="seo__title-profilac">Профилактические мероприятия </div>
+        </div>
+        <div class="seo__text">
+          <ul class="seo__text-list">Септик "Тверь" функционирует как и большинство классических очистных систем. Принцип работы подразделяется
+            на три основных этапа:
+            <li>
+              <div class="seo__text-list_el">
+                 <div class="seo__text-list_el-wrapper">
+                  <div class="seo__text-list_el-dot">&#8226;</div>
+                  <div class="seo__text-list_el-subtitle">Очистка и проверка систем фильтрации</div>
+                </div>
+                <p class="seo__text-list_el-descr">Специальные ерши легко снимаются и промываются под проточной водой. При повторной установке
+                  очищенных фильтров рекомендуется обратить внимание на состояние конструкции, на которую они установлены. В случае
+                  прогнивания их следует заменить.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="seo__text-list_el">
+                <div class="seo__text-list_el-wrapper">
+                  <div class="seo__text-list_el-dot">&#8226;</div>
+                  <div class="seo__text-list_el-subtitle">Очистка камер</div>
+                </div>
+                <p class="seo__text-list_el-descr">В отсеках септика часто скапливаются излишки ила и нерастворимые осадки. Мероприятие направлено
+                  на профилактику засоров, и может быть выполнено с помощью фекальных насосов или специализированной техники.
+                </p>
+              </div>
+            </li>
+            <li>
+              <div class="seo__text-list_el">
+                <div class="seo__text-list_el-wrapper">
+                  <div class="seo__text-list_el-dot">&#8226;</div>
+                  <div class="seo__text-list_el-subtitle">Наполнение септика бактериями и известняком</div>
+                </div>
+                <p class="seo__text-list_el-descr">Недостаточное количество реагентов негативно сказывается на производительности септика,
+                  поэтому процедура также является обязательной.
+                </p>
+              </div>
+            </li>
+          </ul>
+          <p class="seo__text-paragr">Важно! Проводить профилактику автономной канализации рекомендуется каждые 1-2 года.
+            Полное обслуживание - раз в 5-7 лет.
+          </p>
         </div>
       </section>
     </div>
@@ -182,7 +325,8 @@
   flex-direction: column;
   width: 100%;
   max-width: 1600px;
-  margin: 0 auto;
+  margin: 0 auto 64px auto;
+  background: #FFFFFF;
   &__banner {
     margin: 36px 0 16px 0;
     width: 100%;
@@ -201,7 +345,7 @@
     line-height: 72px;
     text-transform: uppercase;
     color: #000000;
-    &-about, &-constr, &-mechanic {
+    &-about, &-constr, &-mechanic, &-rules, &-addrules, &-profilac {
       font-family: 'Roboto Condensed';
     }
   }
@@ -305,6 +449,80 @@
         font-size: 48px;
         line-height: 56px;
         font-family: 'Roboto Condensed';
+      }
+    }
+    .seo__text {
+      &-list {
+        &_el {
+          flex-direction: column;
+          padding-bottom: 24px;
+          border-bottom: 1px solid #E3E3E3;
+          &-subtitle {
+            font-weight: 600;
+            margin: 24px 0 16px 0;
+            &:first-child {
+              margin: 0 0 16px 0;
+            }
+          }
+        }
+      }
+      &-paragr {
+        margin-top: 24px;
+      }
+    }
+    .seo__divider {
+      &-last {
+        margin: 64px 0;
+        width: 100%;
+        height: 1px;
+        background: #E3E3E3;
+      }
+
+    }
+  }
+  &__rules {
+    .seo__text {
+      &-list  {
+        &_el {
+          &-info {
+            margin-left: 24px;
+          }
+        }
+      }
+      &-paragr {
+        margin-top: 24px;
+      }
+    }
+  }
+  &__addrules {
+    .seo__text {
+      &-paragr {
+        margin-top: 48px;
+      }
+    }
+  }
+  &__profilac {
+    .seo__text {
+      &-list {
+        &_el {
+          flex-direction: column;
+          padding-bottom: 24px;
+          border-bottom: 1px solid #E3E3E3;
+          &-wrapper {
+            display: flex;
+            align-items: center;
+          }
+          &-subtitle {
+            font-weight: 600;
+            margin: 24px 0 16px 26px;
+            &:first-child {
+              margin: 0 0 16px 0;
+            }
+          }
+        }
+      }
+      &-paragr {
+        margin-top: 24px;
       }
     }
   }
