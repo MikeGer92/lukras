@@ -1,7 +1,6 @@
 <template>
   <div>
     <div class="swiper"
-    data-aos="new-animation" data-aos-duration="1600"
     >
       <div class="swiper-wrapper">
         <div
