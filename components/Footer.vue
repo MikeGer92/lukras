@@ -16,13 +16,14 @@
         <div class="footer__menu" data-aos="new-animation" data-aos-duration="1200">
           <div class="footer__menu_title">Меню</div>
           <ul class="footer__menu_list">
-            <li class="footer__menu_list-link" v-scroll-to="'#main'">Главная</li>
-            <li class="footer__menu_list-link" v-scroll-to="'/#calc'">Рассчитать стоимость</li>
-            <li class="footer__menu_list-link" v-scroll-to="'#catalog'">Каталог</li>
-            <li class="footer__menu_list-link" v-scroll-to="'#advant'">Преимущества</li>
-            <li class="footer__menu_list-link" v-scroll-to="'#certif'">Сертификат</li>
-            <li class="footer__menu_list-link" v-scroll-to="'#steps'">Этапы работ</li>
-            <li class="footer__menu_list-link" v-scroll-to="'#contacts'">Контакты</li>
+            <nuxt-link v-if="`${this.$route.path}==='seo'`" to="/"><li class="footer__menu_list-link">Главная</li></nuxt-link>
+            <li v-else class="footer__menu_list-link" v-scroll-to="'#main'">Главная</li>
+            <li v-show="this.$route.path ==='/'" class="footer__menu_list-link" v-scroll-to="'/#calc'">Рассчитать стоимость</li>
+            <li v-show="this.$route.path ==='/'" class="footer__menu_list-link" v-scroll-to="'#catalog'">Каталог</li>
+            <li v-show="this.$route.path ==='/'" class="footer__menu_list-link" v-scroll-to="'#advant'">Преимущества</li>
+            <li v-show="this.$route.path ==='/'" class="footer__menu_list-link" v-scroll-to="'#certif'">Сертификат</li>
+            <li v-show="this.$route.path ==='/'" class="footer__menu_list-link" v-scroll-to="'#steps'">Этапы работ</li>
+            <li v-show="this.$route.path ==='/'" class="footer__menu_list-link" v-scroll-to="'#contacts'">Контакты</li>
           </ul>
         </div>
         <div class="footer__inform" data-aos="new-animation" data-aos-duration="1600">
@@ -126,7 +127,6 @@ export default {
           word-break: nowrap;
           cursor: pointer;
           &:hover {
-            font-weight: 600;
             color: #000000;
           }
         }
