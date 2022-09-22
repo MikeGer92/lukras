@@ -2,7 +2,7 @@
 <div class="container">
     <header class="seoheader">
       <div class="seoheader__bottom"  data-aos="new-animation" data-aos-duration="1200">
-        <div class="seoheader__bottom_brand"></div>
+        <nuxt-link to="/"><div class="seoheader__bottom_brand"></div></nuxt-link>
         <div class="seoheader__bottom_social">
           <a><div class="seoheader__bottom_social-phone">8 (800) 600-90-91</div></a>
           <a><div class="seoheader__bottom_social-request">Оставить заявку</div></a>
