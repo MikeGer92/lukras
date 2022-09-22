@@ -4,7 +4,7 @@
       <div class="works__title" data-aos="new-animation" data-aos-duration="800">За 7 лет работы мы установили более 1000 <br>cептиков. Посмотрите некоторые из них</div>
     </div>
     <div class="works__cases">
-      <div class="works__cases_wrapper" data-aos="new-animation" data-aos-duration="1200">
+      <div class="works__cases_wrapper">
         <div class="works__cases_items">
           <button type="button" class="works__cases_items-item"
             v-for="unit in casesList"
@@ -124,10 +124,11 @@ export default {
         font-weight: 400;
         font-size: 16px;
         line-height: 18px;
+        border: 1px solid transparent;
         border-right: 1px solid #E3E3E3;
         &:hover {
+          border-right: none;
           border: 1px solid #000000;
-          font-size: 18px;
         }
         &--active {
           border: 1px solid #BF0000;

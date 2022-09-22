@@ -7,6 +7,7 @@
           v-for="item in imageList"
           :key="item.id" class="swiper-slide"
           :style="{'background': `url(${item.url}) 0px 0px/cover no-repeat`}"
+          data-aos="new-animation" data-aos-duration="1000"
         >
         <div v-if="`${item.name}`" class="swiper-data">{{item.name}}</div>
         </div>
@@ -124,11 +125,9 @@ export default {
       &-title, &-num {
         display: flex;
         padding: 22px 40px;
+        border: 1px solid transparent;
         border-right: 1px solid #E3E3E3;
         align-items: center;
-        &:hover {
-          border: 1px solid #000;
-        }
       }
     }
     &_btn {
@@ -141,9 +140,6 @@ export default {
           align-items: center;
         border-left: 1px solid #E3E3E3;
         cursor: pointer;
-        &:hover {
-          border: 1px solid #000;
-        }
       }
     }
   }
