@@ -71,11 +71,20 @@ import ModalHeader from './ModalHeader.vue';
       };
     },
     methods: {
+      toggleBodyClass(className) {
+        const el = document.body;
+        if (this.showModal) {
+          el.classList.add(className);
+        } else {
+          el.classList.remove(className);
+        }
+      },
       isShowLinks() {
         this.showLinks = !this.showLinks;
       },
       isShowModal() {
         this.showModal = !this.showModal
+        this.toggleBodyClass('deactOver')
       }
     },
     components: { ModalHeader }
@@ -83,6 +92,9 @@ import ModalHeader from './ModalHeader.vue';
 </script>
 
 <style lang="scss">
+.deactOver {
+  overflow: hidden;
+}
 [data-aos="new-animation"] {
   opacity: 0;
   transition-property: transform, opacity;

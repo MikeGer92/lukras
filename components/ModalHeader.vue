@@ -1,9 +1,10 @@
 <template>
+  <body>
   <section class="modal-header" @click="closeModal">
     <div class="container">
       <div class="modal-header__wrapper">
         <div
-          :class="{'modal-header__links': true, 'modal-header__links-active': isShowLinks}"
+          :class="{'modal-header__links': true }"
         >
           <li
             v-for="link in links"
@@ -35,6 +36,7 @@
 
 
   </section>
+</body>
 </template>
 
 <script>
@@ -62,7 +64,7 @@
 
 <style lang="scss">
   .modal-header {
-    position: absolute;
+    position: fixed;
     overflow-y: auto;
     top: 64px;
     left: 0px;
