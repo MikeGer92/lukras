@@ -7,7 +7,7 @@ export default ({app}, inject) => {
     // duration: 1600, // values from 0 to 3000, with step 50ms
     once: true,
     disable: () => {
-      const maxWidth = 768;
+      const maxWidth = 1024;
       return window.innerWidth < maxWidth;
     }
   });

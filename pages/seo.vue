@@ -310,6 +310,7 @@
 <script>
   export default {
     name: 'Seo',
+    layout: 'seo',
     data() {
       return {
 
@@ -562,7 +563,7 @@
     }
   }
 }
-@media (max-width: 577px) {
+@media (max-width: 767px) {
   .seo {
     margin: 0 auto;
     &__title {

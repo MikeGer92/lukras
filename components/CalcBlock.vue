@@ -1,19 +1,19 @@
 <template>
   <div class="container">
-    <section class="calc" id="calc" data-aos="new-animation" data-aos-duration="800">
+    <section class="calc" id="calc">
       <div class="calc__main">
         <div class="calc__main_top">
           <h2 class="calc__main_top-title" data-aos="new-animation" data-aos-duration="1000">Рассчитайте стоимость установки Септика для вашего участка</h2>
-          <div class="calc__main_top-subtitle">Ответьте на 4 вопросов и получите расчёт стоимости и сроков установки септика на ваш участок</div>
+          <div class="calc__main_top-subtitle" data-aos="new-animation" data-aos-duration="1400">Ответьте на 4 вопросов и получите расчёт стоимости и сроков установки септика на ваш участок</div>
         </div>
         <div class="calc__main_bottom">
-          <div class="calc__main_bottom-top" data-aos="new-animation" data-aos-duration="1200">
+          <div class="calc__main_bottom-top">
             <div class="calc__main_bottom-top--sqr">{{ questNum }}</div>
             <div class="calc__main_bottom-top--text">{{ actQuest.title }}</div>
           </div>
           </div>
           <div class="calc__main_bottom-main">
-            <div class="calc__main_bottom-main--choise" v-if="!showForm" data-aos="new-animation" data-aos-duration="1400">
+            <div class="calc__main_bottom-main--choise" v-if="!showForm">
               <div class="calc__main_bottom-main--choise_item"
                 v-for="item in actQuest.variants"
                 :key="item"
@@ -39,7 +39,7 @@
                 </div>
               </div>
             </div>
-            <div class="calc__main_bottom-main--buttons" data-aos="new-animation" data-aos-duration="1600">
+            <div class="calc__main_bottom-main--buttons">
               <button
                 type="button"
                 :class="{'calc__main_bottom-main--buttons_btn-active': true }"
