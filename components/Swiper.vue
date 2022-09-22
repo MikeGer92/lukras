@@ -56,8 +56,6 @@ export default {
     }
   },
   mounted() {
-    // console.log(window.innerWidth)
-    // console.log(this.offset)
     Swiper.use([Navigation, Pagination, Autoplay])
     const swiper = new Swiper('.swiper', {
       direction: 'horizontal',
