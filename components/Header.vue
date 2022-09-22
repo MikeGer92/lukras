@@ -195,6 +195,7 @@ import ModalHeader from './ModalHeader.vue';
           text-align: right;
           color: #000000;
           margin-right: 32px;
+          cursor: pointer;
         }
         &-request {
           box-sizing: border-box;
