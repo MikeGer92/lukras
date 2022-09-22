@@ -31,7 +31,7 @@ export default {
   data() {
     return {
       showModal: false,
-      showConsultModal: true
+      showConsultModal: false
     };
   },
   methods: {
