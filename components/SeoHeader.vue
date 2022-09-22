@@ -57,7 +57,7 @@ import SeoMadalHeader from './SeoMadalHeader.vue';
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    padding: 24px 0px 0px;
+    padding: 32px 0;
     gap: 24px;
     &__top {
       display: flex;

@@ -340,7 +340,7 @@
   margin: 0 auto 64px auto;
   background: #FFFFFF;
   &__banner {
-    margin: 36px 0 16px 0;
+    margin: 0 0 16px 0;
     max-height: 540px;
     display: flex;
       width: 100%;
