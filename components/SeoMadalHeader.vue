@@ -13,7 +13,7 @@
           <div class="seomodal-header__social_item">Viber</div>
           <div class="seomodal-header__social_divider"></div>
           <div class="seomodal-header__social_phone">8 (800) 600-90-91</div>
-          <div class="seomodal-header__social_request">Оставить заявку</div>
+          <div class="seomodal-header__social_request" @click="showConsult">Оставить заявку</div>
         </div>
       </div>
 
@@ -33,6 +33,9 @@
     methods: {
       closeModal() {
         this.$emit('closeModal')
+      },
+      showConsult() {
+        this.$emit('showConsult')
       }
     }
   }
