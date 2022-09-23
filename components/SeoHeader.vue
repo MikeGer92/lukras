@@ -7,11 +7,6 @@
           <a><div class="seoheader__bottom_social-phone">8 (800) 600-90-91</div></a>
           <a><div class="seoheader__bottom_social-request" @click="showConsult">Оставить заявку</div></a>
         </div>
-        <!-- <div
-          :class="{'seoheader__top_popup': true, 'seoheader__top_popup-deactive': showLinks}"
-          @click="isShowLinks"
-        >
-        </div> -->
         <div
           :class="{'seoheader__top_popupxs': true, 'seoheader__top_popupxs-deactive': showModal}"
           @click="isShowModal"
@@ -71,7 +66,7 @@ export default {
   .seoheader {
     width: 100%;
     margin: 0 auto;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 32px 0;
@@ -339,6 +334,7 @@ export default {
 }
 @media (max-width: 576px) {
   .seoheader {
+    padding: 16px 0;
     &__top {
       position: relative;
       margin-bottom: 16px;

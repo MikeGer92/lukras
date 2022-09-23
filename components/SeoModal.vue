@@ -2,38 +2,40 @@
   <div class="modal-wrapper">
   <div class="seomodal" >
     <div class="seomodal__close" @click="closeModal"><img src="@/assets/images/seo-close.svg"></div>
-    <section class="consult">
-      <div class="consult__inter">
-        <div class="consult__inter_image" data-aos="new-animation" data-aos-duration="800">
-          <div class="consult__inter_image-title">Консультант</div>
+    <section class="seoconsult">
+      <div class="seoconsult__inter">
+        <div class="seoconsult__inter_image">
+          <div class="seoconsult__inter_image-title">Консультант</div>
+          <div class="seoconsult__inter_image-close" @click="closeModal"><img src="@/assets/images/seo-close.svg"></div>
         </div>
-        <div class="consult__inter_consl" data-aos="new-animation" data-aos-duration="1200">
-          <div class="consult__inter_consl-info" data-aos-duration="1400">
-            <h3 class="consult__inter_consl-info--title">Получите консультацию нашего специалиста прямо сейчас</h3>
-            <div class="consult__inter_consl-info--subtitle">Оставьте ваши контакты или напишите нам на любой из
+        <div class="seoconsult__inter_consl">
+          <div class="seoconsult__inter_consl-info">
+            <h3 class="seoconsult__inter_consl-info--title">Получите консультацию нашего специалиста прямо сейчас</h3>
+            <div class="seoconsult__inter_consl-info--subtitle">Оставьте ваши контакты или напишите нам на любой из
               наших мессенджеров. Мы поможем вам найти самое
               подходящее решение уже через 30 минут
             </div>
           </div>
-          <div class="consult__inter_consl-form" data-aos="new-animation" data-aos-duration="1600">
-            <div class="consult__inter_consl-form--inputs">
-              <input type="text" class="consult__inter_consl-form--inputs_inp" placeholder="Имя" name="name">
-              <input type="text" class="consult__inter_consl-form--inputs_inp" placeholder="Телефон" name="phone">
+          <div class="seoconsult__inter_consl-form">
+            <div class="seoconsult__inter_consl-form--inputs">
+              <input type="text" class="seoconsult__inter_consl-form--inputs_inp" placeholder="Имя" name="name">
+              <input type="text" class="seoconsult__inter_consl-form--inputs_inp" placeholder="Телефон" name="phone">
             </div>
-            <div class="consult__inter_consl-form--add">
-              <button type="submit" class="consult__inter_consl-form--add_btn">Отправить</button>
-              <div type="submit" class="consult__inter_consl-form--add_text">Нажимая кнопку “отправить”, вы соглашаетесь
+            <div class="seoconsult__inter_consl-form--add">
+              <button type="submit" class="seoconsult__inter_consl-form--add_btn">Отправить</button>
+              <div type="submit" class="seoconsult__inter_consl-form--add_text">Нажимая кнопку “отправить”, вы соглашаетесь
                 с условиями обработки персональных данных
               </div>
             </div>
           </div>
-          <div class="consult__inter_consl-social" data-aos="new-animation" data-aos-duration="1800">
-            <div class="consult__inter_consl-social--text">Либо напишите нам в удобный мессенджер</div>
+          <div class="seoconsult__inter_consl-social">
+            <div class="seoconsult__inter_consl-social--text">Либо напишите нам в удобный мессенджер</div>
             <Social></Social>
           </div>
         </div>
         </div>
       </section>
+      <div class="seomodal__small_close" @click="closeModal"><img src="@/assets/images/seo-close.svg"></div>
     </div>
   </div>
 </template>
@@ -87,6 +89,18 @@ export default {
     background: #FFFFFF;
     border: 1px solid #E3E3E3;
   }
+  &__small {
+    &_close {
+      width: 50px;
+      height: 50px;
+      display: none;
+      align-self: flex-end;
+      justify-content: center;
+      align-items: center;
+      background: #FFFFFF;
+      border: 1px solid #E3E3E3;
+    }
+  }
 }
 [data-aos="new-animation"] {
   opacity: 0;
@@ -97,7 +111,7 @@ export default {
 
   }
 }
-.consult {
+.seoconsult {
   width: 100%;
   max-width: 1320px;
   padding: 8px;
@@ -122,6 +136,16 @@ export default {
         border: 1px solid #E3E3E3;
         border-top: none;
         border-left: none;
+      }
+      &-close {
+        display: none;
+        width: 50px;
+        height: 50px;
+        align-self: flex-start;
+        justify-content: center;
+        align-items: center;
+        background: #FFFFFF;
+        border: 1px solid #E3E3E3;
       }
     }
     &_consl {
@@ -214,20 +238,60 @@ export default {
     }
   }
 }
-@media (min-width: 769px) and (max-width: 992px) {
-  .consult {
-    margin: 100px 0;
-    grid-template-columns: repeat(12, 1fr);
+@media (min-width: 993px) and (max-width: 1440px) {
+  .seomodal__close {
+    display: none;
+  }
+  .seoconsult {
     &__inter {
-      flex-direction: column;
       &_image {
-        grid-column: span 12;
+        display: flex;
+        justify-content: space-between;
+        &-title {
+          max-height: 50px;
+          display: flex;
+          align-items: center;
+        }
+        &-close {
+          display: flex;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 577px) and (max-width: 992px) {
+  .modal-wrapper {
+    height: 1252px;
+  }
+  .seomodal {
+    top: 0;
+    &__close {
+      display: none;
+    }
+  }
+  .seoconsult {
+    margin: 32px 0;
+    display: flex;
+    &__inter {
+      display: flex;
+      flex-direction: column;
+      height: 100%;
+      &_image {
+        display: flex;
+        justify-content: space-between;
         height: 438px;
         background: url('@/assets/images/consultant-small.png') center 0px/cover no-repeat;
+        &-title {
+          display: flex;
+          max-height: 50px;
+          align-items: center;
+        }
+        &-close {
+          display: flex;
+        }
       }
       &_consl {
-        grid-column: span 12;
-        gap: 0px;
+        width: 100%;
         &-info {
           padding: 40px 40px 0 40px;
         }
@@ -248,90 +312,32 @@ export default {
         }
         &-social {
           padding: 40px;
-        }
-      }
-    }
-  }
-}
-@media (min-width: 671px) and (max-width: 768px) {
-  .consult {
-    margin: 100px 0;
-    grid-template-columns: repeat(12, 1fr);
-    &__inter {
-      flex-direction: column;
-      &_image {
-        grid-column: span 12;
-        height: 438px;
-        background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
-      }
-      &_consl {
-        grid-column: span 12;
-        gap: 0px;
-        &-info {
-          padding: 40px 40px 0 40px;
-        }
-        &-form {
-          padding: 40px;
-          &--inputs {
-            width: 100%;
-            gap: 48px;
-            justify-content: space-between;
-            &_inp {
-              width: 50%;
-            }
-          }
-          &--add {
-            column-gap: 0px;
-            justify-content: space-between;
-          }
-        }
-        &-social {
-          padding: 40px;
-        }
-      }
-    }
-  }
-}
-@media (min-width: 577px) and (max-width: 670px) {
-  .consult {
-    margin: 100px 0;
-    grid-template-columns: repeat(12, 1fr);
-    &__inter {
-      flex-direction: column;
-      &_image {
-        grid-column: span 12;
-        height: 438px;
-        background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
-      }
-      &_consl {
-        grid-column: span 12;
-        gap: 40px;
-        &-info {
-          padding: 24px 24px 0 24px;
-        }
-        &-form {
-          padding: 24px;
-          &--inputs {
-            &_inp {
-              padding: 24px 12px;
-              width: 50%;
-            }
-          }
-        }
-        &-social {
-          padding: 24px;
         }
       }
     }
   }
 }
 @media (max-width: 576px) {
-  .consult {
-    margin: 64px -16px;
+  .seomodal {
+    top: 2%;
+    &__close {
+      display: none;
+    }
+    &__small {
+      &_close {
+        margin-top: 11px;
+        display: flex;
+        align-self: center;
+      }
+    }
+  }
+  .seoconsult {
+    margin: 5px 0px;
     grid-template-columns: repeat(12, 1fr);
     &__inter {
       flex-direction: column;
       &_image {
+        display: none;
         grid-column: span 12;
         height: 220px;
         background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
