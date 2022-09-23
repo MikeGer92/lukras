@@ -13,7 +13,7 @@
         >
         </div>
       </div>
-      <SeoMadalHeader v-if="showModal" @showModal="isShowModal"></SeoMadalHeader>
+      <SeoMadalHeader v-if="showModal" @click="isShowModal" @closeModal="isShowModal" @showConsult="isShowConsult"></SeoMadalHeader>
       <SeoModal v-if="showConsultModal" @closeConsult="showSeoModal"></SeoModal>
     </header>
   </div>
@@ -47,6 +47,10 @@ export default {
     },
     showConsult() {
      this.showConsultModal = true
+    },
+    isShowConsult() {
+     this.showConsultModal = true
+     this.showModal = false
     }
   },
   components: { SeoMadalHeader }
