@@ -5,39 +5,51 @@
         <nuxt-link to="/"><div class="seoheader__bottom_brand"></div></nuxt-link>
         <div class="seoheader__bottom_social">
           <a><div class="seoheader__bottom_social-phone">8 (800) 600-90-91</div></a>
-          <a><div class="seoheader__bottom_social-request">Оставить заявку</div></a>
+          <a><div class="seoheader__bottom_social-request" @click="showConsult">Оставить заявку</div></a>
         </div>
-        <!-- <div
-          :class="{'seoheader__top_popup': true, 'seoheader__top_popup-deactive': showLinks}"
-          @click="isShowLinks"
-        >
-        </div> -->
         <div
           :class="{'seoheader__top_popupxs': true, 'seoheader__top_popupxs-deactive': showModal}"
           @click="isShowModal"
         >
         </div>
       </div>
-      <SeoMadalHeader v-if="showModal" @closeModal="isShowModal"></SeoMadalHeader>
+      <SeoMadalHeader v-if="showModal" @showModal="isShowModal"></SeoMadalHeader>
+      <SeoModal v-if="showConsultModal" @closeConsult="showSeoModal"></SeoModal>
     </header>
   </div>
 </template>
 
 <script>
 import SeoMadalHeader from './SeoMadalHeader.vue';
-  export default {
-    name: "SeoHeader",
-    data() {
-      return {
-        showModal: false,
-      };
-    },
-    methods: {
-      isShowModal() {
-        this.showModal = !this.showModal
+export default {
+  name: "SeoHeader",
+  data() {
+    return {
+      showModal: false,
+      showConsultModal: false
+    };
+  },
+  methods: {
+    toggleBodyClass(className) {
+      const el = document.body;
+      if (this.showModal) {
+        el.classList.add(className);
+      } else {
+        el.classList.remove(className);
       }
     },
-    components: { SeoMadalHeader }
+    showSeoModal() {
+      this.showConsultModal = false
+    },
+    isShowModal() {
+      this.showModal = !this.showModal
+      this.toggleBodyClass('deactOver')
+    },
+    showConsult() {
+     this.showConsultModal = true
+    }
+  },
+  components: { SeoMadalHeader }
 }
 </script>
 
@@ -54,7 +66,7 @@ import SeoMadalHeader from './SeoMadalHeader.vue';
   .seoheader {
     width: 100%;
     margin: 0 auto;
-    display: flex;
+    // display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 32px 0;
@@ -322,6 +334,7 @@ import SeoMadalHeader from './SeoMadalHeader.vue';
 }
 @media (max-width: 576px) {
   .seoheader {
+    padding: 16px 0;
     &__top {
       position: relative;
       margin-bottom: 16px;

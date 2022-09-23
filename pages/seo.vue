@@ -304,22 +304,28 @@
         </div>
       </section>
     </div>
+
   </section>
 </template>
 
 <script>
+import SeoModal from '~/components/SeoModal.vue';
   export default {
-    name: 'Seo',
-    layout: 'seo',
+    name: "Seo",
+    layout: "seo",
+    components: { SeoModal },
     data() {
-      return {
+        return {
 
-      }
+        };
     },
     mounted() {
-      console.log(this.$route.path)
+        console.log(this.$route.path);
+    },
+    methods: {
     }
-  }
+
+}
 </script>
 
 <style lang="scss">
@@ -352,7 +358,7 @@
       }
     // background: url('@/assets/images/seo-banner.svg') 0px 0px/cover no-repeat;
   }
-  & .container {
+  .container {
     max-width: 810px;
     padding: 0 24px;
   }
@@ -559,6 +565,179 @@
       }
       &-paragr {
         margin-top: 24px;
+      }
+    }
+  }
+}
+@media (min-width: 769px) and (max-width: 992px) {
+  .consult {
+    margin: 100px 0;
+    grid-template-columns: repeat(12, 1fr);
+    &__inter {
+      flex-direction: column;
+      &_image {
+        grid-column: span 12;
+        height: 438px;
+        background: url('@/assets/images/consultant-small.png') center 0px/cover no-repeat;
+      }
+      &_consl {
+        grid-column: span 12;
+        gap: 0px;
+        &-info {
+          padding: 40px 40px 0 40px;
+        }
+        &-form {
+          padding: 40px;
+          &--inputs {
+            width: 100%;
+            gap: 48px;
+            justify-content: space-between;
+            &_inp {
+              width: 50%;
+            }
+          }
+          &--add {
+            column-gap: 0px;
+            justify-content: space-between;
+          }
+        }
+        &-social {
+          padding: 40px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 671px) and (max-width: 768px) {
+  .consult {
+    margin: 100px 0;
+    grid-template-columns: repeat(12, 1fr);
+    &__inter {
+      flex-direction: column;
+      &_image {
+        grid-column: span 12;
+        height: 438px;
+        background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
+      }
+      &_consl {
+        grid-column: span 12;
+        gap: 0px;
+        &-info {
+          padding: 40px 40px 0 40px;
+        }
+        &-form {
+          padding: 40px;
+          &--inputs {
+            width: 100%;
+            gap: 48px;
+            justify-content: space-between;
+            &_inp {
+              width: 50%;
+            }
+          }
+          &--add {
+            column-gap: 0px;
+            justify-content: space-between;
+          }
+        }
+        &-social {
+          padding: 40px;
+        }
+      }
+    }
+  }
+}
+@media (min-width: 577px) and (max-width: 670px) {
+  .consult {
+    margin: 100px 0;
+    grid-template-columns: repeat(12, 1fr);
+    &__inter {
+      flex-direction: column;
+      &_image {
+        grid-column: span 12;
+        height: 438px;
+        background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
+      }
+      &_consl {
+        grid-column: span 12;
+        gap: 40px;
+        &-info {
+          padding: 24px 24px 0 24px;
+        }
+        &-form {
+          padding: 24px;
+          &--inputs {
+            &_inp {
+              padding: 24px 12px;
+              width: 50%;
+            }
+          }
+        }
+        &-social {
+          padding: 24px;
+        }
+      }
+    }
+  }
+}
+@media (max-width: 576px) {
+  .consult {
+    margin: 64px -16px;
+    grid-template-columns: repeat(12, 1fr);
+    &__inter {
+      flex-direction: column;
+      &_image {
+        grid-column: span 12;
+        height: 220px;
+        background: url('@/assets/images/consultant-small.png') 0px 0px/cover no-repeat;
+        &-title {
+          padding: 12px 24px;
+          max-width: 132px;
+        }
+      }
+      &_consl {
+        grid-column: span 12;
+        gap: 24px;
+        &-info {
+          padding: 24px 32px 0 16px;
+          &--title {
+            font-size: 24px;
+            line-height: 32px;
+          }
+          &--subtitle {
+            margin-top: 16px;
+            font-size: 14px;
+            line-height: 20px;
+          }
+        }
+        &-form {
+          flex-direction: column;
+          align-items: center;
+          padding: 0;
+          &--inputs {
+            flex-direction: column;
+            gap: 24px;
+            &_inp {
+              width: 312px;
+            }
+          }
+          &--add {
+            flex-direction: column;
+            gap: 16px;
+            &_btn {
+              padding: 24px 115px;
+            }
+          }
+        }
+        &-social {
+          flex-direction: column;
+          padding: 24px;
+          gap: 24px;
+          align-items: center;
+          &--text {
+            text-align: center;
+          }
+        }
       }
     }
   }
