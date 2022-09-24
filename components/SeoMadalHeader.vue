@@ -43,7 +43,7 @@
 
 <style lang="scss">
   .seomodal-header {
-    position: absolute;
+    position: fixed;
     overflow-y: auto;
     top: 64px;
     left: 0px;

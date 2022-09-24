@@ -65,7 +65,7 @@ export default {
   left: 50%;
   transform: translateX(-50%);
   background: #FFF;
-  overflow: hidden;
+  // overflow: hidden;
 }
 .seomodal {
   display: flex;
@@ -76,7 +76,7 @@ export default {
   top: 7%;
   left: 50%;
   transform: translateX(-50%);
-  overflow: hidden;
+  // overflow: hidden;
   background: #fff;
   &__close {
     width: 50px;
