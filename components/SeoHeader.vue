@@ -43,7 +43,8 @@ export default {
     },
     isShowModal() {
       this.showModal = !this.showModal
-      this.toggleBodyClass('deactOver')
+      this.showConsultModal = false
+      // this.toggleBodyClass('deactOver')
     },
     showConsult() {
      this.showConsultModal = true
