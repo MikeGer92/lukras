@@ -1,7 +1,7 @@
 <template>
 <div class="container">
     <header class="seoheader">
-      <div class="seoheader__bottom"  data-aos="new-animation" data-aos-duration="1200">
+      <div class="seoheader__bottom">
         <nuxt-link to="/"><div class="seoheader__bottom_brand"></div></nuxt-link>
         <div class="seoheader__bottom_social">
           <a><div class="seoheader__bottom_social-phone">8 (800) 600-90-91</div></a>
@@ -32,7 +32,7 @@ export default {
   methods: {
     toggleBodyClass(className) {
       const el = document.body;
-      if (this.showModal) {
+      if (this.showModal || this.showConsultModal) {
         el.classList.add(className);
       } else {
         el.classList.remove(className);
@@ -40,14 +40,16 @@ export default {
     },
     showSeoModal() {
       this.showConsultModal = false
+      this.toggleBodyClass('deactOver')
     },
     isShowModal() {
       this.showModal = !this.showModal
       this.showConsultModal = false
-      // this.toggleBodyClass('deactOver')
+      this.toggleBodyClass('deactOver')
     },
     showConsult() {
      this.showConsultModal = true
+     this.toggleBodyClass('deactOver')
     },
     isShowConsult() {
      this.showConsultModal = true
@@ -71,7 +73,6 @@ export default {
   .seoheader {
     width: 100%;
     margin: 0 auto;
-    // display: flex;
     flex-direction: column;
     align-items: flex-start;
     padding: 32px 0;

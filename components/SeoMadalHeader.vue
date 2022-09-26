@@ -48,7 +48,8 @@
     top: 64px;
     left: 0px;
     background: #fff;
-    height: 100%;
+    height: calc(100% - 64px);
+    padding: 16px 0;
     width: 100%;
     z-index: 3;
     text-align: center;
