@@ -280,7 +280,15 @@ export default {
   }
   .seomodal {
     width: 90%;
-    transform: translate(-50%, -35%);
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 1440px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -15%);
+    transition: all ease;
     &__close {
       display: none;
     }
