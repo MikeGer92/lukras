@@ -1,8 +1,8 @@
 <template>
-  <div class="modal-wrapper">
+  <div class="modal-wrapper" @click.self="closeModal">
   <div class="seomodal" >
     <div class="seomodal__close" @click="closeModal"><img src="@/assets/images/seo-close.svg"></div>
-    <section class="seoconsult">
+    <section class="seoconsult" >
       <div class="seoconsult__inter">
         <div class="seoconsult__inter_image">
           <div class="seoconsult__inter_image-title">Консультант</div>
@@ -60,8 +60,9 @@ export default {
 <style lang="scss">
 .modal-wrapper {
   width: 100%;
-  height: calc(100% - 64px);
+  height: calc(100% - 0px);
   position: fixed;
+  top: 0;
   left: 50%;
   transform: translateX(-50%);
   background: rgba($color: #000000, $alpha: 0.3);
@@ -73,14 +74,14 @@ export default {
   position: fixed;
   width: 100%;
   max-width: 1440px;
-  top: 0%;
+  top: 50%;
   left: 50%;
-  transform: translateX(-50%);
-  background: #fff;
+  transform: translate(-50%, -50%);
+  transition: all ease;
   &__close {
     width: 50px;
     height: 50px;
-    margin: 90px 11px 0 0 ;
+    margin: 11px 11px 0 0 ;
     display: flex;
     align-self: flex-end;
     justify-content: center;
@@ -115,7 +116,8 @@ export default {
   max-width: 1320px;
   padding: 8px;
   border: 1px solid #E3E3E3;
-  margin: 0 auto 140px auto;
+  margin: 0 auto;
+  background: white;
   &__inter {
     border: 1px solid #E3E3E3;
     display: grid;
@@ -242,6 +244,8 @@ export default {
     display: none;
   }
   .seoconsult {
+    width: 90%;
+    margin: 0 auto;
     &__inter {
       &_image {
         display: flex;
@@ -260,10 +264,11 @@ export default {
 }
 @media (min-width: 577px) and (max-width: 992px) {
   .modal-wrapper {
-    height: calc(100% - 64px);
+    height: calc(100% - 0px);
   }
   .seomodal {
-    top: 0;
+    width: 90%;
+    transform: translate(-50%, -35%);
     &__close {
       display: none;
     }
@@ -305,8 +310,7 @@ export default {
             }
           }
           &--add {
-            column-gap: 0px;
-            justify-content: space-between;
+            column-gap: 24px;
           }
         }
         &-social {
@@ -317,8 +321,18 @@ export default {
   }
 }
 @media (max-width: 576px) {
+  .modal-wrapper {
+    width: 100%;
+    height: calc(100% - 0px);
+    position: fixed;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    background: rgba(0, 0, 0, 0.3);
+    overflow-y: scroll;
+}
   .seomodal {
-    top: 0;
+    transform: translate(-50%, -25%);
     padding: 16px 0;
     &__close {
       display: none;
