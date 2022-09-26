@@ -60,12 +60,12 @@ export default {
 <style lang="scss">
 .modal-wrapper {
   width: 100%;
-  height: 100%;
-  position: absolute;
+  height: calc(100% - 64px);
+  position: fixed;
   left: 50%;
   transform: translateX(-50%);
-  background: #FFF;
-  // overflow: hidden;
+  background: rgba($color: #000000, $alpha: 0.3);
+  overflow-y: scroll;
 }
 .seomodal {
   display: flex;
@@ -73,10 +73,9 @@ export default {
   position: fixed;
   width: 100%;
   max-width: 1440px;
-  top: 7%;
+  top: 0%;
   left: 50%;
   transform: translateX(-50%);
-  // overflow: hidden;
   background: #fff;
   &__close {
     width: 50px;
@@ -261,7 +260,7 @@ export default {
 }
 @media (min-width: 577px) and (max-width: 992px) {
   .modal-wrapper {
-    height: 1252px;
+    height: calc(100% - 64px);
   }
   .seomodal {
     top: 0;
@@ -319,7 +318,8 @@ export default {
 }
 @media (max-width: 576px) {
   .seomodal {
-    top: 2%;
+    top: 0;
+    padding: 16px 0;
     &__close {
       display: none;
     }
