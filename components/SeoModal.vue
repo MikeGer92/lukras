@@ -240,6 +240,18 @@ export default {
   }
 }
 @media (min-width: 993px) and (max-width: 1440px) {
+  .seomodal {
+    display: flex;
+    flex-direction: column;
+    position: fixed;
+    width: 100%;
+    max-width: 1440px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -25%);
+    transition: all ease;
+    padding: 32px 0;
+}
   .seomodal__close {
     display: none;
   }
